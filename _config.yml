@@ -3,7 +3,7 @@
 locale                   : "en-US"
 title                    : "Shuaijun LIU / MY PERSONAL WEB"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "Name"
 description              : &description "personal description"
 url                      : https://shuaijun-liu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
