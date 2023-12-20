@@ -1,7 +1,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "SHUAIJUN LIU / MY PERSONAL WEB"
+title                    : "SHUAIJUN LIU / PROFILE"
 title_separator          : "-"
 name                     : &name "Name"
 description              : &description "personal description"
