@@ -18,6 +18,7 @@ redirect_from:
 
 EDUCATION
 ======
+____________________________________________________________________________________________________________
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong><a href="https://www.bu.edu">Boston University</a></strong></div>
     <div style="text-align: right;">01/2024 - 07/2025</div>
@@ -34,7 +35,7 @@ EDUCATION
 
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong><a href="https://www.uic.edu.cn/en">Beijing Normal University-Hong Kong Baptist University United International College (UIC)</a></strong></div>
-    <div style="text-align: right;">09/2019 - 06/2023</div>
+    <div style="text-align: right;">09/2020 - 06/2023</div>
 </div>
 * <u>Minor in Computer Science and Technology</u>
   * Main Courses: _Object-Oriented Programming (JAVA), Principles of Compilers, Database Management System (SQL), Data Structures and Algorithms, C++_
@@ -43,6 +44,7 @@ EDUCATION
 
 ACADEMIC RESEARCH
 ======
+____________________________________________________________________________________________________________
 <span style="font-size:18px;"><strong>Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with \*)</strong></span>
 
 * Participate in Peer Review:
@@ -60,6 +62,7 @@ ACADEMIC RESEARCH
 
 Skills
 ======
+____________________________________________________________________________________________________________
 * Skill 1
 * Skill 2
   * Sub-skill 2.1
@@ -71,6 +74,7 @@ Skills
 
 Publications
 ======
+____________________________________________________________________________________________________________
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
@@ -79,6 +83,7 @@ Publications
   
 Service and leadership
 ======
+____________________________________________________________________________________________________________
 * Currently signed in to 43 different slack teams
 
 
