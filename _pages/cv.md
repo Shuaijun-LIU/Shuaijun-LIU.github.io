@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: ""
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -8,6 +8,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+
+[Download paper here](http://https://shuaijun-liu.github.io/publications/CV-ShuaijunLIU.pdf) 
 
 Education
 ======
