@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 
 <div class="background-box">
-  <p>要加背景的文字</p>
+  <p>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
 </div>
 .background-box {
   background-color: lightgray;
