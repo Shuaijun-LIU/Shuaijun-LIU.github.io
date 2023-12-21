@@ -9,7 +9,14 @@ redirect_from:
 
 {% include base_path %}
 
-[Download My Full Resume Here](http://https://shuaijun-liu.github.io/publications/CV-ShuaijunLIU.pdf) 
+<div class="background-box">
+  <p>要加背景的文字</p>
+</div>
+.background-box {
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 5px;
+}
 
 EDUCATION
 ======
@@ -18,10 +25,7 @@ EDUCATION
     <div style="text-align: right;">01/2024 - 07/2025</div>
 </div>
 
-
-
-__Boston University__       01/2024 - 07/2025
-* M.Sc. in Applied Data Analytics _Accepted offer for Fall 2023 (23fall) and deferred until 2024 (24spring)_
+* <u>M.Sc. in Applied Data Analytics</u> _Accepted offer for Fall 2023 (23fall) and deferred until 2024 (24spring)_
 
 __Beijing Normal University-Hong Kong Baptist University United International College (UIC)__      09/2019 - 06/2023
 * B.Sc. (Honours) in Statistics and Data Science (Major) & Computer Science and Technology (Minor)
@@ -73,6 +77,7 @@ Service and leadership
 * Currently signed in to 43 different slack teams
 
 
+[Download My Full Resume Here](http://https://shuaijun-liu.github.io/publications/CV-ShuaijunLIU.pdf) 
 
 
 
