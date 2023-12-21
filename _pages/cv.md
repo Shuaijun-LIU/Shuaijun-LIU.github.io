@@ -13,12 +13,12 @@ redirect_from:
 
 EDUCATION
 ======
-Boston University       01/2024 - 07/2025
+* Boston University*       01/2024 - 07/2025
 * M.Sc. in Applied Data Analytics** _Accepted offer for Fall 2023 (23fall) and deferred until 2024 (24spring)
 
-Beijing Normal University-Hong Kong Baptist University United International College (UIC)      09/2019 - 06/2023
-* B.Sc. (Honours) in Statistics and Data Science (Major) & Computer Science and Technology (Minor)
-  * Main Courses: _Data Analysis by R, Database Management System (SQL), Data Structures and Algorithms, Object-Oriented Programming (JAVA), Principles of Compilers, Data Mining, Advanced Statistics, Time Series Analysis, C++
+* Beijing Normal University-Hong Kong Baptist University United International College (UIC)*      09/2019 - 06/2023
+  * B.Sc. (Honours) in Statistics and Data Science (Major) & Computer Science and Technology (Minor)
+  * Main Courses: Data Analysis by R, Database Management System (SQL), Data Structures and Algorithms, Object-Oriented Programming (JAVA), Principles of Compilers, Data Mining, Advanced Statistics, Time Series Analysis, C++
 
 ACADEMIC RESEARCH **_Supervisors and Acknowledgements: Prof. Jingjin Wu, Yuhui Deng, Aihua Zhang_ (Marked with \*)
 ======
