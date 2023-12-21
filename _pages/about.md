@@ -46,8 +46,7 @@ ________________________________________________________________________________
 ACADEMIC RESEARCH
 ======
 ____________________________________________________________________________________________________________
-<span style="font-size:18px;"><strong>Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with \*)</strong></span>
-____________________________________________________________________________________________________________
+<span style="font-size:18px; font-style: italic;"><strong>Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with \*)</strong></span>
 
 __Participate in Peer Review:__
   * IEEE Transactions on Green Communications and Networking (TGCN) 2023.
@@ -65,6 +64,47 @@ __Participate in Peer Review:__
 </ul>
 * __Publication:__ _S. Liu_, J. Yin, Z. Zeng, and J. Wu\*, "[Optimal trajectory planning and task assignment for UAV-assisted fog computing](https://ieeexplore.ieee.org/document/10074734)," _2022_ [_IEEE 24th Int Conf on High Performance Computing & Communications (HPCC)_](http://www.ieee-hpcc.org/2022/index.html), pp.1400–1407, doi:10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00217.
 * __Supports:__ Partly supported by the Guangdong Provincial Science and Technology Innovation Fund, Information technology category 2023(Grant No.: _pdjh2023b0593_), the Guangdong Provincial Key Laboratory of Interdisciplinary Research and Application for Data Science(Grant No.: _2022B1212010006_).
+
+
+____________________________________________________________________________________________________________
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;"><strong>UAV Attitude Control and Trajectory Planning System Development</strong></div>
+    <div style="text-align: right;">12/2022 - 10/2023</div>
+</div>
+
+* __Key Words:__ UAV Attitude Control System, Hardware and Software System Design, Heuristic Algorithm Optimization
+<ul style="text-align: justify;">
+  <li><strong>Overview:</strong> In this project, we proposed an anti-lockout ant colony system (ACS-DS) algorithm with two mechanisms for setting decoupling & safety values to solve the problem of local optimization in three-dimensional trajectory planning of the Unmanned Aerial Vehicle (UAV), taking into account the energy efficiency of a single UAV assisted fog computing network. We have integrated a fuzzy PID attitude control system for a quadrotor UAV, which is the first application of a UAV control system in an open paper in the field of Assisted Fog Computing as of October 23, and has been shown to significantly reduce (≥34%) the consumption of an existing model. </li>
+</ul>
+* __Publication:__ _S. Liu_, J. Du, Y. Zheng, Y. Deng\* and J. Wu\*, "A Holistic Optimization Framework for Energy Efficient UAV-assisted Fog Computing: Attitude Control, Trajectory Planning and Task Assignment," _2023_ [_Transactions on Cloud Computing (TCC)_](https://www.computer.org/csdl/journal/cc). Peer review.
+* __Supports:__ Partly supported by the Guangdong Higher Education Upgrading Plan 2021-2025(Grant No.: _UIC R0400001-22_), the Zhuhai Basic and Applied Basic Research Foundation Grant(Grant No.: _ZH22017003200018PWC_).
+
+____________________________________________________________________________________________________________
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;"><strong>Design and Optimization of a Network Model for UAV-Assisted Fog Computing</strong></div>
+    <div style="text-align: right;">11/2021 - 12/2022</div>
+</div>
+
+* __Key Words:__ Cloud and Fog Computing, UAV Trajectory Planning Algorithms, High-Performance Distributed Computing
+<ul style="text-align: justify;">
+  <li><strong>Overview:</strong> This project involves deploying Unmanned Aerial Vehicle (UAV) equipment with powerful communication and computing servers at the edge of the Internet of Things (IoT), providing efficient and secure auxiliary computing services for users' mobile devices. We model and simulate the trajectory planning, resource allocation, and distributed task computing process of UAV obstacle avoidance flight, seeking the optimal solution based on two algorithms: Ant Colony Optimization (ACO) and Particle Swarm Optimization (PSO). Ultimately, we solve the problem through continuous convex approximation. Simulation results demonstrate a more than 40% improvement in fog computing network efficiency(weighted sum of energy consumption and delay) compared to existing baseline algorithms. </li>
+</ul>
+* __Publication:__ _S. Liu_, J. Yin, Z. Zeng, and J. Wu\*, "[Optimal trajectory planning and task assignment for UAV-assisted fog computing](https://ieeexplore.ieee.org/document/10074734)," _2022_ [_IEEE 24th Int Conf on High Performance Computing & Communications (HPCC)_](http://www.ieee-hpcc.org/2022/index.html), pp.1400–1407, doi:10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00217.
+* __Supports:__ Partly supported by the Guangdong Provincial Science and Technology Innovation Fund, Information technology category 2023(Grant No.: _pdjh2023b0593_), the Guangdong Provincial Key Laboratory of Interdisciplinary Research and Application for Data Science(Grant No.: _2022B1212010006_).
+
+____________________________________________________________________________________________________________
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;"><strong>Design and Optimization of a Network Model for UAV-Assisted Fog Computing</strong></div>
+    <div style="text-align: right;">11/2021 - 12/2022</div>
+</div>
+
+* __Key Words:__ Cloud and Fog Computing, UAV Trajectory Planning Algorithms, High-Performance Distributed Computing
+<ul style="text-align: justify;">
+  <li><strong>Overview:</strong> This project involves deploying Unmanned Aerial Vehicle (UAV) equipment with powerful communication and computing servers at the edge of the Internet of Things (IoT), providing efficient and secure auxiliary computing services for users' mobile devices. We model and simulate the trajectory planning, resource allocation, and distributed task computing process of UAV obstacle avoidance flight, seeking the optimal solution based on two algorithms: Ant Colony Optimization (ACO) and Particle Swarm Optimization (PSO). Ultimately, we solve the problem through continuous convex approximation. Simulation results demonstrate a more than 40% improvement in fog computing network efficiency(weighted sum of energy consumption and delay) compared to existing baseline algorithms. </li>
+</ul>
+* __Publication:__ _S. Liu_, J. Yin, Z. Zeng, and J. Wu\*, "[Optimal trajectory planning and task assignment for UAV-assisted fog computing](https://ieeexplore.ieee.org/document/10074734)," _2022_ [_IEEE 24th Int Conf on High Performance Computing & Communications (HPCC)_](http://www.ieee-hpcc.org/2022/index.html), pp.1400–1407, doi:10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00217.
+* __Supports:__ Partly supported by the Guangdong Provincial Science and Technology Innovation Fund, Information technology category 2023(Grant No.: _pdjh2023b0593_), the Guangdong Provincial Key Laboratory of Interdisciplinary Research and Application for Data Science(Grant No.: _2022B1212010006_).
+
 
 <hr style="border: none; border-top: 2px solid black;">
 
@@ -98,23 +138,9 @@ ________________________________________________________________________________
 [Download My Full Resume Here](http://https://shuaijun-liu.github.io/publications/CV-ShuaijunLIU.pdf) 
 
 
-**ACADEMIC RESEARCH** _Supervisors and Acknowledgements: Prof. Jingjin Wu, Yuhui Deng, Aihua Zhang_ (Marked with \*)
 
-**Participate in Peer Review**** :**IEEE Transactions on Green Communications and Networking (TGCN) 2023. Transactions on Emerging Telecommunications Technologies (ETT) 2023. Int Conf on High Performance Computing & Communications (HPCC) 2023.
 
-**Design and Optimization of a Network Model for UAV-Assisted Fog Computing** 11/2021 - 12/2022
 
-- **Key Words:** Cloud and Fog Computing, UAV Trajectory Planning Algorithms, High-Performance Distributed Computing
-- **Overview:** This project involves deploying Unmanned Aerial Vehicle (UAV) equipment with powerful communication and computing servers at the edge of the Internet of Things (IoT), providing efficient and secure auxiliary computing services for users' mobile devices. We model and simulate the trajectory planning, resource allocation, and distributed task computing process of UAV obstacle avoidance flight, seeking the optimal solution based on two algorithms: Ant Colony Optimization (ACO) and Particle Swarm Optimization (PSO). Ultimately, we solve the problem through continuous convex approximation. Simulation results demonstrate a more than 40% improvement in fog computing network efficiency(weighted sum of energy consumption and delay) compared to existing baseline algorithms.
-- **Publication:**** S. Liu**, J. Yin, Z. Zeng, and J. Wu\*, "[Optimal trajectory planning and task assignment for UAV-assisted fog computing](https://ieeexplore.ieee.org/document/10074734)," _2022_ [_IEEE 24th Int Conf on High Performance Computing & Communications (HPCC)_](http://www.ieee-hpcc.org/2022/index.html), pp.1400–1407, doi:10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00217.
-- **Supports:** Partly supported by the Guangdong Provincial Science and Technology Innovation Fund, Information technology category 2023(Grant No.: _pdjh2023b0593_), the Guangdong Provincial Key Laboratory of Interdisciplinary Research and Application for Data Science(Grant No.: _2022B1212010006_).
-
-**UAV Attitude Control and Trajectory Planning System Development** 12/2022 - 10/2023
-
-- **Key Words:** UAV Attitude Control System, Hardware and Software System Design, Heuristic Algorithm Optimization
-- **Overview:** In this project, we proposed an anti-lockout ant colony system (ACS-DS) algorithm with two mechanisms for setting decoupling & safety values to solve the problem of local optimization in three-dimensional trajectory planning of the Unmanned Aerial Vehicle (UAV), taking into account the energy efficiency of a single UAV assisted fog computing network. We have integrated a fuzzy PID attitude control system for a quadrotor UAV, which is the first application of a UAV control system in an open paper in the field of Assisted Fog Computing as of October 23, and has been shown to significantly reduce (≥34%) the consumption of an existing model.
-- **Publication:**** S. Liu**, J. Du, Y. Zheng, Y. Deng\* and J. Wu\*, "A Holistic Optimization Framework for Energy Efficient UAV-assisted Fog Computing: Attitude Control, Trajectory Planning and Task Assignment," _2023_ [_Transactions on Cloud Computing (TCC)_](https://www.computer.org/csdl/journal/cc)_._ Peer review.
-- **Supports:** Partly supported by the Guangdong Higher Education Upgrading Plan 2021-2025(Grant No.: _UIC R0400001-22_), the Zhuhai Basic and Applied Basic Research Foundation Grant(Grant No.: _ZH22017003200018PWC_).
 
 **Text-based Stock Price and Investor Sentiment Analysis** 07/2022 - Present
 
