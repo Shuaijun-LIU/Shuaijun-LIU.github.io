@@ -39,6 +39,8 @@ ________________________________________________________________________________
 * Minor in Computer Science and Technology
 * Main Courses: _Object-Oriented Programming (JAVA), Principles of Compilers, Database Management System (SQL), Data Structures and Algorithms, C++_
 
+<hr style="border: none; border-top: 2px solid black;">
+
 ACADEMIC RESEARCH <span style="font-size:14px;">Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with \*)</span>
 ======
 * Participate in Peer Review:
