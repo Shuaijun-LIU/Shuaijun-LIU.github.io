@@ -11,10 +11,10 @@ redirect_from:
 
 <div style="background-color: lightgray; padding: 30px; border-radius: 10px;">
   <p> &#x1F600; &#x1F44B; Hi, Shuaijun LIU (George) here. Sincerely welcome to my personal page, which I hope will give you a full understanding of my experience and abilities. </p>
-  <p> I received my B.S. honors degree in Statistics from HongKong Baptist University (HKBU) with a minor in Computer Sciences from BNU-HKUB UIC in July 2023, and will be going to Boston University for my M.S. in 2024. As of now I am interested in data analysis, optimization algorithms and software design in distributed computing, and am doing some related research to try to be innovative in this area. </p>
+  <p> I received my B.S. honors degree in Statistics from HongKong Baptist University (HKBU) with a minor in Computer Science from BNU-HKUB UIC in July 2023, and will be going to Boston University for my M.S. in 2024. As of now I am interested in data analysis, optimization algorithms and software design in distributed computing, and am doing some related research to try to be innovative in this area. </p>
   <p> My ongoing or planned research interests include but are not limited to: trajectory planning algorithms in unmanned aerial vehicle (UAV)-assisted fog computing, deep learning applications in distributed computing, and software design for sustainability networks. I plan to be well-prepared for my PhD application in order to have sufficient skills to accomplish these ideas. </p> 
   <p> Please contact me with any questions you have about me personally or would like to discuss: <a href="mailto:shuaijun@bu.edu">shuaijun@bu.edu</a>, <a href="mailto:shuaijun.liu@outlook.com">shuaijun.liu@outlook.com</a>, <a href="mailto:lsj15559271941@gmail.com">lsj15559271941@gmail.com</a>. </p>
-  <p> If there are any mistakes in my description please correct me, it would be my pleasure. </p>
+  <p> My detailed resume follows &#x1F447;. If there are any mistakes in my description please correct me, it would be my pleasure. </p>
 </div> <br>
 
 EDUCATION
@@ -26,24 +26,25 @@ EDUCATION
 * <u>M.Sc. in Applied Data Analytics</u>  _Accepted offer for Fall 2023 (23fall) and deferred until 2024 (24spring)_
 
 <div style="display: flex; justify-content: space-between;">
-    <div style="text-align: left;"><strong>Hong Kong Baptist University</strong></div>
+    <div style="text-align: left;"><strong><a href="https://www.bu.edu">Hong Kong Baptist University</a></strong></div>
     <div style="text-align: right;">09/2019 - 06/2023</div>
 </div>
-* B.Sc. (Honours) in Statistics and Data Science
+* <u>B.Sc. (Honours) in Statistics and Data Science</u>
 * Main Courses: _Data Analysis by R, Data Mining, Advanced Statistics, Time Series Analysis, Optimization (Matlab), Linear Algebra, Calculus_
 
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong>Beijing Normal University-Hong Kong Baptist University United International College (UIC)</strong></div>
     <div style="text-align: right;">09/2019 - 06/2023</div>
 </div>
-* Minor in Computer Science and Technology
+* <u>Minor in Computer Science and Technology</u>
 * Main Courses: _Object-Oriented Programming (JAVA), Principles of Compilers, Database Management System (SQL), Data Structures and Algorithms, C++_
 
 <hr style="border: none; border-top: 2px solid black;">
 
 ACADEMIC RESEARCH
-<span style="font-size:14px;"><strong>Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with \*)</strong></span>
 ======
+<span style="font-size:18px;"><strong>Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with \*)</strong></span>
+
 * Participate in Peer Review:
   * IEEE Transactions on Green Communications and Networking (TGCN) 2023.
   * Transactions on Emerging Telecommunications Technologies (ETT) 2023.
