@@ -13,8 +13,7 @@ redirect_from:
   <p> &#x1F600; &#x1F44B; Hi, Shuaijun LIU (George) here. Sincerely welcome to my personal page, which I hope will give you a full understanding of my experience and abilities. </p>
   <p> I received my B.S. honors degree in Statistics from HongKong Baptist University (HKBU) with a minor in Computer Science from BNU-HKUB UIC in July 2023, and will be going to Boston University for my M.S. in 2024. As of now I am interested in data analysis, optimization algorithms and software design in distributed computing, and am doing some related research to try to be innovative in this area. </p>
   <p> My ongoing or planned research interests include but are not limited to: trajectory planning algorithms in unmanned aerial vehicle (UAV)-assisted fog computing, deep learning applications in distributed computing, and software design for sustainability networks. I plan to be well-prepared for my PhD application in order to have sufficient skills to accomplish these ideas. </p> 
-  <p> Please contact me with any questions you have about me personally or would like to discuss: <a href="mailto:shuaijun@bu.edu">shuaijun@bu.edu</a>, <a href="mailto:shuaijun.liu@outlook.com">shuaijun.liu@outlook.com</a>, <a href="mailto:lsj15559271941@gmail.com">lsj15559271941@gmail.com</a>. </p>
-  <p> My detailed resume follows &#x1F447;. If there are any mistakes in my description please correct me, it would be my pleasure. </p>
+  <p> Please contact me with any questions you have about me personally or would like to discuss: <a href="mailto:shuaijun@bu.edu">shuaijun@bu.edu</a>, <a href="mailto:shuaijun.liu@outlook.com">shuaijun.liu@outlook.com</a>, <a href="mailto:lsj15559271941@gmail.com">lsj15559271941@gmail.com</a>. My detailed resume follows &#x1F447;. </p>
 </div> <br>
 
 EDUCATION
