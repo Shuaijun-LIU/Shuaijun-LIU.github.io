@@ -22,12 +22,21 @@ ________________________________________________________________________________
     <div style="text-align: left;"><strong>Boston University</strong></div>
     <div style="text-align: right;">01/2024 - 07/2025</div>
 </div>
+* <u>M.Sc. in Applied Data Analytics</u>  _Accepted offer for Fall 2023 (23fall) and deferred until 2024 (24spring)_
 
-* <u>M.Sc. in Applied Data Analytics</u> _Accepted offer for Fall 2023 (23fall) and deferred until 2024 (24spring)_
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;"><strong>Hong Kong Baptist University</strong></div>
+    <div style="text-align: right;">09/2019 - 06/2023</div>
+</div>
+* B.Sc. (Honours) in Statistics and Data Science
+* Main Courses: _Data Analysis by R, Data Mining, Advanced Statistics, Time Series Analysis, Optimization (Matlab), Linear Algebra, Calculus_
 
-__Beijing Normal University-Hong Kong Baptist University United International College (UIC)__      09/2019 - 06/2023
-* B.Sc. (Honours) in Statistics and Data Science (Major) & Computer Science and Technology (Minor)
-* Main Courses: _Data Analysis by R, Database Management System (SQL), Data Structures and Algorithms, Object-Oriented Programming (JAVA), Principles of Compilers, Data Mining, Advanced Statistics, Time Series Analysis, C++_
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;"><strong>Beijing Normal University-Hong Kong Baptist University United International College (UIC)</strong></div>
+    <div style="text-align: right;">09/2019 - 06/2023</div>
+</div>
+* Minor in Computer Science and Technology
+* Main Courses: _Object-Oriented Programming (JAVA), Principles of Compilers, Database Management System (SQL), Data Structures and Algorithms, C++_
 
 ACADEMIC RESEARCH **_Supervisors and Acknowledgements: Prof. Jingjin Wu, Yuhui Deng, Aihua Zhang_ (Marked with \*)
 ======
