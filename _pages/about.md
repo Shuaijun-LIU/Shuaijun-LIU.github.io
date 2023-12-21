@@ -8,43 +8,166 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+{% include base_path %}
 
-A data-driven personal website
+<div style="background-color: rgba(211, 211, 211, 0.5); padding: 30px; border-radius: 10px;">
+  <p> &#x1F600; &#x1F44B; <strong> Hi, Shuaijun LIU (George) here. Sincerely welcome to my personal page, which I hope will give you a full understanding of my experience and abilities. </strong></p>
+  <p> I received my B.S. honors degree in Statistics from HongKong Baptist University (HKBU) with a minor in Computer Science from BNU-HKUB UIC in July 2023, and will be going to Boston University for my M.S. in 2024. As of now I am interested in data analysis, optimization algorithms and software design in distributed computing, and am doing some related research to try to be innovative in this area. </p>
+  <p> My ongoing or planned research interests include but are not limited to: trajectory planning algorithms in unmanned aerial vehicle (UAV)-assisted fog computing, deep learning applications in distributed computing, and software design for sustainability networks. I plan to be well-prepared for my PhD application in order to have sufficient skills to accomplish these ideas. </p> 
+  <p> Please contact me with any questions you have about me personally or would like to discuss: <a href="mailto:shuaijun@bu.edu">shuaijun@bu.edu</a>, <a href="mailto:shuaijun.liu@outlook.com">shuaijun.liu@outlook.com</a>, <a href="mailto:lsj15559271941@gmail.com">lsj15559271941@gmail.com</a>. My detailed resume follows &#x1F447;. </p>
+</div> <br>
+
+EDUCATION
 ======
-Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+____________________________________________________________________________________________________________
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;"><strong><a href="https://www.bu.edu">Boston University</a></strong></div>
+    <div style="text-align: right;">01/2024 - 07/2025</div>
+</div>
+* <u>M.Sc. in Applied Data Analytics</u>
+  * _Accepted offer for Fall 2023 (23fall) and deferred until 2024 (24spring)_
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;"><strong><a href="https://www.hkbu.edu.hk">Hong Kong Baptist University</a></strong></div>
+    <div style="text-align: right;">09/2019 - 06/2023</div>
+</div>
+* <u>B.Sc. (Honours) in Statistics and Data Science</u>
+  * Main Courses: _Data Analysis by R, Data Mining, Advanced Statistics, Time Series Analysis, Optimization (Matlab), Linear Algebra, Calculus_
 
-Getting started
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;"><strong><a href="https://www.uic.edu.cn/en">Beijing Normal University-Hong Kong Baptist University United International College (UIC)</a></strong></div>
+    <div style="text-align: right;">09/2020 - 06/2023</div>
+</div>
+* <u>Minor in Computer Science and Technology</u>
+  * Main Courses: _Object-Oriented Programming (JAVA), Principles of Compilers, Database Management System (SQL), Data Structures and Algorithms, C++_
+
+<hr style="border: none; border-top: 2px solid black;">
+
+ACADEMIC RESEARCH
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+____________________________________________________________________________________________________________
+<span style="font-size:18px;"><strong>Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with \*)</strong></span>
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+__Participate in Peer Review:__
+  * IEEE Transactions on Green Communications and Networking (TGCN) 2023.
+  * Transactions on Emerging Telecommunications Technologies (ETT) 2023.
+  * Int Conf on High Performance Computing & Communications (HPCC) 2023.
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;"><strong>Design and Optimization of a Network Model for UAV-Assisted Fog Computing</strong></div>
+    <div style="text-align: right;">11/2021 - 12/2022</div>
+</div>
+* __Key Words:__ Cloud and Fog Computing, UAV Trajectory Planning Algorithms, High-Performance Distributed Computing
+* __Overview:__ This project involves deploying Unmanned Aerial Vehicle (UAV) equipment with powerful communication and computing servers at the edge of the Internet of Things (IoT), providing efficient and secure auxiliary computing services for users' mobile devices. We model and simulate the trajectory planning, resource allocation, and distributed task computing process of UAV obstacle avoidance flight, seeking the optimal solution based on two algorithms: Ant Colony Optimization (ACO) and Particle Swarm Optimization (PSO). Ultimately, we solve the problem through continuous convex approximation. Simulation results demonstrate a more than 40% improvement in fog computing network efficiency(weighted sum of energy consumption and delay) compared to existing baseline algorithms.
+* __Publication:__ S. Liu**, J. Yin, Z. Zeng, and J. Wu\*, "[Optimal trajectory planning and task assignment for UAV-assisted fog computing](https://ieeexplore.ieee.org/document/10074734)," _2022_ [_IEEE 24th Int Conf on High Performance Computing & Communications (HPCC)_](http://www.ieee-hpcc.org/2022/index.html), pp.1400–1407, doi:10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00217.
+* __Supports:__ Partly supported by the Guangdong Provincial Science and Technology Innovation Fund, Information technology category 2023(Grant No.: _pdjh2023b0593_), the Guangdong Provincial Key Laboratory of Interdisciplinary Research and Application for Data Science(Grant No.: _2022B1212010006_).
 
-**Markdown generator**
+<hr style="border: none; border-top: 2px solid black;">
 
-I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the academicpages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+Skills
+======
+____________________________________________________________________________________________________________
+* Skill 1
+* Skill 2
+  * Sub-skill 2.1
+  * Sub-skill 2.2
+  * Sub-skill 2.3
+* Skill 3
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+<hr style="border: none; border-top: 2px solid black;">
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+Publications
+======
+____________________________________________________________________________________________________________
+  <ul>{% for post in site.publications %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+  
+<hr style="border: none; border-top: 2px solid black;">
+  
+Service and leadership
+======
+____________________________________________________________________________________________________________
+* Currently signed in to 43 different slack teams
 
-For more info
-------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+
+[Download My Full Resume Here](http://https://shuaijun-liu.github.io/publications/CV-ShuaijunLIU.pdf) 
+
+
+**ACADEMIC RESEARCH** _Supervisors and Acknowledgements: Prof. Jingjin Wu, Yuhui Deng, Aihua Zhang_ (Marked with \*)
+
+**Participate in Peer Review**** :**IEEE Transactions on Green Communications and Networking (TGCN) 2023. Transactions on Emerging Telecommunications Technologies (ETT) 2023. Int Conf on High Performance Computing & Communications (HPCC) 2023.
+
+**Design and Optimization of a Network Model for UAV-Assisted Fog Computing** 11/2021 - 12/2022
+
+- **Key Words:** Cloud and Fog Computing, UAV Trajectory Planning Algorithms, High-Performance Distributed Computing
+- **Overview:** This project involves deploying Unmanned Aerial Vehicle (UAV) equipment with powerful communication and computing servers at the edge of the Internet of Things (IoT), providing efficient and secure auxiliary computing services for users' mobile devices. We model and simulate the trajectory planning, resource allocation, and distributed task computing process of UAV obstacle avoidance flight, seeking the optimal solution based on two algorithms: Ant Colony Optimization (ACO) and Particle Swarm Optimization (PSO). Ultimately, we solve the problem through continuous convex approximation. Simulation results demonstrate a more than 40% improvement in fog computing network efficiency(weighted sum of energy consumption and delay) compared to existing baseline algorithms.
+- **Publication:**** S. Liu**, J. Yin, Z. Zeng, and J. Wu\*, "[Optimal trajectory planning and task assignment for UAV-assisted fog computing](https://ieeexplore.ieee.org/document/10074734)," _2022_ [_IEEE 24th Int Conf on High Performance Computing & Communications (HPCC)_](http://www.ieee-hpcc.org/2022/index.html), pp.1400–1407, doi:10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00217.
+- **Supports:** Partly supported by the Guangdong Provincial Science and Technology Innovation Fund, Information technology category 2023(Grant No.: _pdjh2023b0593_), the Guangdong Provincial Key Laboratory of Interdisciplinary Research and Application for Data Science(Grant No.: _2022B1212010006_).
+
+**UAV Attitude Control and Trajectory Planning System Development** 12/2022 - 10/2023
+
+- **Key Words:** UAV Attitude Control System, Hardware and Software System Design, Heuristic Algorithm Optimization
+- **Overview:** In this project, we proposed an anti-lockout ant colony system (ACS-DS) algorithm with two mechanisms for setting decoupling & safety values to solve the problem of local optimization in three-dimensional trajectory planning of the Unmanned Aerial Vehicle (UAV), taking into account the energy efficiency of a single UAV assisted fog computing network. We have integrated a fuzzy PID attitude control system for a quadrotor UAV, which is the first application of a UAV control system in an open paper in the field of Assisted Fog Computing as of October 23, and has been shown to significantly reduce (≥34%) the consumption of an existing model.
+- **Publication:**** S. Liu**, J. Du, Y. Zheng, Y. Deng\* and J. Wu\*, "A Holistic Optimization Framework for Energy Efficient UAV-assisted Fog Computing: Attitude Control, Trajectory Planning and Task Assignment," _2023_ [_Transactions on Cloud Computing (TCC)_](https://www.computer.org/csdl/journal/cc)_._ Peer review.
+- **Supports:** Partly supported by the Guangdong Higher Education Upgrading Plan 2021-2025(Grant No.: _UIC R0400001-22_), the Zhuhai Basic and Applied Basic Research Foundation Grant(Grant No.: _ZH22017003200018PWC_).
+
+**Text-based Stock Price and Investor Sentiment Analysis** 07/2022 - Present
+
+- **Key Words:** Natural Language Processing (NLP), Data Mining (Scrapy Framework), LSTM Neural Networks, Sentiment Text Analysis
+- **Overview:** This project aims to study the role of sentiment analysis in stock prediction. We used the Scrapy framework and BeautifulSoup web parser to crawl 400,000 stock comments text and their corresponding historical trading data from the East-money stock bar, and stored them in a database. We extracted the text feature vectors using jieba word splitting and TF-IDF methods, used a SVM sentiment classifier to classify the crawled text data into sentiment polarities and constructed an investor sentiment index. Finally, we trained price prediction models using LSTM neural network and ARIMA time series, the prediction result is a significant improvement over the baseline evaluation criteria.
+- **Publication:**** S. Liu**, X. Hu, J. Wu\*, and A. Zhang\*, "An Empirical Analysis on Stock Price and Investor Sentiment Based on Text Analysis," Manuscript.
+
+**Convolutional Neural Network & Computerized Image Recognition Based Surroundings Prediction and Trajectory Planning in UAV-Assisted Fog Computing** 10/2023 - Present
+
+- **Key Words:** Deep Learning, Computerized Image Recognition (CIR), Fog Computing, UAV Trajectory Planning
+- **Overview:** The focus of this project is to utilize deep learning to help Unmanned Aerial Vehicles (UAVs) predict changing trends in the environment during assisted fog computation in order to enhance UAV execution efficiency in various environmental contexts. First, OpenCV computer vision library is used for topographic image reading, edge detection, and segmentation. The map data combined with solar radiation is used to build hydrodynamic and meteorological models, which include temperature, humidity, atmospheric pressure, wind speed, and wind direction. Next, a convolutional neural network (CNN) is trained to enable the UAV to predict the environment based on sensor and terrain image recognition. Additionally, model sharing and collaborative learning among multiple UAVs are achieved through fog computing network, allowing the UAVs to movement while avoiding abnormal terrain and meteorological regions. Compared to movement without considering predicted surroundings, the chance of crashing due to abnormal areas and weather is reduced by about 64%.
+- **Publication & Supports:**** S. Liu**, X. Hu, J. Yin, Y. Deng\*, and J. Wu\*, "CNN & CIR-Based Surroundings Prediction and Trajectory Planning in UAV-Assisted Fog Computing," Manuscript.
+
+**Others** 09/2019 – Present
+
+- **A Data-Driven Approach for Optimal COVID-19 Medical Resource Allocation by SVIR Model and Gurobi Solver:** This study proposes an integrated model for vaccine distribution and critical medical resource allocation in response to the COVID-19 pandemic. Using China as a case study, we categorized the population by region and age stage, Modeled SVIR and estimated the shortage of resources based on future demand. By utilizing the Gurobi solver to optimize the allocation to minimize infections, hospitalizations, and deaths. (J. Du, **S. Liu** ,Y. Zhen)
+- HTML and Database Based Takeaway Website Construction, Deep Learning-based Credit Card User Evaluation and Default Prediction, **…**
+
+**INTERNSHIPS**
+
+**Cross-Border Sustainable Children's Wear Brand ayaMaa** 06/2021 - Present
+
+_Co-founder & Research Analyst_
+
+- Jointly founded the brand [ayaMaa](https://www.ayamaa.com/) and launched the first 20 SKUs of the "First Light" and "The Meadow" collections for sale on the standalone website ([https://www.ayamaa.com](https://www.ayamaa.com/)) in June 2022 to sell to 7 countries, including the U. K., the U. S., France, and Germany.
+- Plugins available to cross-border e-commerce in Amazon and Shopify and improved the website structure and functions with HTML
+- Investigated and assessed more than 47 brands' overseas markets, current situation and anticipation of industries by using Python and R.
+
+**Chengdu Xinchao Media**** Ltd.** 07/2021 - 09/2021
+
+_Technician of the Face Recognition Development Project, Digital Platform Department_
+
+- The Face Recognition Development Project Team is mainly responsible for developing and managing the face recognition system.
+- My specific responsibilities are the annotation of facial feature data and the screening of similar faces, as well as participating in the extraction of facial features, image coding and low-resolution image optimization of the recognition model in the face recognition system to improve the accuracy of face detection.
+
+**Others**
+
+- **Beijing Normal University-Hong Kong Baptist University UIC** (_Data Administrator of the Four-Point Office_)09/2021 - 12/2021
+- **Shenzhen Wanhong Asset Management Co., Ltd.** (_Data Analyst_)06/2020 - 08/2020
+
+**AWARDS & SKILLS**
+
+Outstanding Graduation Thesis 06/2023
+
+National Second Prize & Guangdong First Prize of the China Undergraduate Mathematical Contest in Modeling 09/2022
+
+Meritorious Winner of the 2022 Mathematical Contest in Modeling 05/2022
+
+Second Prize (Guangdong Division) of the 2021 Contemporary Undergraduate Mathematical Contest in Modeling 10/2021
+
+Best Writing & Planning Award (UIC) 05/2021
+
+Top Ten Outstanding Volunteers of the Year (UIC) 12/2020
+
+- **Office:** Excel, PPT and other office software, Linux (Ubuntu) operating system, configuration and use of virtual machines (VMware).
+- **Programming & Development:** Python, Matlab, R, JAVA, C++, Deep learning and Heuristic algorithm optimization, Data mining, Object-Oriented Programming, Basic concepts and operations of WEB front-end (HTML) and some back-end (SQL).
+- **Language:** IELTS 6.5
+- **Others:** Computer assembling, CPU overclocking and BIOS (Basic Input/Output System) debugging.
+
+3/ **3**
