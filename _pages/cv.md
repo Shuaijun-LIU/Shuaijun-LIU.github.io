@@ -9,9 +9,9 @@ redirect_from:
 
 {% include base_path %}
 
-<div style="background-color: lightgray; padding: 10px; border-radius: 5px;">
-  <p>#U+1F600 #U+1F44B Hi, Shuaijun (George) here. I received my B.S. in Statistics with a minor in CS from BNU-HKBU, and will be going to BU for my M.S. in 2024.
-  Sincerely welcome to my personal academic page, which I hope will give you a full understanding of my experience and abilities. Please contact me with any questions you have about me personally or would like to discuss: <a href="mailto:shuaijun@bu.edu">shuaijun@bu.edu</a>, <a href="mailto:shuaijun.liu@outlook.com">shuaijun.liu@outlook.com</a>, <a href="mailto:lsj15559271941@gmail.com">lsj15559271941@gmail.com</a> </p>
+<div style="background-color: lightgray; padding: 20px; border-radius: 5px;">
+  <p>#U+1F600 #U+1F44B Hi, Shuaijun (George) here. I received my B.S. in Statistics with a minor in CS from BNU-HKBU, and will be going to BU for my M.S. in 2024.<p>
+  <p>Sincerely welcome to my personal academic page, which I hope will give you a full understanding of my experience and abilities. Please contact me with any questions you have about me personally or would like to discuss: <a href="mailto:shuaijun@bu.edu">shuaijun@bu.edu</a>, <a href="mailto:shuaijun.liu@outlook.com">shuaijun.liu@outlook.com</a>, <a href="mailto:lsj15559271941@gmail.com">lsj15559271941@gmail.com</a> </p>
 </div> <br>
 
 EDUCATION
