@@ -40,30 +40,7 @@ ________________________________________________________________________________
     <div style="text-align: left;"><strong>Others</strong></div>
 </div>
 <ul style="text-align: justify;">
-  <li><strong>Beijing Normal University-Hong Kong Baptist University UIC</strong>(Data Administrator of the Four-Point Office) 09/2021 - 12/2021</li>
+  <li><strong>Beijing Normal University-Hong Kong Baptist University UIC</strong> (Data Administrator of the Four-Point Office) 09/2021 - 12/2021</li>
   <li><strong>Shenzhen Wanhong Asset Management Co., Ltd.</strong>(Data Analyst) 06/2020 - 08/2020</li>
 </ul>
-
-
-
-**AWARDS & SKILLS**
-
-Outstanding Graduation Thesis 06/2023
-
-National Second Prize & Guangdong First Prize of the China Undergraduate Mathematical Contest in Modeling 09/2022
-
-Meritorious Winner of the 2022 Mathematical Contest in Modeling 05/2022
-
-Second Prize (Guangdong Division) of the 2021 Contemporary Undergraduate Mathematical Contest in Modeling 10/2021
-
-Best Writing & Planning Award (UIC) 05/2021
-
-Top Ten Outstanding Volunteers of the Year (UIC) 12/2020
-
-- **Office:** Excel, PPT and other office software, Linux (Ubuntu) operating system, configuration and use of virtual machines (VMware).
-- **Programming & Development:** Python, Matlab, R, JAVA, C++, Deep learning and Heuristic algorithm optimization, Data mining, Object-Oriented Programming, Basic concepts and operations of WEB front-end (HTML) and some back-end (SQL).
-- **Language:** IELTS 6.5
-- **Others:** Computer assembling, CPU overclocking and BIOS (Basic Input/Output System) debugging.
-
-3/ **3**
 
