@@ -39,7 +39,7 @@ ________________________________________________________________________________
 * Minor in Computer Science and Technology
 * Main Courses: _Object-Oriented Programming (JAVA), Principles of Compilers, Database Management System (SQL), Data Structures and Algorithms, C++_
 
-ACADEMIC RESEARCH **_Supervisors and Acknowledgements: Prof. Jingjin Wu, Yuhui Deng, Aihua Zhang_ (Marked with \*)
+ACADEMIC RESEARCH <span style="font-size:14px;">Supervisors and Acknowledgements: Prof. Jingjin Wu, Yuhui Deng, Aihua Zhang_ (Marked with \*)</span>
 ======
 * Participate in Peer Review:
   * IEEE Transactions on Green Communications and Networking (TGCN) 2023.
