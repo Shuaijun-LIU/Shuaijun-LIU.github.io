@@ -17,5 +17,4 @@ redirect_from:
   <p> I am very fortunate to be advised by <a href="https://fst.uic.edu.cn/stat_en/faculty/faculty.htm#/Jingjinwu/en">Prof. Timothy WU</a>, <a href="https://fst.uic.edu.cn/stat_en/faculty/faculty.htm#/ivandeng/en">Prof. Ivan DENG</a> and <a href="https://fst.uic.edu.cn/stat_en/faculty/faculty.htm#/evaahzhang/en">Prof. Eva ZHANG</a> of Guangdong Provincial Key Laboratory of Interdisciplinary Research and Application for Data Science(No.: 2022B1212010006). The researches partly supported by the Guangdong Provincial Science and Technology Innovation Fund, Information technology category 2023(No.: pdjh2023b0593), the Zhuhai Basic and Applied Basic Research Foundation Grant (No.: ZH22017003200018PWC).
   <p> Please contact me with any questions you have about me personally or would like to discuss: <a href="mailto:shuaijun@bu.edu">shuaijun@bu.edu</a>, <a href="mailto:shuaijun.liu@outlook.com">shuaijun.liu@outlook.com</a>, <a href="mailto:lsj15559271941@gmail.com">lsj15559271941@gmail.com</a>. </p>
   <p> For more details you can click on the index bar or <a href="https://shuaijun-liu.github.io/CV-ShuaijunLIU.pdf">Download My Full Resume Here</a>.</p>
-</div> <br>
-
+</div> 
