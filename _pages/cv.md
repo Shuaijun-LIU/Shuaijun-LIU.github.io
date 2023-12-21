@@ -51,11 +51,12 @@ __Participate in Peer Review:__
   * IEEE Transactions on Green Communications and Networking (TGCN) 2023.
   * Transactions on Emerging Telecommunications Technologies (ETT) 2023.
   * Int Conf on High Performance Computing & Communications (HPCC) 2023.
-
+<p style="margin-top: 20px;">
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong>Design and Optimization of a Network Model for UAV-Assisted Fog Computing</strong></div>
     <div style="text-align: right;">11/2021 - 12/2022</div>
 </div>
+<p style="margin-top: 20px;">
 * __Key Words:__ Cloud and Fog Computing, UAV Trajectory Planning Algorithms, High-Performance Distributed Computing
 * __Overview:__ This project involves deploying Unmanned Aerial Vehicle (UAV) equipment with powerful communication and computing servers at the edge of the Internet of Things (IoT), providing efficient and secure auxiliary computing services for users' mobile devices. We model and simulate the trajectory planning, resource allocation, and distributed task computing process of UAV obstacle avoidance flight, seeking the optimal solution based on two algorithms: Ant Colony Optimization (ACO) and Particle Swarm Optimization (PSO). Ultimately, we solve the problem through continuous convex approximation. Simulation results demonstrate a more than 40% improvement in fog computing network efficiency(weighted sum of energy consumption and delay) compared to existing baseline algorithms.
 * __Publication:__ S. Liu**, J. Yin, Z. Zeng, and J. Wu\*, "[Optimal trajectory planning and task assignment for UAV-assisted fog computing](https://ieeexplore.ieee.org/document/10074734)," _2022_ [_IEEE 24th Int Conf on High Performance Computing & Communications (HPCC)_](http://www.ieee-hpcc.org/2022/index.html), pp.1400–1407, doi:10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00217.
