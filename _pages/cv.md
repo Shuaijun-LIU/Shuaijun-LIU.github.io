@@ -16,6 +16,7 @@ redirect_from:
 
 EDUCATION
 ======
+____________________________________________________________________________________________________________________________________________________________________________________
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong>Boston University</strong></div>
     <div style="text-align: right;">01/2024 - 07/2025</div>
