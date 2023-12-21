@@ -9,11 +9,12 @@ redirect_from:
 
 {% include base_path %}
 
-[Download paper here](http://https://shuaijun-liu.github.io/publications/CV-ShuaijunLIU.pdf) 
+[Download My Full Resume Here](http://https://shuaijun-liu.github.io/publications/CV-ShuaijunLIU.pdf) 
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
+* B.S. (Honours) in Statistics and Data Science (Major) & Computer Science and Technology (Minor), GitHub University, Beijing Normal University-Hong Kong Baptist University United International College (UIC)
+
 * M.S. in Jekyll, GitHub University, 2014
 * Ph.D in Version Control Theory, GitHub University, 2018 (expected)
 
