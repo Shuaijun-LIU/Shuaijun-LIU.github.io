@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "personal websites"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -47,7 +47,7 @@ ACADEMIC RESEARCH
 ======
 ____________________________________________________________________________________________________________
 <span style="font-size:18px;"><strong>Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with \*)</strong></span>
-
+____________________________________________________________________________________________________________
 __Participate in Peer Review:__
   * IEEE Transactions on Green Communications and Networking (TGCN) 2023.
   * Transactions on Emerging Telecommunications Technologies (ETT) 2023.
