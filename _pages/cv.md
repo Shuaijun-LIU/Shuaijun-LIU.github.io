@@ -10,8 +10,8 @@ redirect_from:
 {% include base_path %}
 
 <div style="background-color: lightgray; padding: 10px; border-radius: 5px;">
-  <p>Hi, Shuaijun (George) here. I received my B.S. in Statistics with a minor in CS from BNU-HKBU, and will be going to BU for my M.S. in 2024.</p>
-</div>
+  <p>U+1F600 Hi, Shuaijun (George) here. I received my B.S. in Statistics with a minor in CS from BNU-HKBU, and will be going to BU for my M.S. in 2024.</p>
+</div> <br><br>
 
 EDUCATION
 ======
