@@ -1,202 +1,79 @@
 ---
 permalink: /markdown/
-title: "Markdown"
+title: ""
 author_profile: true
 redirect_from: 
   - /md/
   - /markdown.html
 ---
 
-## Locations of key files/directories
 
-* Basic config options: _config.yml
-* Top navigation bar config: _data/navigation.yml
-* Single pages: _pages/
-* Collections of pages are .md or .html files in:
-  * _publications/
-  * _portfolio/
-  * _posts/
-  * _teaching/
-  * _talks/
-* Footer: _includes/footer.html
-* Static files (like PDFs): /files/
-* Profile image (can set in _config.yml): images/profile.png
+ACADEMIC RESEARCH
+======
+____________________________________________________________________________________________________________
+<span style="font-size:18px; font-style: italic;"><strong>Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with \*)</strong></span>
 
-## Tips and hints
+__Participate in Peer Review:__
+  * IEEE Transactions on Green Communications and Networking (TGCN) 2023.
+  * Transactions on Emerging Telecommunications Technologies (ETT) 2023.
+  * Int Conf on High Performance Computing & Communications (HPCC) 2023.
 
-* Name a file ".md" to have it render in markdown, name it ".html" to render in HTML.
-* Go to the [commit list](https://github.com/academicpages/academicpages.github.io/commits/master) (on your repo) to find the last version Github built with Jekyll. 
-  * Green check: successful build
-  * Orange circle: building
-  * Red X: error
-  * No icon: not built
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;"><strong>Design and Optimization of a Network Model for UAV-Assisted Fog Computing</strong></div>
+    <div style="text-align: right;">11/2021 - 12/2022</div>
+</div>
+* __Key Words:__ Cloud and Fog Computing, UAV Trajectory Planning Algorithms, High-Performance Distributed Computing
+<ul style="text-align: justify;">
+  <li><strong>Overview:</strong> This project involves deploying Unmanned Aerial Vehicle (UAV) equipment with powerful communication and computing servers at the edge of the Internet of Things (IoT), providing efficient and secure auxiliary computing services for users' mobile devices. We model and simulate the trajectory planning, resource allocation, and distributed task computing process of UAV obstacle avoidance flight, seeking the optimal solution based on two algorithms: Ant Colony Optimization (ACO) and Particle Swarm Optimization (PSO). Ultimately, we solve the problem through continuous convex approximation. Simulation results demonstrate a more than 40% improvement in fog computing network efficiency(weighted sum of energy consumption and delay) compared to existing baseline algorithms. </li>
+</ul>
+* __Publication:__ _S. Liu_, J. Yin, Z. Zeng, and J. Wu\*, "[Optimal trajectory planning and task assignment for UAV-assisted fog computing](https://ieeexplore.ieee.org/document/10074734)," _2022_ [_IEEE 24th Int Conf on High Performance Computing & Communications (HPCC)_](http://www.ieee-hpcc.org/2022/index.html), pp.1400–1407, doi:10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00217.
+* __Supports:__ Partly supported by the Guangdong Provincial Science and Technology Innovation Fund, Information technology category 2023(Grant No.: _pdjh2023b0593_), the Guangdong Provincial Key Laboratory of Interdisciplinary Research and Application for Data Science(Grant No.: _2022B1212010006_).
 
-## Resources
- * [Liquid syntax guide](https://shopify.github.io/liquid/tags/control-flow/)
+____________________________________________________________________________________________________________
 
-## Markdown guide
 
-### Header three
 
-#### Header four
 
-##### Header five
+**INTERNSHIPS**
 
-###### Header six
+**Cross-Border Sustainable Children's Wear Brand ayaMaa** 06/2021 - Present
 
-## Blockquotes
+_Co-founder & Research Analyst_
 
-Single line blockquote:
+- Jointly founded the brand [ayaMaa](https://www.ayamaa.com/) and launched the first 20 SKUs of the "First Light" and "The Meadow" collections for sale on the standalone website ([https://www.ayamaa.com](https://www.ayamaa.com/)) in June 2022 to sell to 7 countries, including the U. K., the U. S., France, and Germany.
+- Plugins available to cross-border e-commerce in Amazon and Shopify and improved the website structure and functions with HTML
+- Investigated and assessed more than 47 brands' overseas markets, current situation and anticipation of industries by using Python and R.
 
-> Quotes are cool.
+**Chengdu Xinchao Media**** Ltd.** 07/2021 - 09/2021
 
-## Tables
+_Technician of the Face Recognition Development Project, Digital Platform Department_
 
-### Table 1
+- The Face Recognition Development Project Team is mainly responsible for developing and managing the face recognition system.
+- My specific responsibilities are the annotation of facial feature data and the screening of similar faces, as well as participating in the extraction of facial features, image coding and low-resolution image optimization of the recognition model in the face recognition system to improve the accuracy of face detection.
 
-| Entry            | Item   |                                                              |
-| --------         | ------ | ------------------------------------------------------------ |
-| [John Doe](#)    | 2016   | Description of the item in the list                          |
-| [Jane Doe](#)    | 2019   | Description of the item in the list                          |
-| [Doe Doe](#)     | 2022   | Description of the item in the list                          |
+**Others**
 
-### Table 2
+- **Beijing Normal University-Hong Kong Baptist University UIC** (_Data Administrator of the Four-Point Office_)09/2021 - 12/2021
+- **Shenzhen Wanhong Asset Management Co., Ltd.** (_Data Analyst_)06/2020 - 08/2020
 
-| Header1 | Header2 | Header3 |
-|:--------|:-------:|--------:|
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
-|-----------------------------|
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
-|=============================|
-| Foot1   | Foot2   | Foot3   |
+**AWARDS & SKILLS**
 
-## Definition Lists
+Outstanding Graduation Thesis 06/2023
 
-Definition List Title
-:   Definition list division.
+National Second Prize & Guangdong First Prize of the China Undergraduate Mathematical Contest in Modeling 09/2022
 
-Startup
-:   A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.
+Meritorious Winner of the 2022 Mathematical Contest in Modeling 05/2022
 
-#dowork
-:   Coined by Rob Dyrdek and his personal body guard Christopher "Big Black" Boykins, "Do Work" works as a self motivator, to motivating your friends.
+Second Prize (Guangdong Division) of the 2021 Contemporary Undergraduate Mathematical Contest in Modeling 10/2021
 
-Do It Live
-:   I'll let Bill O'Reilly [explain](https://www.youtube.com/watch?v=O_HyZ5aW76c "We'll Do It Live") this one.
+Best Writing & Planning Award (UIC) 05/2021
 
-## Unordered Lists (Nested)
+Top Ten Outstanding Volunteers of the Year (UIC) 12/2020
 
-  * List item one 
-      * List item one 
-          * List item one
-          * List item two
-          * List item three
-          * List item four
-      * List item two
-      * List item three
-      * List item four
-  * List item two
-  * List item three
-  * List item four
+- **Office:** Excel, PPT and other office software, Linux (Ubuntu) operating system, configuration and use of virtual machines (VMware).
+- **Programming & Development:** Python, Matlab, R, JAVA, C++, Deep learning and Heuristic algorithm optimization, Data mining, Object-Oriented Programming, Basic concepts and operations of WEB front-end (HTML) and some back-end (SQL).
+- **Language:** IELTS 6.5
+- **Others:** Computer assembling, CPU overclocking and BIOS (Basic Input/Output System) debugging.
 
-## Ordered List (Nested)
+3/ **3**
 
-  1. List item one 
-      1. List item one 
-          1. List item one
-          2. List item two
-          3. List item three
-          4. List item four
-      2. List item two
-      3. List item three
-      4. List item four
-  2. List item two
-  3. List item three
-  4. List item four
-
-## Buttons
-
-Make any link standout more when applying the `.btn` class.
-
-## Notices
-
-**Watch out!** You can also add notices by appending `{: .notice}` to a paragraph.
-{: .notice}
-
-## HTML Tags
-
-### Address Tag
-
-<address>
-  1 Infinite Loop<br /> Cupertino, CA 95014<br /> United States
-</address>
-
-### Anchor Tag (aka. Link)
-
-This is an example of a [link](http://github.com "Github").
-
-### Abbreviation Tag
-
-The abbreviation CSS stands for "Cascading Style Sheets".
-
-*[CSS]: Cascading Style Sheets
-
-### Cite Tag
-
-"Code is poetry." ---<cite>Automattic</cite>
-
-### Code Tag
-
-You will learn later on in these tests that `word-wrap: break-word;` will be your best friend.
-
-### Strike Tag
-
-This tag will let you <strike>strikeout text</strike>.
-
-### Emphasize Tag
-
-The emphasize tag should _italicize_ text.
-
-### Insert Tag
-
-This tag should denote <ins>inserted</ins> text.
-
-### Keyboard Tag
-
-This scarcely known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the `<code>` tag.
-
-### Preformatted Tag
-
-This tag styles large blocks of code.
-
-<pre>
-.post-title {
-  margin: 0 0 5px;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 1.2;
-  and here's a line of some really, really, really, really long text, just to see how the PRE tag handles it and to find out how it overflows;
-}
-</pre>
-
-### Quote Tag
-
-<q>Developers, developers, developers&#8230;</q> &#8211;Steve Ballmer
-
-### Strong Tag
-
-This tag shows **bold text**.
-
-### Subscript Tag
-
-Getting our science styling on with H<sub>2</sub>O, which should push the "2" down.
-
-### Superscript Tag
-
-Still sticking with science and Isaac Newton's E = MC<sup>2</sup>, which should lift the 2 up.
-
-### Variable Tag
-
-This allows you to denote <var>variables</var>.
