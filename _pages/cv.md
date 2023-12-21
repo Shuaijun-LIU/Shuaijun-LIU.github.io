@@ -41,8 +41,11 @@ ________________________________________________________________________________
 
 <hr style="border: none; border-top: 2px solid black;">
 
-ACADEMIC RESEARCH <span style="font-size:14px;">Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with \*)</span>
+ACADEMIC RESEARCH
 ======
+____________________________________________________________________________________________________________________________________________________________________________________
+<span style="font-size:14px;"><strong>Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with \*)</strong></span>
+
 * Participate in Peer Review:
   * IEEE Transactions on Green Communications and Networking (TGCN) 2023.
   * Transactions on Emerging Telecommunications Technologies (ETT) 2023.
