@@ -13,6 +13,13 @@ redirect_from:
 
 EDUCATION
 ======
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;"><strong>Boston University</strong></div>
+    <div style="text-align: right;">01/2024 - 07/2025</div>
+</div>
+
+
+
 __Boston University__       01/2024 - 07/2025
 * M.Sc. in Applied Data Analytics _Accepted offer for Fall 2023 (23fall) and deferred until 2024 (24spring)_
 
