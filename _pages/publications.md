@@ -14,6 +14,7 @@ ________________________________________________________________________________
 </div>
 * <u>M.Sc. in Applied Data Analytics</u>
   * _Accepted offer for Fall 2023 (23fall) and deferred until 2024 (24spring)_
+  * Main Courses: _Advanced Machine Learning and Neural Networks, Big Data Analytics, Designing and Implementing a Data Warehouse, Data Science with Python, Optimization (Matlab), Web Mining and Graph Analytics, Analysis of Algorithms_
 
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong><a href="https://www.hkbu.edu.hk">Hong Kong Baptist University</a></strong></div>
