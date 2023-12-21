@@ -29,7 +29,7 @@ ________________________________________________________________________________
     <div style="text-align: right;">07/2021 - 09/2021</div>
 </div>
 <ul style="text-align: justify;">
-  <li><strong>Technician of the Face Recognition Development Project, Digital Platform Department</strong></li>
+  <li><strong>Technician of the Face Recognition Development Project</strong></li>
   <li>The Face Recognition Development Project Team is mainly responsible for developing and managing the face recognition system.</li>
   <li>My specific responsibilities are the annotation of facial feature data and the screening of similar faces, as well as participating in the extraction of facial features, image coding and low-resolution image optimization of the recognition model in the face recognition system to improve the accuracy of face detection.</li>
 </ul>
