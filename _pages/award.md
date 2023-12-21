@@ -1,8 +1,10 @@
 ---
-permalink: /award/
+layout: archive
 title: ""
+permalink: /award/
 author_profile: true
-redirect_from: 
+redirect_from:
+  - /resume
 ---
 
 
