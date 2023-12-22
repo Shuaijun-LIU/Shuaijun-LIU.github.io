@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-INTERNSHIPS
+AWARD AND SKILLS
 ======
 ____________________________________________________________________________________________________________
 
@@ -38,10 +38,13 @@ ________________________________________________________________________________
 </div>
 ____________________________________________________________________________________________________________
 
-_Office:_ Excel, PPT and other office software, Linux (Ubuntu) operating system, configuration and use of virtual machines (VMware).
-_Programming & Development:_ Python, Matlab, R, JAVA, C++, Deep learning and Heuristic algorithm optimization, Data mining, Object-Oriented Programming, Basic concepts and operations of WEB front-end (HTML) and some back-end (SQL).
-_Language:_ IELTS 6.5
-_Others:_ Computer assembling, CPU overclocking and BIOS (Basic Input/Output System) debugging.
+* __Office:__ Excel, PPT and other office software, Linux (Ubuntu) operating system, configuration and use of virtual machines (VMware).
+
+* __Programming & Development:__ Python, Matlab, R, JAVA, C++, Deep learning and Heuristic algorithm optimization, Data mining, Object-Oriented Programming, Basic concepts and operations of WEB front-end (HTML) and some back-end (SQL).
+
+* __Language:__ IELTS 6.5
+
+* __Others:__ Computer assembling, CPU overclocking and BIOS (Basic Input/Output System) debugging.
 
 ____________________________________________________________________________________________________________
 
