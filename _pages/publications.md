@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: ""
-permalink: /education/
+permalink: /publications/
 author_profile: true
 ---
 
