@@ -1,17 +1,17 @@
 # main links links
 main:
   - title: "EDUCATION"
-    url: /publications/
+    url: /education/
 
   - title: "RESEARCH"
-    url: /cv/    
+    url: /research/    
 
   - title: "INTERNSHIPS"
-    url: /markdown/    
-    
+    url: /internships/    
+
   - title: "AWARDS & SKILLS"
     url: /award/
-        
+
   - title: "PROPOSAL"
     url: /year-archive/
     
