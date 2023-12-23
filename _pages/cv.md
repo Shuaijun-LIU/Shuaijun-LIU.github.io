@@ -34,7 +34,7 @@ __Participate in Peer Review:__
   * Int Conf on High Performance Computing & Communications (HPCC) 2023.
 
 
-<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 12px; padding: 30px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 12px;">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: left;">
           <strong class="project-title">Design and Optimization of a Network Model for UAV-Assisted Fog Computing</strong></div>
@@ -57,7 +57,7 @@ __Participate in Peer Review:__
 
 ____________________________________________________________________________________________________________
 
-<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 12px; padding: 30px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 12px;">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: left;">
             <strong class="project-title">UAV Attitude Control and Trajectory Planning System Development</strong>
@@ -89,7 +89,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________
 
 
-<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 12px; padding: 30px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 12px;">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: left;">
             <strong class="project-title">Text-based Stock Price and Investor Sentiment Analysis</strong>
@@ -118,7 +118,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________
 
 
-<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 12px; padding: 30px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 12px;">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: left;">
             <strong class="project-title">Convolutional Neural Network & Computerized Image Recognition Based Surroundings Prediction and Trajectory Planning in UAV-Assisted Fog Computing</strong>
@@ -148,7 +148,7 @@ ________________________________________________________________________________
 
 ____________________________________________________________________________________________________________
 
-<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 12px; padding: 30px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 12px;">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: left;">
             <strong class="project-title">Others</strong>
