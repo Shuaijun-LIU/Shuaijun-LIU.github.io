@@ -19,7 +19,7 @@ redirect_from:
         line-height: 1;
     }
     .project-title {
-        font-size: 22px;
+        font-size: 20px;
     }
 </style>
 
