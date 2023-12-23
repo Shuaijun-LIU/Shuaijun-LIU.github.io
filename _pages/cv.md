@@ -40,7 +40,7 @@ __Participate in Peer Review:__
           <strong class="project-title">Design and Optimization of a Network Model for UAV-Assisted Fog Computing</strong></div>
         <div style="text-align: right;">11/2021 - 12/2022</div>
     </div>
-    <p><strong>Key Words:</strong> 
+    <p><strong class="tag">Key Words:</strong> 
       <span style="display: inline-block; margin-top: 5px;">
         <span class="tag"><i class="fas fa-tag"></i> Cloud and Fog Computing</span>
         <span class="tag"><i class="fas fa-tag"></i> UAV Trajectory Planning Algorithms</span>
