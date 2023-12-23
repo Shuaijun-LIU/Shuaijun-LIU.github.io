@@ -20,7 +20,7 @@ __Participate in Peer Review:__
   * Int Conf on High Performance Computing & Communications (HPCC) 2023.
 
 
-<div style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px; padding: 10px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 30px;">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: left;"><strong>Design and Optimization of a Network Model for UAV-Assisted Fog Computing</strong></div>
         <div style="text-align: right;">11/2021 - 12/2022</div>
