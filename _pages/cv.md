@@ -104,8 +104,8 @@ ________________________________________________________________________________
     <p><strong class="tag">Key Words:</strong>
         <span style="display: inline-block; margin-top: 5px;">
             <span class="tag"><i class="fas fa-tag"></i> Natural Language Processing (NLP)</span>
-            <span class="tag"><i class="fas fa-tag"></i> Data Mining (Scrapy Framework)</span>
-            <span class="tag"><i class="fas fa-tag"></i> LSTM Neural Networks</span>
+            <span class="tag"><i class="fas fa-tag"></i> Data Mining (Scrapy)</span>
+            <span class="tag"><i class="fas fa-tag"></i> LSTM</span>
             <span class="tag"><i class="fas fa-tag"></i> Sentiment Text Analysis</span>
         </span>
     </p>
