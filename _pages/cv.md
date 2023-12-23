@@ -15,7 +15,7 @@ redirect_from:
         padding: 3px 8px;
         border-radius: 5px;
         margin-right: 5px;
-        font-size: 12px;
+        font-size: 16px;
         line-height: 1;
     }
     .project-title {
