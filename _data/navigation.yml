@@ -18,8 +18,8 @@ main:
   - title: "PROPOSAL"
     url: /proposal/
     
-  #- title: "CV"
-  #  url: /cv/
+  - title: "TALK"
+    url: /talks/
     
   #- title: "Guide"
   #  url: /teaching/
