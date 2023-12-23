@@ -27,9 +27,9 @@ __Participate in Peer Review:__
     </div>
     <p><strong>Key Words:</strong> 
       <span style="display: inline-block; margin-top: 5px;">
-        <span style="background-color: lightgray; padding: 5px; border-radius: 5px; margin-right: 5px;"><i class="fas fa-tag"></i>Cloud and Fog Computing</span>
-        <span style="background-color: lightgray; padding: 5px; border-radius: 5px; margin-right: 5px;"><i class="fas fa-tag"></i>UAV Trajectory Planning Algorithms</span>
-        <span style="background-color: lightgray; padding: 5px; border-radius: 5px; margin-right: 5px;"><i class="fas fa-tag"></i>High-Performance Distributed Computing</span>
+        <span style="background-color: lightgray; padding: 5px; border-radius: 5px; margin-right: 5px;"><i class="fas fa-tag"></i> Cloud and Fog Computing</span>
+        <span style="background-color: lightgray; padding: 5px; border-radius: 5px; margin-right: 5px;"><i class="fas fa-tag"></i> UAV Trajectory Planning Algorithms</span>
+        <span style="background-color: lightgray; padding: 5px; border-radius: 5px; margin-right: 5px;"><i class="fas fa-tag"></i> High-Performance Distributed Computing</span>
     </span></p>
     <ul style="text-align: justify;">
       <li><strong>Overview:</strong> This project involves deploying Unmanned Aerial Vehicle (UAV) equipment with powerful communication and computing servers at the edge of the Internet of Things (IoT), providing efficient and secure auxiliary computing services for users' mobile devices. We model and simulate the trajectory planning, resource allocation, and distributed task computing process of UAV obstacle avoidance flight, seeking the optimal solution based on two algorithms: Ant Colony Optimization (ACO) and Particle Swarm Optimization (PSO). Ultimately, we solve the problem through continuous convex approximation. Simulation results demonstrate a more than 40% improvement in fog computing network efficiency (weighted sum of energy consumption and delay) compared to existing baseline algorithms.</li>
