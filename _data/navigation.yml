@@ -1,19 +1,22 @@
 # main links links
 main:
+  - title: "BLOG"
+    url: /year-archive/
+    
   - title: "EDUCATION"
     url: /publications/
 
   - title: "RESEARCH"
     url: /cv/    
 
-  - title: "INTERNSHIPS"
+  - title: "INTERNSHIP"
     url: /markdown/    
 
-  - title: "AWARDS & SKILLS"
+  - title: "AWARD & SKILL"
     url: /award/
 
   - title: "PROPOSAL"
-    url: /year-archive/
+    url: /teaching/
     
   #- title: "CV"
   #  url: /cv/
