@@ -19,6 +19,10 @@ __Participate in Peer Review:__
   * Transactions on Emerging Telecommunications Technologies (ETT) 2023.
   * Int Conf on High Performance Computing & Communications (HPCC) 2023.
 
+
+
+
+<hr style="border: none; border-top: 2px solid black;"> 
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong>Design and Optimization of a Network Model for UAV-Assisted Fog Computing</strong></div>
     <div style="text-align: right;">11/2021 - 12/2022</div>
@@ -30,11 +34,15 @@ __Participate in Peer Review:__
 * __Publication:__ __S. Liu__, J. Yin, Z. Zeng, and J. Wu\*, "[Optimal trajectory planning and task assignment for UAV-assisted fog computing](https://ieeexplore.ieee.org/document/10074734)," _2022_ [_IEEE 24th Int Conf on High Performance Computing & Communications (HPCC)_](http://www.ieee-hpcc.org/2022/index.html), pp.1400–1407, doi:10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00217.
 * __Supports:__ Partly supported by the Guangdong Provincial Science and Technology Innovation Fund, Information technology category 2023 (Grant No.: _pdjh2023b0593_), the Guangdong Provincial Key Laboratory of Interdisciplinary Research and Application for Data Science (Grant No.: _2022B1212010006_).
 
-____________________________________________________________________________________________________________
+
+
+
+<hr style="border: none; border-top: 2px solid black;"> 
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong>UAV Attitude Control and Trajectory Planning System Development</strong></div>
     <div style="text-align: right;">12/2022 - 10/2023</div>
 </div>
+____________________________________________________________________________________________________________
 * __Key Words:__ UAV Attitude Control System, Hardware and Software System Design, Heuristic Algorithm Optimization
 <ul style="text-align: justify;">
   <li><strong>Overview:</strong> In this project, we proposed an anti-lockout ant colony system (ACS-DS) algorithm with two mechanisms for setting decoupling & safety values to solve the problem of local optimization in three-dimensional trajectory planning of the Unmanned Aerial Vehicle (UAV), taking into account the energy efficiency of a single UAV assisted fog computing network. We have integrated a fuzzy PID attitude control system for a quadrotor UAV, which is the first application of a UAV control system in an open paper in the field of Assisted Fog Computing as of October 23, and has been shown to significantly reduce (≥34%) the consumption of an existing model. </li>
@@ -42,17 +50,24 @@ ________________________________________________________________________________
 * __Publication:__ __S. Liu__, J. Du, Y. Zheng, Y. Deng\* and J. Wu\*, "A Holistic Optimization Framework for Energy Efficient UAV-assisted Fog Computing: Attitude Control, Trajectory Planning and Task Assignment," _2023_ [_Transactions on Cloud Computing (TCC)_](https://www.computer.org/csdl/journal/cc). Peer review.
 * __Supports:__ Partly supported by the Guangdong Higher Education Upgrading Plan 2021-2025 (Grant No.: _UIC R0400001-22_), the Zhuhai Basic and Applied Basic Research Foundation Grant (Grant No.: _ZH22017003200018PWC_).
 
-____________________________________________________________________________________________________________
+
+
+
+<hr style="border: none; border-top: 2px solid black;"> 
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong>Text-based Stock Price and Investor Sentiment Analysis</strong></div>
     <div style="text-align: right;">07/2022 - Present</div>
 </div>
+____________________________________________________________________________________________________________
 * __Key Words:__ Natural Language Processing (NLP), Data Mining (Scrapy Framework), LSTM Neural Networks, Sentiment Text Analysis
 <ul style="text-align: justify;">
   <li><strong>Overview:</strong> This project aims to study the role of sentiment analysis in stock prediction. We used the Scrapy framework and BeautifulSoup web parser to crawl 400,000 stock comments text and their corresponding historical trading data from the East-money stock bar, and stored them in a database. We extracted the text feature vectors using jieba word splitting and TF-IDF methods, used a SVM sentiment classifier to classify the crawled text data into sentiment polarities and constructed an investor sentiment index. Finally, we trained price prediction models using LSTM neural network and ARIMA time series, the prediction result is a significant improvement over the baseline evaluation criteria. </li>
 </ul>
 * __Publication:__ __S. Liu__, X. Hu, J. Wu\*, and A. Zhang\*, "An Empirical Analysis on Stock Price and Investor Sentiment Based on Text Analysis." Manuscript.
 
+
+
+<hr style="border: none; border-top: 2px solid black;"> 
 ____________________________________________________________________________________________________________
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong>Convolutional Neural Network & Computerized Image Recognition Based Surroundings Prediction and Trajectory Planning in UAV-Assisted Fog Computing</strong></div>
@@ -64,11 +79,14 @@ ________________________________________________________________________________
 </ul>
 * __Publication:__ __S. Liu__, X. Hu, J. Yin, Y. Deng\*, and J. Wu\*, "CNN & CIR-Based Surroundings Prediction and Trajectory Planning in UAV-Assisted Fog Computing." Manuscript.
 
-____________________________________________________________________________________________________________
+
+
+<hr style="border: none; border-top: 2px solid black;"> 
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong>Others</strong></div>
     <div style="text-align: right;">09/2019 – Present</div>
 </div>
+____________________________________________________________________________________________________________
 <ul style="text-align: justify;">
   <li><strong>A Data-Driven Approach for Optimal COVID-19 Medical Resource Allocation by SVIR Model and Gurobi Solver:</strong> This study proposes an integrated model for vaccine distribution and critical medical resource allocation in response to the COVID-19 pandemic. Using China as a case study, we categorized the population by region and age stage, Modeled SVIR and estimated the shortage of resources based on future demand. By utilizing the Gurobi solver to optimize the allocation to minimize infections, hospitalizations, and deaths. (J. Du, <strong>S. Liu</strong> ,Y. Zhen) </li>
   <li><strong>HTML and Database Based Takeaway Website Construction, Deep Learning-based Credit Card User Evaluation and Default Prediction, ...</strong> </li>
