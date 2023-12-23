@@ -28,7 +28,8 @@ ACADEMIC RESEARCH
 ____________________________________________________________________________________________________________
 <span style="font-size:18px; font-style: italic; text-decoration: underline;"><strong>Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with *)</strong></span>
 
-<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 12px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 18px;">
+  <p><strong>Participate in Peer Review:</strong>
   <ul>
     <li>IEEE Transactions on Green Communications and Networking (TGCN) 2023.</li>
     <li>Transactions on Emerging Telecommunications Technologies (ETT) 2023.</li>
@@ -36,7 +37,7 @@ ________________________________________________________________________________
   </ul>
 </div>
 
-<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 12px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 18px;">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: left;">
           <strong class="project-title">Design and Optimization of a Network Model for UAV-Assisted Fog Computing</strong></div>
@@ -59,7 +60,7 @@ ________________________________________________________________________________
 
 ____________________________________________________________________________________________________________
 
-<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 12px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 18px;">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: left;">
             <strong class="project-title">UAV Attitude Control and Trajectory Planning System Development</strong>
@@ -91,7 +92,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________
 
 
-<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 12px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 18px;">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: left;">
             <strong class="project-title">Text-based Stock Price and Investor Sentiment Analysis</strong>
@@ -120,7 +121,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________
 
 
-<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 12px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 18px;">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: left;">
             <strong class="project-title">Convolutional Neural Network & Computerized Image Recognition Based Surroundings Prediction and Trajectory Planning in UAV-Assisted Fog Computing</strong>
@@ -150,7 +151,7 @@ ________________________________________________________________________________
 
 ____________________________________________________________________________________________________________
 
-<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 12px;">
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 18px;">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: left;">
             <strong class="project-title">Others</strong>
