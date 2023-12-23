@@ -10,7 +10,7 @@ redirect_from:
 
 {% include base_path %}
 
-<div style="text-align: justify; background-color: rgba(211, 211, 211, 0.5); padding: 30px; border-radius: 10px;">
+<div style="text-align: justify; background-color: rgba(211, 211, 211, 0.5); padding: 20px; border-radius: 15px;">
   <p> &#x1F600; &#x1F44B; <strong> Hi, Shuaijun LIU (George) here. Sincerely welcome to my personal page, which I hope will give you a full understanding of my experience and abilities. </strong></p>
   <p> I received my B.S. honors degree in Statistics from <a href="https://www.hkbu.edu.hk">Hong Kong Baptist University</a> with a minor in Computer Science from <a href="https://www.uic.edu.cn/en">Beijing Normal University-Hong Kong Baptist University United International College (UIC)</a> in July 2023, and will be going to <a href="https://www.bu.edu">Boston University</a> for my M.S. in 2024. As of now I am interested in data analysis, optimization algorithms and software design in distributed computing, and am doing some related research to try to be innovative in this area. </p>
   <p> My ongoing or planned research interests include but are not limited to: trajectory planning algorithms in unmanned aerial vehicle (UAV)-assisted fog computing, deep learning applications in distributed computing, and software design for sustainability networks. I plan to be well-prepared for my PhD application in order to have sufficient skills to accomplish these ideas. </p> 
