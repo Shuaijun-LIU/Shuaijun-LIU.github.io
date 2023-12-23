@@ -8,42 +8,178 @@ redirect_from:
 ---
 
 
-AWARD AND SKILLS
+PROPOSAL
 ======
 ____________________________________________________________________________________________________________
 
-<div style="display: flex; justify-content: space-between;">
-    <div style="text-align: left;"><strong>Outstanding Graduation Thesis</strong></div>
-    <div style="text-align: right;">06/2023</div>
-</div>
-<div style="display: flex; justify-content: space-between;">
-    <div style="text-align: left;"><strong>National Second Prize & Guangdong First Prize of the China Undergraduate Mathematical Contest in Modeling</strong></div>
-    <div style="text-align: right;">09/2022</div>
-</div>
-<div style="display: flex; justify-content: space-between;">
-    <div style="text-align: left;"><strong>Meritorious Winner of the 2022 Mathematical Contest in Modeling</strong></div>
-    <div style="text-align: right;">05/2022</div>
-</div>
-<div style="display: flex; justify-content: space-between;">
-    <div style="text-align: left;"><strong>Second Prize (Guangdong) of the China Undergraduate Mathematical Contest in Modeling</strong></div>
-    <div style="text-align: right;">10/2021</div>
-</div>
-<div style="display: flex; justify-content: space-between;">
-    <div style="text-align: left;"><strong>Best Writing & Planning Award (UIC)</strong></div>
-    <div style="text-align: right;">05/2021</div>
-</div>
-<div style="display: flex; justify-content: space-between;">
-    <div style="text-align: left;"><strong>Top Ten Outstanding Volunteers of the Year (UIC)</strong></div>
-    <div style="text-align: right;">12/2020</div>
-</div>
-____________________________________________________________________________________________________________
+A variety of common markup showing how the theme styles them.
 
-* __Office:__ Excel, PPT and other office software, Linux (Ubuntu) operating system, configuration and use of virtual machines (VMware).
+# Header one
 
-* __Programming & Development:__ Python, Matlab, R, JAVA, C++, Deep learning and Heuristic algorithm optimization, Data mining, Object-Oriented Programming, Basic concepts and operations of WEB front-end (HTML) and some back-end (SQL).
+## Header two
 
-* __Language:__ IELTS 6.5
+### Header three
 
-* __Others:__ Computer assembling, CPU overclocking and BIOS (Basic Input/Output System) debugging.
+#### Header four
 
-____________________________________________________________________________________________________________
+##### Header five
+
+###### Header six
+
+## Blockquotes
+
+Single line blockquote:
+
+> Quotes are cool.
+
+## Tables
+
+| Entry            | Item   |                                                              |
+| --------         | ------ | ------------------------------------------------------------ |
+| [John Doe](#)    | 2016   | Description of the item in the list                          |
+| [Jane Doe](#)    | 2019   | Description of the item in the list                          |
+| [Doe Doe](#)     | 2022   | Description of the item in the list                          |
+
+| Header1 | Header2 | Header3 |
+|:--------|:-------:|--------:|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|-----------------------------|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|=============================|
+| Foot1   | Foot2   | Foot3   |
+
+## Definition Lists
+
+Definition List Title
+:   Definition list division.
+
+Startup
+:   A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.
+
+#dowork
+:   Coined by Rob Dyrdek and his personal body guard Christopher "Big Black" Boykins, "Do Work" works as a self motivator, to motivating your friends.
+
+Do It Live
+:   I'll let Bill O'Reilly [explain](https://www.youtube.com/watch?v=O_HyZ5aW76c "We'll Do It Live") this one.
+
+## Unordered Lists (Nested)
+
+  * List item one 
+      * List item one 
+          * List item one
+          * List item two
+          * List item three
+          * List item four
+      * List item two
+      * List item three
+      * List item four
+  * List item two
+  * List item three
+  * List item four
+
+## Ordered List (Nested)
+
+  1. List item one 
+      1. List item one 
+          1. List item one
+          2. List item two
+          3. List item three
+          4. List item four
+      2. List item two
+      3. List item three
+      4. List item four
+  2. List item two
+  3. List item three
+  4. List item four
+
+## Buttons
+
+Make any link standout more when applying the `.btn` class.
+
+## Notices
+
+**Watch out!** You can also add notices by appending `{: .notice}` to a paragraph.
+{: .notice}
+
+## HTML Tags
+
+### Address Tag
+
+<address>
+  1 Infinite Loop<br /> Cupertino, CA 95014<br /> United States
+</address>
+
+### Anchor Tag (aka. Link)
+
+This is an example of a [link](http://github.com "Github").
+
+### Abbreviation Tag
+
+The abbreviation CSS stands for "Cascading Style Sheets".
+
+*[CSS]: Cascading Style Sheets
+
+### Cite Tag
+
+"Code is poetry." ---<cite>Automattic</cite>
+
+### Code Tag
+
+You will learn later on in these tests that `word-wrap: break-word;` will be your best friend.
+
+### Strike Tag
+
+This tag will let you <strike>strikeout text</strike>.
+
+### Emphasize Tag
+
+The emphasize tag should _italicize_ text.
+
+### Insert Tag
+
+This tag should denote <ins>inserted</ins> text.
+
+### Keyboard Tag
+
+This scarcely known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the `<code>` tag.
+
+### Preformatted Tag
+
+This tag styles large blocks of code.
+
+<pre>
+.post-title {
+  margin: 0 0 5px;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 1.2;
+  and here's a line of some really, really, really, really long text, just to see how the PRE tag handles it and to find out how it overflows;
+}
+</pre>
+
+### Quote Tag
+
+<q>Developers, developers, developers&#8230;</q> &#8211;Steve Ballmer
+
+### Strong Tag
+
+This tag shows **bold text**.
+
+### Subscript Tag
+
+Getting our science styling on with H<sub>2</sub>O, which should push the "2" down.
+
+### Superscript Tag
+
+Still sticking with science and Isaac Newton's E = MC<sup>2</sup>, which should lift the 2 up.
+
+### Variable Tag
+
+This allows you to denote <var>variables</var>.
+
+{% include base_path %}
+{% for post in site.pages %}
+{% include archive-single.html %}
+{% endfor %}
