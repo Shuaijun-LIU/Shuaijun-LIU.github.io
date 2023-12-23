@@ -29,13 +29,15 @@ ________________________________________________________________________________
 <span style="font-size:18px; font-style: italic; text-decoration: underline;"><strong>Supervisors and Acknowledgements: Prof. Jingjin Wu, Prof. Yuhui Deng, Prof. Aihua Zhang (Marked with *)</strong></span>
 
 <div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 18px;">
-  <p><strong>Participate in Peer Review:</strong>
+  <p><strong>Participate in Peer Review:</strong></p>
   <ul>
     <li>IEEE Transactions on Green Communications and Networking (TGCN) 2023.</li>
     <li>Transactions on Emerging Telecommunications Technologies (ETT) 2023.</li>
     <li>Int Conf on High Performance Computing & Communications (HPCC) 2023.</li>
   </ul>
 </div>
+
+____________________________________________________________________________________________________________
 
 <div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 18px;">
     <div style="display: flex; justify-content: space-between;">
