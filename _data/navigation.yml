@@ -1,8 +1,5 @@
 # main links links
 main:
-  - title: "BLOG"
-    url: /year-archive/
-    
   - title: "EDUCATION"
     url: /publications/
 
@@ -14,7 +11,10 @@ main:
 
   - title: "AWARD & SKILL"
     url: /award/
-
+    
+  - title: "BLOG"
+    url: /year-archive/
+    
   - title: "PROPOSAL"
     url: /proposal/
     
