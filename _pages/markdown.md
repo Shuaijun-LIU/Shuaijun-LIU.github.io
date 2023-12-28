@@ -12,16 +12,21 @@ INTERNSHIPS
 ======
 ____________________________________________________________________________________________________________
 
-<div style="display: flex; justify-content: space-between;">
-    <div style="text-align: left;"><strong>Cross-Border Sustainable Children's Wear Brand ayaMaa</strong></div>
-    <div style="text-align: right;">06/2021 - Present</div>
-</div>
-<ul style="text-align: justify;">
-  <strong> Co-founder & Research Analyst </strong>
-  <li>Jointly founded the brand <a href="https://www.ayamaa.com">ayaMaa</a> and launched the first 20 SKUs of the "First Light" and "The Meadow" collections for sale on the standalone website in June 2022 to sell to 7 countries, including the U. K., the U. S., France, and Germany.</li>
-  <li>Plugins available to cross-border e-commerce in Amazon and Shopify and improved the website structure and functions with HTML.</li>
-  <li>Investigated and assessed more than 47 brands' overseas markets, current situation and anticipation of industries by using Python and R.</li>
+<div style="background-color: rgba(211, 211, 211, 0.5); border-radius: 15px; padding: 18px;">
+    <div style="display: flex; justify-content: space-between;">
+      <div style="text-align: left;"><strong>Cross-Border Sustainable Children's Wear Brand ayaMaa</strong></div>
+      <div style="text-align: right;">06/2021 - Present</div>
+    </div>
+    <ul style="text-align: justify;">
+      <li><strong>Overview:</strong> This project involves deploying Unmanned Aerial Vehicle (UAV) equipment with powerful communication and computing servers at the edge of the Internet of Things (IoT), providing efficient and secure auxiliary computing services for users' mobile devices. We model and simulate the trajectory planning, resource allocation, and distributed task computing process of UAV obstacle avoidance flight, seeking the optimal solution based on two algorithms: Ant Colony Optimization (ACO) and Particle Swarm Optimization (PSO). Ultimately, we solve the problem through continuous convex approximation. Simulation results demonstrate a more than 40% improvement in fog computing network efficiency (weighted sum of energy consumption and delay) compared to existing baseline algorithms.</li>
+    </ul>
+    <ul style="text-align: justify;">
+      <strong> Co-founder & Research Analyst </strong>
+      <li>Jointly founded the brand <a href="https://www.ayamaa.com">ayaMaa</a> and launched the first 20 SKUs of the "First Light" and "The Meadow" collections for sale on the standalone website in June 2022 to sell to 7 countries, including the U. K., the U. S., France, and Germany.</li>
+      <li>Plugins available to cross-border e-commerce in Amazon and Shopify and improved the website structure and functions with HTML.</li>
+      <li>Investigated and assessed more than 47 brands' overseas markets, current situation and anticipation of industries by using Python and R.</li>
 </ul>
+</div>
 ____________________________________________________________________________________________________________
 
 <div style="display: flex; justify-content: space-between;">
