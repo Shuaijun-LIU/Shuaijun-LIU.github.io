@@ -35,7 +35,8 @@ ________________________________________________________________________________
     <div style="text-align: left;"><strong>Top Ten Outstanding Volunteers of the Year (UIC)</strong></div>
     <div style="text-align: right;">12/2020</div>
 </div>
-____________________________________________________________________________________________________________
+
+<hr style="border: none; border-top: 2px solid black;"> 
 
 * __Office:__ Excel, PPT and other office software, Linux (Ubuntu) operating system, configuration and use of virtual machines (VMware).
 
