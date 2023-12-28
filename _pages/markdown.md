@@ -45,6 +45,6 @@ ________________________________________________________________________________
   </div>
   <ul style="text-align: justify;">
     <li><strong>Beijing Normal University-Hong Kong Baptist University UIC</strong> (Data Administrator of the Four-Point Office) 09/2021 - 12/2021</li>
-    <li><strong>Shenzhen Wanhong Asset Management Co., Ltd.</strong>(Data Analyst) 06/2020 - 08/2020</li>
+    <li><strong>Shenzhen Wanhong Asset Management Co., Ltd.</strong> (Data Analyst) 06/2020 - 08/2020</li>
   </ul>
 </div>
