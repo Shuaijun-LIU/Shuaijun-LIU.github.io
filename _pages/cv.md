@@ -33,7 +33,7 @@ ________________________________________________________________________________
   <ul>
     <li>IEEE Transactions on Green Communications and Networking (TGCN) 2023.</li>
     <li>Transactions on Emerging Telecommunications Technologies (ETT) 2023.</li>
-    <li>Int Conf on High Performance Computing & Communications (HPCC) 2023.</li>
+    <li>Int Conf on Mobile Internet, Cloud Computing and Information Security (MICCIS) 2024.</li>
   </ul>
 </div>
 
