@@ -13,7 +13,6 @@ ________________________________________________________________________________
     <div style="text-align: right;">01/2024 - 07/2025</div>
 </div>
 * <u>M.Sc. in Applied Data Analytics</u>
-  * _Accepted offer for Fall 2023 (23fall) and deferred until 2024 (24spring)_
   * Main Courses: _Advanced Machine Learning and Neural Networks, Big Data Analytics, Designing and Implementing a Data Warehouse, Data Science with Python, Optimization (Matlab), Web Mining and Graph Analytics, Analysis of Algorithms_
 
 <div style="display: flex; justify-content: space-between;">
