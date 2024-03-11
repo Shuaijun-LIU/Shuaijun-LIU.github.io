@@ -20,7 +20,7 @@ ________________________________________________________________________________
     <div style="text-align: right;">09/2022</div>
 </div>
 <div style="display: flex; justify-content: space-between;">
-    <div style="text-align: left;"><strong>Meritorious Winner of the 2022 Mathematical Contest in Modeling</strong></div>
+    <div style="text-align: left;"><strong>Meritorious Winner (First Prize) of the 2022 Mathematical Contest in Modeling</strong></div>
     <div style="text-align: right;">05/2022</div>
 </div>
 <div style="display: flex; justify-content: space-between;">
