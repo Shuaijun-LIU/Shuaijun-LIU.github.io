@@ -24,7 +24,7 @@ ________________________________________________________________________________
     <div style="text-align: right;">05/2022</div>
 </div>
 <div style="display: flex; justify-content: space-between;">
-    <div style="text-align: left;"><strong>Second Prize (Guangdong) of the China Undergraduate Mathematical Contest in Modeling</strong></div>
+    <div style="text-align: left;"><strong>Guangdong Second Prize of the China Undergraduate Mathematical Contest in Modeling</strong></div>
     <div style="text-align: right;">10/2021</div>
 </div>
 <div style="display: flex; justify-content: space-between;">
