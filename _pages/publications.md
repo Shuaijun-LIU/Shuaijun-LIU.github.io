@@ -12,8 +12,8 @@ ________________________________________________________________________________
     <div style="text-align: left;"><strong><a href="https://www.bu.edu">Boston University</a></strong></div>
     <div style="text-align: right;">01/2024 - 07/2025</div>
 </div>
-* <u>M.Sc. in Applied Data Analytics</u>
-  * Main Courses: _Advanced Machine Learning and Neural Networks, Big Data Analytics, Designing and Implementing a Data Warehouse, Data Science with Python, Optimization (Matlab), Web Mining and Graph Analytics, Analysis of Algorithms_
+* <u>M.Sc. in Applied Data Analytics (In the process of transferring to Computer Science)</u>
+  * Main Courses: _Advanced Machine Learning and Neural Networks, Big Data Analytics, Designing and Implementing a Data Warehouse, Data Science with Python, Web Mining and Graph Analytics, Analysis of Algorithms_
 
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: left;"><strong><a href="https://www.hkbu.edu.hk">Hong Kong Baptist University</a></strong></div>
