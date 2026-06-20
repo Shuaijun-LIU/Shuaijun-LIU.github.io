@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Language-conditioned manipulation benchmark workflow</title>
+  <desc id="desc">A diagram showing instruction, observation, policy, and success evaluation for language-conditioned manipulation benchmarks.</desc>
+  <rect width="1200" height="520" fill="#f7fbff"/>
+  <rect x="54" y="44" width="1092" height="432" rx="28" fill="#ffffff" stroke="#d7e4f3" stroke-width="2"/>
+  <text x="92" y="104" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#17324d">Language-Conditioned Manipulation</text>
+  <text x="94" y="140" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#5f6f82">Instruction following, long-horizon execution, and task-level success checks.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="100" y="210" width="210" height="130" rx="18" fill="#e8f1ff" stroke="#7fb0ec"/>
+    <text x="132" y="260" font-size="23" font-weight="700" fill="#1f4f86">Instruction</text>
+    <text x="132" y="294" font-size="16" fill="#315b85">Language goal</text>
+    <text x="132" y="318" font-size="16" fill="#315b85">Task predicate</text>
+    <path d="M320 275H420" stroke="#8ba0b6" stroke-width="5" stroke-linecap="round"/>
+    <path d="M420 275l-18-12v24z" fill="#8ba0b6"/>
+    <rect x="430" y="210" width="210" height="130" rx="18" fill="#edf9ef" stroke="#81c995"/>
+    <text x="462" y="260" font-size="23" font-weight="700" fill="#216339">Observation</text>
+    <text x="462" y="294" font-size="16" fill="#3b7150">RGB, state</text>
+    <text x="462" y="318" font-size="16" fill="#3b7150">Scene feedback</text>
+    <path d="M650 275H750" stroke="#8ba0b6" stroke-width="5" stroke-linecap="round"/>
+    <path d="M750 275l-18-12v24z" fill="#8ba0b6"/>
+    <rect x="760" y="210" width="210" height="130" rx="18" fill="#fff5df" stroke="#efbd64"/>
+    <text x="792" y="260" font-size="23" font-weight="700" fill="#8a5a13">Policy</text>
+    <text x="792" y="294" font-size="16" fill="#8a641f">Actions or skills</text>
+    <text x="792" y="318" font-size="16" fill="#8a641f">Closed-loop rollout</text>
+    <path d="M980 275H1070" stroke="#8ba0b6" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1070 275l-18-12v24z" fill="#8ba0b6"/>
+    <circle cx="1102" cy="275" r="54" fill="#ffe8e8" stroke="#e58a8a"/>
+    <text x="1072" y="270" font-size="19" font-weight="700" fill="#8a2e2e">Success</text>
+    <text x="1078" y="296" font-size="14" fill="#8a2e2e">metric</text>
+  </g>
+  <text x="94" y="414" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#6d7886">Useful for VLA evaluation, imitation learning, sequence success, and failure analysis.</text>
+</svg>

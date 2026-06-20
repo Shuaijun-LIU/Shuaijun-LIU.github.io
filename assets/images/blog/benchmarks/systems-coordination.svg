@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Systems and coordination benchmark structure</title>
+  <desc id="desc">A diagram showing multi-agent coordination, simulator runtime, learner, and logging for systems-oriented robotics benchmarks.</desc>
+  <rect width="1200" height="520" fill="#fbfbfc"/>
+  <rect x="58" y="48" width="1084" height="424" rx="28" fill="#ffffff" stroke="#e1e4ea" stroke-width="2"/>
+  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#26313f">Systems and Coordination Benchmarks</text>
+  <text x="98" y="142" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#65707e">Some benchmarks test the whole runtime: agents, data flow, synchronization, and evaluation logs.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="105" y="220" width="210" height="126" rx="18" fill="#e9f3ff" stroke="#85b8ee"/>
+    <text x="138" y="264" font-size="23" font-weight="700" fill="#235b91">Agents</text>
+    <text x="138" y="298" font-size="16" fill="#486e8e">one or many</text>
+    <rect x="370" y="220" width="210" height="126" rx="18" fill="#f0f8e8" stroke="#9bc777"/>
+    <text x="403" y="264" font-size="23" font-weight="700" fill="#4f7629">Runtime</text>
+    <text x="403" y="298" font-size="16" fill="#657943">sim, buffers</text>
+    <rect x="635" y="220" width="210" height="126" rx="18" fill="#fff1e7" stroke="#edaa74"/>
+    <text x="668" y="264" font-size="23" font-weight="700" fill="#955422">Learner</text>
+    <text x="668" y="298" font-size="16" fill="#88634a">policy update</text>
+    <rect x="900" y="220" width="210" height="126" rx="18" fill="#f3edff" stroke="#b79ee9"/>
+    <text x="933" y="264" font-size="23" font-weight="700" fill="#604594">Report</text>
+    <text x="933" y="298" font-size="16" fill="#705a98">video, metrics</text>
+    <path d="M315 283H370M580 283H635M845 283H900" stroke="#929ca9" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="98" y="414" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#697382">Useful for multi-agent robotics, benchmark orchestration, throughput studies, and reproducible rollout logging.</text>
+</svg>

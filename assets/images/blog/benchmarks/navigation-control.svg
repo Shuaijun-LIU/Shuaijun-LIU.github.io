@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Navigation and control benchmark loop</title>
+  <desc id="desc">A diagram showing state, plan, action, and feedback for navigation and control benchmarks.</desc>
+  <rect width="1200" height="520" fill="#f9fbff"/>
+  <rect x="58" y="48" width="1084" height="424" rx="28" fill="#ffffff" stroke="#dae3f2" stroke-width="2"/>
+  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#243a5e">Navigation and Control Benchmarks</text>
+  <text x="98" y="142" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#65758d">Closed-loop behavior is judged by how the agent reacts after each observation.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <circle cx="245" cy="284" r="82" fill="#e9f2ff" stroke="#85afe8"/>
+    <text x="207" y="275" font-size="24" font-weight="700" fill="#23568e">State</text>
+    <text x="193" y="306" font-size="16" fill="#476987">pose, image</text>
+    <circle cx="470" cy="284" r="82" fill="#f4f9e9" stroke="#a5c56a"/>
+    <text x="432" y="275" font-size="24" font-weight="700" fill="#526f22">Plan</text>
+    <text x="417" y="306" font-size="16" fill="#65783e">path, skill</text>
+    <circle cx="695" cy="284" r="82" fill="#fff3e4" stroke="#edb26b"/>
+    <text x="650" y="275" font-size="24" font-weight="700" fill="#905d1e">Action</text>
+    <text x="645" y="306" font-size="16" fill="#8b6740">move, push</text>
+    <circle cx="920" cy="284" r="82" fill="#f3ecff" stroke="#b59be7"/>
+    <text x="864" y="275" font-size="24" font-weight="700" fill="#5e4392">Feedback</text>
+    <text x="872" y="306" font-size="16" fill="#725d98">success, cost</text>
+    <path d="M327 284H388M552 284H613M777 284H838" stroke="#8c9bb0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M920 370C790 446 375 446 245 370" fill="none" stroke="#8c9bb0" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 12"/>
+  </g>
+  <text x="98" y="414" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#68758a">Useful for replanning, navigation robustness, action-chunk control, and feedback-sensitive evaluation.</text>
+</svg>

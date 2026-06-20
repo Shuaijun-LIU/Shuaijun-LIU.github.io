@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Offline and real-robot data benchmark workflow</title>
+  <desc id="desc">A diagram showing datasets, goals, models, and offline evaluation for real-robot and offline RL benchmarks.</desc>
+  <rect width="1200" height="520" fill="#f8fbfa"/>
+  <rect x="58" y="48" width="1084" height="424" rx="28" fill="#ffffff" stroke="#d7e9e3" stroke-width="2"/>
+  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#173c35">Offline Data and Real-Robot Benchmarks</text>
+  <text x="98" y="142" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#61766f">Datasets turn robot learning into a question of coverage, supervision, and evaluation protocol.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="115" y="210" width="235" height="142" rx="18" fill="#e9f4ff" stroke="#7eb5e8"/>
+    <text x="148" y="254" font-size="23" font-weight="700" fill="#215d8e">Dataset</text>
+    <text x="148" y="290" font-size="16" fill="#416b89">trajectories</text>
+    <text x="148" y="314" font-size="16" fill="#416b89">actions, video, state</text>
+    <rect x="400" y="210" width="235" height="142" rx="18" fill="#f1f9e9" stroke="#95c978"/>
+    <text x="433" y="254" font-size="23" font-weight="700" fill="#477326">Goal</text>
+    <text x="433" y="290" font-size="16" fill="#607744">language or state</text>
+    <text x="433" y="314" font-size="16" fill="#607744">task conditioning</text>
+    <rect x="685" y="210" width="235" height="142" rx="18" fill="#fff0e9" stroke="#eaa17c"/>
+    <text x="718" y="254" font-size="23" font-weight="700" fill="#914a23">Model</text>
+    <text x="718" y="290" font-size="16" fill="#8a654f">BC, VLA, GCRL</text>
+    <text x="718" y="314" font-size="16" fill="#8a654f">prediction or control</text>
+    <circle cx="1025" cy="281" r="70" fill="#f6edff" stroke="#b492e7"/>
+    <text x="985" y="275" font-size="22" font-weight="700" fill="#5d3d92">Offline</text>
+    <text x="988" y="303" font-size="16" fill="#6e5794">metrics</text>
+    <path d="M350 281H400M635 281H685M920 281H955" stroke="#88a19a" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="98" y="414" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#6a7a75">Useful for imitation learning, action prediction, goal-conditioned RL, and data-centric robotics studies.</text>
+</svg>

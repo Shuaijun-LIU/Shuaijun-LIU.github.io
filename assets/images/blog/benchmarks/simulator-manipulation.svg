@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Simulator manipulation benchmark map</title>
+  <desc id="desc">A diagram showing robots, tasks, sensors, and metrics in simulator-based manipulation benchmarks.</desc>
+  <rect width="1200" height="520" fill="#fbfaf7"/>
+  <rect x="58" y="48" width="1084" height="424" rx="28" fill="#ffffff" stroke="#eadfce" stroke-width="2"/>
+  <text x="96" y="106" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#3b2f22">Simulator Manipulation Benchmarks</text>
+  <text x="98" y="142" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#756859">Controlled physics, repeatable task definitions, and structured observations.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="115" y="210" width="205" height="142" rx="18" fill="#eaf5ff" stroke="#8cc3f2"/>
+    <text x="148" y="254" font-size="23" font-weight="700" fill="#1e5b8f">Robot</text>
+    <text x="148" y="290" font-size="16" fill="#466c8b">arm, gripper</text>
+    <text x="148" y="314" font-size="16" fill="#466c8b">controller</text>
+    <rect x="365" y="210" width="205" height="142" rx="18" fill="#f1f8e9" stroke="#9bc879"/>
+    <text x="398" y="254" font-size="23" font-weight="700" fill="#4d7826">Task</text>
+    <text x="398" y="290" font-size="16" fill="#5d743d">pick, place</text>
+    <text x="398" y="314" font-size="16" fill="#5d743d">open, assemble</text>
+    <rect x="615" y="210" width="205" height="142" rx="18" fill="#fff0e5" stroke="#eba66f"/>
+    <text x="648" y="254" font-size="23" font-weight="700" fill="#97531f">Sensors</text>
+    <text x="648" y="290" font-size="16" fill="#8c633f">RGB, depth</text>
+    <text x="648" y="314" font-size="16" fill="#8c633f">state, contacts</text>
+    <rect x="865" y="210" width="205" height="142" rx="18" fill="#f4ecff" stroke="#b99ceb"/>
+    <text x="898" y="254" font-size="23" font-weight="700" fill="#63419a">Metrics</text>
+    <text x="898" y="290" font-size="16" fill="#72599b">success rate</text>
+    <text x="898" y="314" font-size="16" fill="#72599b">rollout traces</text>
+    <path d="M320 281H365M570 281H615M820 281H865" stroke="#a59682" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="98" y="414" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#766b61">Useful for controlled ablations, task design, policy debugging, and reproducible visual exports.</text>
+</svg>
