@@ -85,6 +85,57 @@
     text-align: center;
 }
 
+.blog-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.75rem 0;
+}
+
+.blog-mini-card {
+    border: 1px solid #e8edf3;
+    border-radius: 0.75rem;
+    padding: 1.05rem;
+    background: #ffffff;
+}
+
+.blog-mini-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+}
+
+.blog-mini-card p {
+    margin-bottom: 0.65rem;
+    color: #56606f;
+}
+
+.blog-mini-blue {
+    border-color: #d8e8ff;
+    background: #f8fbff;
+}
+
+.blog-mini-green {
+    border-color: #d7f0df;
+    background: #f8fffa;
+}
+
+.blog-mini-amber {
+    border-color: #ffe4b8;
+    background: #fffaf2;
+}
+
+.blog-note {
+    margin: 1.75rem 0;
+    padding: 1rem 1.1rem;
+    border: 1px solid #e8edf3;
+    border-left: 4px solid #d98421;
+    border-radius: 0.75rem;
+    background: #fffaf2;
+    color: #3f4855;
+    line-height: 1.65;
+}
+
 .blog-content strong {
     color: #1f2937;
 }
@@ -130,6 +181,10 @@
 }
 
 @media (max-width: 768px) {
+    .blog-comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
     .blog-content .col-md-8,
     .blog-content .col-md-4 {
         padding: 0;
