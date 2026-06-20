@@ -9,49 +9,54 @@ tags:
 excerpt: "PushT is a single 2D pushing benchmark, but that simplicity makes it useful for debugging action chunks, policy outputs, and evaluation pipelines."
 ---
 
-PushT is a small 2D contact-rich control task that became widely used through the Diffusion Policy evaluation suite. The agent must push a T-shaped object into a target T-shaped region. Its value comes from being simple, visual, and sensitive to action-sequence quality.
-
-<figure class="blog-figure">
-  <img src="{{ '/assets/images/blog/benchmarks/papers/pusht-paper-figure.jpg' | relative_url }}" alt="PushT and other simulated manipulation tasks from the Diffusion Policy paper">
-  <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2303.04137">Diffusion Policy</a> source package, where PushT appears as one of the simulated manipulation tasks.</figcaption>
-</figure>
+PushT is a small 2D contact-rich control task that became widely used through the Diffusion Policy evaluation suite. The agent must push a T-shaped object into a target T-shaped region. It is not a broad manipulation benchmark, and it should not be presented as one. Its value is narrower and more useful: it is a fast diagnostic for whether a policy can produce coherent closed-loop action sequences.
 
 ## What the Paper Context Adds
 
 PushT is not a large benchmark suite by itself. In the Diffusion Policy paper, it is part of a broader evaluation over multiple manipulation tasks. That context matters: PushT is best treated as a diagnostic task for closed-loop action generation, not as evidence for general-purpose robot intelligence.
 
-The task is still valuable because contact-rich pushing exposes errors in action normalization, action horizon, temporal smoothing, and rollout logging. A bad policy is easy to see in video.
+This is also why it should be used carefully. A method that performs well on PushT may only have learned a narrow kind of 2D contact control. A method that performs poorly on PushT, however, is giving a much stronger warning: something may be wrong with the action representation, control horizon, normalization, rollout loop, or temporal consistency of the policy.
 
-## What PushT Tests
+## Why I Still Like It
 
-PushT tests whether a policy can produce a sequence of continuous actions that progressively moves an object into a target pose. The core difficulty is contact-rich control under partial progress: a small action error can rotate or displace the object in ways that later actions must correct.
+Small benchmarks are easy to dismiss, but they can be useful precisely because they are small. In a full robotics stack, failure is ambiguous. A VLA model can fail because of language grounding, visual preprocessing, camera mismatch, embodiment mismatch, action scaling, simulator settings, object geometry, or the success detector. PushT removes most of that noise.
 
-It is often useful for debugging:
+My own view is that PushT is best used like a microscope. It is not the final claim. It is the thing you put under the model early to see whether the basic temporal behavior makes sense. If a sequence policy jitters, over-commits, stalls, or produces actions with the wrong scale, PushT usually makes that visible quickly.
+
+The task is also a good reminder that contact-rich control is not solved by making the benchmark visually impressive. Even in a simple 2D environment, the policy must manage partial progress. A bad push can rotate the object into an inconvenient pose, and later actions must recover. That makes the task more informative than a one-step reaching target, even though it is much smaller than household manipulation.
+
+## What PushT Actually Tests
+
+PushT mostly tests whether a policy can turn observations into a temporally coherent sequence of continuous actions under contact. It is especially useful for checking:
 
 - action normalization;
 - action chunk length;
 - diffusion or sequence policy outputs;
-- rollout logging;
-- simple success metrics;
-- video export and qualitative inspection.
+- closed-loop correction after imperfect pushes;
+- whether rollout videos and metrics agree with each other;
+- whether a policy is smooth, decisive, and recoverable rather than merely producing plausible single actions.
 
-## How to Use It
+This is a narrower claim than "robot manipulation." It is closer to "does this policy interface produce usable control behavior at all?"
 
-The practical workflow is:
+## How I Would Use It
 
-```text
-load policy -> run N PushT episodes -> save JSON/CSV metrics -> inspect rollout GIFs
-```
+I would use PushT near the beginning of a policy pipeline, especially for methods that predict action chunks, diffusion trajectories, or other short-horizon action sequences. It is a good place to check whether the model's output distribution has the right scale and whether the closed-loop behavior remains stable after several steps.
 
-When debugging, vary one setting at a time: action horizon, normalization, seed, or policy checkpoint. If multiple knobs change together, PushT loses its main advantage as a diagnostic tool.
+I would not spend too much time optimizing a leaderboard-style number on it. Once the policy is stable, the next question should be whether the same design survives more realistic observation, task, and embodiment variation. PushT is a gate, not a destination.
 
-## When To Use It
+When debugging, change only one variable at a time. Action horizon, normalization, seed, checkpoint, and observation preprocessing can all change the rollout. If several knobs move together, PushT stops being a clean diagnostic and becomes just another confusing experiment.
 
-Use PushT early when building a new policy pipeline, especially if the method outputs action chunks or uses a sequence model. It is a good first target before moving into multi-task manipulation, language-conditioned benchmarks, or real robot data.
+## What It Cannot Tell You
 
-## Limits
+PushT does not tell you whether a robot understands language. It does not test object-category generalization, household interaction, real-robot robustness, multi-stage task planning, or safe deployment. It also does not reveal much about semantic perception because the visual structure is intentionally simple.
 
-PushT does not prove household manipulation, language understanding, object generalization, or real robot robustness. It is a control and pipeline sanity benchmark. Treat it as an early diagnostic, not a final robotics claim.
+This is not a weakness if the claim is scoped correctly. The problem starts when a tiny diagnostic task is used as if it validates a broad robotics story. A good PushT result should usually be followed by harder manipulation suites, language-conditioned tasks, real robot data, or at least a more diverse simulated benchmark.
+
+## How to Read Results
+
+For PushT, I care about the rollout videos as much as the final score. A policy that reaches the target through smooth correction is different from one that succeeds by unstable lucky contacts. The aggregate number should be paired with qualitative inspection, failure cases, and sensitivity to action horizon.
+
+The most useful question is not "is the benchmark hard enough?" The useful question is "what failure does this benchmark isolate?" For PushT, the answer is temporal action quality under simple contact dynamics. That is a small question, but it is a question worth answering before moving to larger robotics experiments.
 
 ## Paper Source
 

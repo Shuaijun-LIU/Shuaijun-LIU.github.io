@@ -12,8 +12,8 @@ excerpt: "RoboFactory is useful when a robotics project needs multi-robot coordi
 RoboFactory is a benchmark and automated data collection framework for embodied multi-agent manipulation. The paper is useful because it does not treat multi-robot learning as simply "single-robot learning times N." It introduces compositional constraints to make collaboration safer and more structured.
 
 <figure class="blog-figure">
-  <img src="{{ '/assets/images/blog/benchmarks/papers/robofactory-paper-figure.jpg' | relative_url }}" alt="RoboFactory benchmark demonstrations from the paper">
-  <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2503.16408">RoboFactory</a> source package, showing example embodied multi-agent manipulation tasks.</figcaption>
+  <img src="{{ '/assets/images/blog/benchmarks/papers/robofactory-paper-figure.jpg' | relative_url }}" alt="RoboFactory pipeline overview from the paper">
+  <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2503.16408">RoboFactory</a> source package, showing how RoboBrain generates subgoals and constraints while RoboChecker validates multi-agent trajectories.</figcaption>
 </figure>
 
 ## What the Paper Contributes
