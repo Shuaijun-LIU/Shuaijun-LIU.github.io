@@ -1,0 +1,19 @@
+# main links links
+main:
+  - title: "EDUCATION"
+    url: /publications/
+
+  - title: "RESEARCH"
+    url: /cv/    
+
+  - title: "EXPERIENCE"
+    url: /markdown/    
+
+  - title: "AWARDS & SKILLS"
+    url: /award/
+    
+  #- title: "CV"
+  #  url: /cv/
+    
+  #- title: "Guide"
+  #  url: /teaching/
