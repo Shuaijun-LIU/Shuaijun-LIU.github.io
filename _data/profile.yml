@@ -2,11 +2,6 @@ primary_name: "Shuaijun Liu"
 secondary_name: "George"
 navbar_name: "Shuaijun Liu"
 
-positions:
-- name: Ph.D. Student
-- name: HKUST(GZ), NEBULIS Lab
-
-
 email: "shuaijun.liu@outlook.com"
 github: Shuaijun-LIU
 orcid: 0000-0002-8443-3713
@@ -19,10 +14,10 @@ short_bio: >-
     advised by Prof. Ningxin Su in <a href="https://nebulis-lab.com" target="_blank">NEBULIS Lab</a>.
   </p>
   <p>
-    My research focuses on embodied intelligence, vision-language-action models, robotic manipulation,
-    world models, reliable decision-making, and efficient inference for autonomous agents in physical environments.
-    I am especially interested in budgeted replanning and robust long-horizon behavior for robot manipulation and
-    autonomous maritime robotics.
+    My research focuses on Embodied Intelligence, Vision-Language-Action Models, Robotic Manipulation,
+    World Models, Reliable Decision-Making, and Efficient Inference for autonomous agents in physical environments.
+    I am especially interested in Budgeted Replanning and Robust Long-Horizon Behavior for Robot Manipulation and
+    Autonomous Maritime Robotics.
   </p>
 
 portrait_url: /assets/images/photos/portrait.jpg
@@ -61,7 +56,7 @@ experience:
 #   date: Jul. 2021 - Sep. 2021
 
 awards:
-- name: China Scholarship Council Full Scholarship
+- name: China Scholarship Council (CSC) Full Scholarship for Ph.D. Study
   date: 2025
 - name: Outstanding Graduation Thesis
   date: 2023

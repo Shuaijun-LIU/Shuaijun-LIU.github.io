@@ -22,15 +22,7 @@
                 </div>
                 <div class="row">
                     <div class="col text-center h4">
-                        {{ site.data.profile.primary_name }}
-                    </div>
-                </div>
-
-                <div class="row small">
-                    <div class="col text-center">
-                        {% for position in site.data.profile.positions %}
-                        {{ position.name }}<br/>
-                        {% endfor %}
+                        {{ site.data.profile.primary_name }}{% if site.data.profile.secondary_name %} ({{ site.data.profile.secondary_name }}){% endif %}
                     </div>
                 </div>
 
