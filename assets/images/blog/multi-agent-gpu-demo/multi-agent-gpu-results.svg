@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+<title id="title">Multi-agent GPU demo results</title>
+<desc id="desc">Runtime and latency decomposition for six multi-agent GPU execution modes.</desc>
+<rect width="1200" height="620" fill="#ffffff"/>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#111827}.subtitle{font-size:14px;fill:#667085}.h{font-size:18px;font-weight:700;fill:#1d2939}.label{font-size:13px;fill:#344054}.small{font-size:12px;fill:#667085}.tiny{font-size:11px;fill:#667085}.value{font-size:13px;font-weight:700;fill:#1d2939}</style>
+<text x="72" y="48" class="title">Multi-Agent GPU Demo: Execution Results</text>
+<text x="72" y="73" class="subtitle">The same prompt is used for the four blue modes; gray modes demonstrate cooperative and hierarchical workflows.</text>
+<text x="72" y="105" class="h">End-to-end runtime</text>
+<text x="72" y="162" class="label">Parallel Multi-GPU</text>
+<rect x="255" y="141" width="44.7" height="32" rx="6" fill="#2f80ed"/>
+<text x="311.7" y="162" class="value">27.6s</text>
+<text x="72" y="216" class="label">Auto-expanded Parallel</text>
+<rect x="255" y="195" width="136.2" height="32" rx="6" fill="#2f80ed"/>
+<text x="403.2" y="216" class="value">84.2s (3 GPUs)</text>
+<text x="72" y="270" class="label">Sequential Single-GPU</text>
+<rect x="255" y="249" width="179.4" height="32" rx="6" fill="#2f80ed"/>
+<text x="446.4" y="270" class="value">110.9s</text>
+<text x="72" y="324" class="label">Shared Model Single-GPU</text>
+<rect x="255" y="303" width="420.0" height="32" rx="6" fill="#2f80ed"/>
+<text x="687.0" y="324" class="value">259.6s</text>
+<text x="72" y="378" class="label">Hierarchical Leader-Worker</text>
+<rect x="255" y="357" width="83.2" height="32" rx="6" fill="#98a2b3"/>
+<text x="350.2" y="378" class="value">51.5s</text>
+<text x="72" y="432" class="label">Cooperative Chain</text>
+<rect x="255" y="411" width="191.3" height="32" rx="6" fill="#98a2b3"/>
+<text x="458.3" y="432" class="value">118.3s</text>
+<rect x="255" y="490" width="18" height="12" rx="3" fill="#2f80ed"/><text x="282" y="501" class="tiny">same task prompt</text>
+<rect x="385" y="490" width="18" height="12" rx="3" fill="#98a2b3"/><text x="412" y="501" class="tiny">workflow demonstration</text>
+<text x="670" y="105" class="h">Average agent latency decomposition</text>
+<text x="670" y="128" class="subtitle">Load time and inference/waiting time are separated where the demo records them.</text>
+<line x1="670" x2="1130" y1="475.0" y2="475.0" stroke="#e6eaf0" stroke-dasharray="4 5"/>
+<text x="658" y="479.0" text-anchor="end" class="tiny">0</text>
+<line x1="670" x2="1130" y1="416.4" y2="416.4" stroke="#e6eaf0" stroke-dasharray="4 5"/>
+<text x="658" y="420.4" text-anchor="end" class="tiny">60</text>
+<line x1="670" x2="1130" y1="357.7" y2="357.7" stroke="#e6eaf0" stroke-dasharray="4 5"/>
+<text x="658" y="361.7" text-anchor="end" class="tiny">120</text>
+<line x1="670" x2="1130" y1="299.1" y2="299.1" stroke="#e6eaf0" stroke-dasharray="4 5"/>
+<text x="658" y="303.1" text-anchor="end" class="tiny">180</text>
+<line x1="670" x2="1130" y1="240.5" y2="240.5" stroke="#e6eaf0" stroke-dasharray="4 5"/>
+<text x="658" y="244.5" text-anchor="end" class="tiny">240</text>
+<line x1="670" x2="1130" y1="181.8" y2="181.8" stroke="#e6eaf0" stroke-dasharray="4 5"/>
+<text x="658" y="185.8" text-anchor="end" class="tiny">300</text>
+<line x1="670" x2="1130" y1="475" y2="475" stroke="#cfd6df"/>
+<rect x="705" y="459.2" width="62" height="10.6" rx="5" fill="#f4a261"/>
+<rect x="705" y="459.2" width="62" height="5.2" rx="5" fill="#76c7a0"/>
+<text x="736.0" y="449.2" text-anchor="middle" class="value">16.3s</text>
+<text x="736.0" y="467" text-anchor="middle" class="tiny" fill="#1d2939">loads: 8</text>
+<text x="736.0" y="499" text-anchor="middle" class="tiny">Parallel</text>
+<text x="736.0" y="513" text-anchor="middle" class="tiny">Multi</text>
+<text x="736.0" y="527" text-anchor="middle" class="tiny">GPU</text>
+<rect x="813" y="440.1" width="62" height="29.5" rx="5" fill="#f4a261"/>
+<rect x="813" y="440.1" width="62" height="5.3" rx="5" fill="#76c7a0"/>
+<text x="844.0" y="430.1" text-anchor="middle" class="value">35.8s</text>
+<text x="844.0" y="467" text-anchor="middle" class="tiny" fill="#1d2939">loads: 8</text>
+<text x="844.0" y="499" text-anchor="middle" class="tiny">Auto-expanded</text>
+<text x="844.0" y="513" text-anchor="middle" class="tiny">Parallel</text>
+<rect x="921" y="461.7" width="62" height="10.2" rx="5" fill="#f4a261"/>
+<rect x="921" y="461.7" width="62" height="3.1" rx="5" fill="#76c7a0"/>
+<text x="952.0" y="451.7" text-anchor="middle" class="value">13.7s</text>
+<text x="952.0" y="467" text-anchor="middle" class="tiny" fill="#1d2939">loads: 8</text>
+<text x="952.0" y="499" text-anchor="middle" class="tiny">Sequential</text>
+<text x="952.0" y="513" text-anchor="middle" class="tiny">Single</text>
+<text x="952.0" y="527" text-anchor="middle" class="tiny">GPU</text>
+<rect x="1029" y="225.0" width="62" height="250.0" rx="5" fill="#f4a261"/>
+<rect x="1029" y="225.0" width="62" height="0.0" rx="5" fill="#76c7a0"/>
+<text x="1060.0" y="215.0" text-anchor="middle" class="value">255.8s</text>
+<text x="1060.0" y="467" text-anchor="middle" class="tiny" fill="#1d2939">loads: 1</text>
+<text x="1060.0" y="499" text-anchor="middle" class="tiny">Shared</text>
+<text x="1060.0" y="513" text-anchor="middle" class="tiny">Model</text>
+<text x="1060.0" y="527" text-anchor="middle" class="tiny">Single</text>
+<text x="1060.0" y="541" text-anchor="middle" class="tiny">GPU</text>
+<rect x="670" y="555" width="16" height="10" rx="2" fill="#76c7a0"/><text x="694" y="564" class="tiny">avg model load</text>
+<rect x="820" y="555" width="16" height="10" rx="2" fill="#f4a261"/><text x="844" y="564" class="tiny">avg inference / waiting</text>
+</svg>
