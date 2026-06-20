@@ -3,7 +3,7 @@ secondary_name: "George"
 navbar_name: "Shuaijun Liu"
 
 positions:
-- name: Ph.D. Student, IoT and AI
+- name: Ph.D. Student
 - name: HKUST(GZ), NEBULIS Lab
 
 
@@ -14,7 +14,7 @@ orcid: 0000-0002-8443-3713
 short_bio_text_justify: true
 short_bio: >-
   <p>
-    I am a Ph.D. student in Internet of Things and Artificial Intelligence at
+    I am a Ph.D. student at
     <a href="https://www.hkust-gz.edu.cn/" target="_blank">The Hong Kong University of Science and Technology (Guangzhou)</a>,
     advised by Prof. Ningxin Su in <a href="https://nebulis-lab.com" target="_blank">NEBULIS Lab</a>.
   </p>
@@ -30,34 +30,31 @@ portrait_url: /assets/images/photos/portrait.jpg
 education:
 - name: The Hong Kong University of Science and Technology (Guangzhou)
   position: >- 
-    Ph.D. Student in Internet of Things and Artificial Intelligence <br/>
-    Advisor: Prof. Ningxin Su
+    Ph.D. Student <br/>
+    Advisor: Prof. Ningxin Su · NEBULIS Lab
   date: Sep. 2025 - Jun. 2028
 - name: Boston University
   position: M.S. in Computer Science
   date: Sep. 2023 - May 2025
 - name: Hong Kong Baptist University
-  position: B.S. in Statistics and Data Science
+  position: >-
+    B.S. in Statistics and Data Science <br/>
+    Minor in Computer Science
   date: Sep. 2019 - Jun. 2023
-- name: Beijing Normal University-Hong Kong Baptist University United International College
-  position: Minor in Computer Science and Technology
-  date: Sep. 2020 - Jun. 2023
 
 experience:
 - name: Amazon
   position: Applied Scientist Intern, New York
   date: Jul. 2024 - Oct. 2024
-- name: ayaMaa
-  position: Co-founder and Research Analyst
-  date: Jun. 2021 - Present
-- name: Chengdu Xinchao Media Ltd.
-  position: Technician, Face Recognition Development Project
-  date: Jul. 2021 - Sep. 2021
+# - name: ayaMaa
+#   position: Co-founder and Research Analyst
+#   date: Jun. 2021 - Present
+# - name: Chengdu Xinchao Media Ltd.
+#   position: Technician, Face Recognition Development Project
+#   date: Jul. 2021 - Sep. 2021
 
 awards:
-- name: China Scholarship Council Full Scholarship, Individual Ph.D. Program
-  date: 2025
-- name: Fully funded Ph.D. offers from Boston University and the University of Queensland
+- name: China Scholarship Council Full Scholarship
   date: 2025
 - name: Outstanding Graduation Thesis
   date: 2023
