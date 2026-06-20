@@ -3,6 +3,9 @@ secondary_name: "George"
 navbar_name: "Shuaijun Liu"
 
 email: "shuaijun.liu@outlook.com"
+emails:
+- "shuaijun.liu@outlook.com"
+- "sliu529@connect.hkust-gz.edu.cn"
 github: Shuaijun-LIU
 orcid: 0000-0002-8443-3713
 
@@ -37,7 +40,7 @@ education:
   date: Sep. 2023 - May 2025
 - name: Hong Kong Baptist University
   logo: /assets/images/badges/hkbu-logo-mini.png
-  logo_width: 27px
+  logo_width: 24px
   color: "#004B8D"
   position: >-
     B.S. in Statistics and Data Science <br/>
@@ -62,5 +65,5 @@ awards:
   date: 2023
 - name: National Second Prize and Guangdong First Prize, China Undergraduate Mathematical Contest in Modeling
   date: 2022
-- name: Meritorious Winner, Mathematical Contest in Modeling
+- name: Meritorious Winner (First Prize), Mathematical Contest in Modeling (U.S. undergraduate competition)
   date: 2022

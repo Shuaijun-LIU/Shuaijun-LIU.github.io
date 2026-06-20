@@ -2,7 +2,7 @@
 show: true
 width: 3
 date: 2026-06-21 00:03:00 +0800
-group: 我的宠物
+group: My Pet
 ---
 
 <div>

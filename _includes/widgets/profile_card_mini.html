@@ -28,9 +28,17 @@
 
                 <div class="row small">
                     <div class="col text-center">
-                        <a class="email-text" href="mailto:{{ site.data.profile.email }}">
-                            {{ site.data.profile.email | replace: "@", "(at)" }}
-                        </a>
+                        {% if site.data.profile.emails %}
+                            {% for email in site.data.profile.emails %}
+                            <a class="email-text d-block" href="mailto:{{ email }}">
+                                {{ email | replace: "@", "(at)" }}
+                            </a>
+                            {% endfor %}
+                        {% else %}
+                            <a class="email-text" href="mailto:{{ site.data.profile.email }}">
+                                {{ site.data.profile.email | replace: "@", "(at)" }}
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
 
