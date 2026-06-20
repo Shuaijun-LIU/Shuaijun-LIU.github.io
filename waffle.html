@@ -24,25 +24,30 @@ gallery_images:
 ---
 
 <div class="waffle-page">
+    <div class="waffle-lang-switch" aria-label="Waffle language switch">
+        <button type="button" class="active" data-waffle-lang="en">EN</button>
+        <button type="button" data-waffle-lang="zh">中文</button>
+    </div>
+
     <div class="row">
         <div class="col-lg-4 mb-3">
             <div class="card border-0 shadow-sm bg-white h-100 waffle-profile-card">
                 <div class="card-body p-4 text-center">
                     <img src="{{ '/assets/images/waffle/waffle-01.jpg' | relative_url }}" class="waffle-portrait mb-3" alt="Waffle 🧇">
                     <h1 class="h3 mb-1">Waffle 🧇</h1>
-                    <div class="text-muted">Chief Feline Researcher</div>
-                    <div class="small mt-1">
+                    <div class="text-muted" data-i18n="role">Chief Feline Researcher</div>
+                    <div class="small mt-1" data-i18n="affiliation">
                         Department of Household Sciences<br>
                         Institute of Advanced Feline Intelligence
                     </div>
                     <hr>
                     <div class="text-left small">
-                        <div><strong>Species:</strong> Domestic cat</div>
-                        <div><strong>Born:</strong> Sep. 2025</div>
-                        <div><strong>Breed/color:</strong> Long-haired golden shaded</div>
-                        <div><strong>Research style:</strong> Curious, quiet, strategically demanding</div>
-                        <div><strong>Favorite resources:</strong> Treats, soft beds, boxes, sunlight</div>
-                        <div><strong>Nicknames:</strong> Professor Waffle, PI Waffle</div>
+                        <div data-i18n="species"><strong>Species:</strong> Domestic cat</div>
+                        <div data-i18n="born"><strong>Born:</strong> Sep. 2025</div>
+                        <div data-i18n="breed"><strong>Breed/color:</strong> Golden shaded British Longhair</div>
+                        <div data-i18n="research_style"><strong>Research style:</strong> Curious, quiet, strategically demanding</div>
+                        <div data-i18n="resources"><strong>Favorite resources:</strong> Treats, soft beds, boxes, sunlight</div>
+                        <div data-i18n="nicknames"><strong>Nicknames:</strong> Professor Waffle, PI Waffle</div>
                     </div>
                 </div>
             </div>
@@ -53,50 +58,50 @@ gallery_images:
                 <div class="card-body p-4">
                     <div class="d-flex align-items-start flex-wrap">
                         <div>
-                            <h2 class="h3 mb-1">Catademic Homepage</h2>
-                            <div class="text-profile-position">Principal Investigator in Feline Intelligence</div>
+                            <h2 class="h3 mb-1" data-i18n="page_title">Catademic Homepage</h2>
+                            <div class="text-profile-position" data-i18n="pi_title">Principal Investigator in Feline Intelligence</div>
                         </div>
-                        <span class="badge badge-light border ml-lg-auto mt-2">Research supported by unlimited treats and human labor.</span>
+                        <span class="badge badge-light border ml-lg-auto mt-2" data-i18n="support_badge">Research supported by unlimited treats and human labor.</span>
                     </div>
-                    <p class="mt-3 mb-3">
+                    <p class="mt-3 mb-3" data-i18n="intro">
                         Waffle is an independent feline researcher specializing in human supervision,
                         environmental exploration, and advanced nap scheduling. Current work studies how
                         repeated vocal requests, eye contact, and strategic cuteness can improve household
-                        service quality. Born in September 2025, he is a long-haired golden shaded cat
+                        service quality. Born in September 2025, he is a golden shaded British Longhair
                         with a serious academic expression and a deeply unserious research agenda.
                     </p>
                     <div class="waffle-lab-strip" aria-label="Waffle research pipeline animation">
-                        <span>Observe</span>
-                        <span>Meow</span>
-                        <span>Nap</span>
-                        <span>Treat</span>
+                        <span data-i18n="pipeline_observe">Observe</span>
+                        <span data-i18n="pipeline_meow">Meow</span>
+                        <span data-i18n="pipeline_nap">Nap</span>
+                        <span data-i18n="pipeline_treat">Treat</span>
                     </div>
-                    <h5>Research Interests</h5>
+                    <h5 data-i18n="research_interests">Research Interests</h5>
                     <div class="waffle-tags">
-                        <span>Human Behavior Observation</span>
-                        <span>Sleep Optimization</span>
-                        <span>Cardboard Box Exploration</span>
-                        <span>Treat Acquisition</span>
-                        <span>High-Speed Indoor Navigation</span>
-                        <span>Window-Sill Bird Watching</span>
+                        <span data-i18n="interest_human">Human Behavior Observation</span>
+                        <span data-i18n="interest_sleep">Sleep Optimization</span>
+                        <span data-i18n="interest_box">Cardboard Box Exploration</span>
+                        <span data-i18n="interest_treat">Treat Acquisition</span>
+                        <span data-i18n="interest_navigation">High-Speed Indoor Navigation</span>
+                        <span data-i18n="interest_bird">Window-Sill Bird Watching</span>
                     </div>
                     <div class="row mt-4">
                         <div class="col-md-6">
-                            <h5>News</h5>
+                            <h5 data-i18n="news_title">News</h5>
                             <ul class="small pl-3 mb-0">
-                                <li><strong>Jun. 2026</strong>: Launched the Waffle Catademic Homepage.</li>
-                                <li><strong>May 2026</strong>: Achieved a new personal record in advanced nap scheduling.</li>
-                                <li><strong>Apr. 2026</strong>: Expanded research into household supervision.</li>
-                                <li><strong>Mar. 2026</strong>: Received the Best Cat Award.</li>
+                                <li data-i18n="news_1"><strong>Jun. 2026</strong>: Launched the Waffle Catademic Homepage.</li>
+                                <li data-i18n="news_2"><strong>May 2026</strong>: Achieved a new personal record in advanced nap scheduling.</li>
+                                <li data-i18n="news_3"><strong>Apr. 2026</strong>: Expanded research into household supervision.</li>
+                                <li data-i18n="news_4"><strong>Mar. 2026</strong>: Received the Best Cat Award.</li>
                             </ul>
                         </div>
                         <div class="col-md-6 mt-3 mt-md-0">
-                            <h5>Awards</h5>
+                            <h5 data-i18n="awards_title">Awards</h5>
                             <ul class="small pl-3 mb-0">
-                                <li>Best Household Cat</li>
-                                <li>Outstanding Contribution to Sofa Hair Distribution</li>
-                                <li>Excellence in Early-Morning Human Wake-Up</li>
-                                <li>Lifetime Achievement in Looking Cute</li>
+                                <li data-i18n="award_1">Best Household Cat</li>
+                                <li data-i18n="award_2">Outstanding Contribution to Sofa Hair Distribution</li>
+                                <li data-i18n="award_3">Excellence in Early-Morning Human Wake-Up</li>
+                                <li data-i18n="award_4">Lifetime Achievement in Looking Cute</li>
                             </ul>
                         </div>
                     </div>
@@ -107,27 +112,27 @@ gallery_images:
 
     <div class="card border-0 shadow-sm bg-white my-3">
         <div class="card-body p-4">
-            <h3 class="h5">Selected Publications</h3>
+            <h3 class="h5" data-i18n="pub_title">Selected Publications</h3>
             <div class="row waffle-publication-list">
                 <div class="col-lg-4 mb-3 mb-lg-0">
                     <div class="waffle-paper h-100">
-                        <div class="small text-muted mb-2">Journal of Applied Meow Science, 2026</div>
-                        <h4 class="h6">A Systematic Study of Whether Humans Will Provide Snacks After Repeated Vocal Requests</h4>
-                        <p class="small mb-0"><strong>Waffle</strong>, Human Assistant</p>
+                        <div class="small text-muted mb-2" data-i18n="pub_venue_1">Journal of Applied Meow Science, 2026</div>
+                        <h4 class="h6" data-i18n="pub_paper_1">A Systematic Study of Whether Humans Will Provide Snacks After Repeated Vocal Requests</h4>
+                        <p class="small mb-0" data-i18n="pub_authors_1"><strong>Waffle</strong>, Human Assistant</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3 mb-lg-0">
                     <div class="waffle-paper h-100">
-                        <div class="small text-muted mb-2">International Conference on Feline Computing, 2026</div>
-                        <h4 class="h6">Optimizing Sunlight Exposure Through Dynamic Window-Sill Selection</h4>
-                        <p class="small mb-0"><strong>Waffle</strong>, Human Assistant</p>
+                        <div class="small text-muted mb-2" data-i18n="pub_venue_2">International Conference on Feline Computing, 2026</div>
+                        <h4 class="h6" data-i18n="pub_paper_2">Optimizing Sunlight Exposure Through Dynamic Window-Sill Selection</h4>
+                        <p class="small mb-0" data-i18n="pub_authors_2"><strong>Waffle</strong>, Human Assistant</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="waffle-paper h-100">
-                        <div class="small text-muted mb-2">Transactions on Domestic Intelligence, 2026</div>
-                        <h4 class="h6">NapFormer: Predicting Optimal Household Resting Locations from Softness and Human Availability</h4>
-                        <p class="small mb-0"><strong>Waffle</strong></p>
+                        <div class="small text-muted mb-2" data-i18n="pub_venue_3">Transactions on Domestic Intelligence, 2026</div>
+                        <h4 class="h6" data-i18n="pub_paper_3">NapFormer: Predicting Optimal Household Resting Locations from Softness and Human Availability</h4>
+                        <p class="small mb-0" data-i18n="pub_authors_3"><strong>Waffle</strong></p>
                     </div>
                 </div>
             </div>
@@ -136,30 +141,30 @@ gallery_images:
 
     <div class="card border-0 shadow-sm bg-white my-3">
         <div class="card-body p-4">
-            <h3 class="h5">Projects</h3>
+            <h3 class="h5" data-i18n="projects_title">Projects</h3>
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                     <div class="waffle-project h-100">
-                        <strong>Project BoxNet</strong>
-                        <p class="small mb-0">Explores the relationship between cardboard-box dimensions and feline satisfaction.</p>
+                        <strong data-i18n="project_1_title">Project BoxNet</strong>
+                        <p class="small mb-0" data-i18n="project_1_desc">Explores the relationship between cardboard-box dimensions and feline satisfaction.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                     <div class="waffle-project h-100">
-                        <strong>NapFormer</strong>
-                        <p class="small mb-0">Predicts the best sleeping location given sunlight, softness, and human proximity.</p>
+                        <strong data-i18n="project_2_title">NapFormer</strong>
+                        <p class="small mb-0" data-i18n="project_2_desc">Predicts the best sleeping location given sunlight, softness, and human proximity.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                     <div class="waffle-project h-100">
-                        <strong>MeowGPT</strong>
-                        <p class="small mb-0">Uses vocal commands to make humans open doors, refill food, and provide playtime.</p>
+                        <strong data-i18n="project_3_title">MeowGPT</strong>
+                        <p class="small mb-0" data-i18n="project_3_desc">Uses vocal commands to make humans open doors, refill food, and provide playtime.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="waffle-project h-100">
-                        <strong>CatVLA</strong>
-                        <p class="small mb-0">Vision-Language-Action for autonomous snack retrieval in domestic environments.</p>
+                        <strong data-i18n="project_4_title">CatVLA</strong>
+                        <p class="small mb-0" data-i18n="project_4_desc">Vision-Language-Action for autonomous snack retrieval in domestic environments.</p>
                     </div>
                 </div>
             </div>
@@ -168,7 +173,7 @@ gallery_images:
 
     <div id="waffle-gallery" class="card border-0 shadow-sm bg-white my-3">
         <div class="card-body p-4">
-            <h3 class="h5">Gallery</h3>
+            <h3 class="h5" data-i18n="gallery_title">Gallery</h3>
             <div class="row waffle-gallery">
                 {% for image in page.gallery_images %}
                     <div class="col-6 col-md-4 col-lg-3 mb-3">
@@ -179,3 +184,90 @@ gallery_images:
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const page = document.querySelector(".waffle-page");
+    if (!page) return;
+
+    const translations = {
+        en: {},
+        zh: {
+            role: "首席猫科研究员",
+            affiliation: "家庭科学系<br>高级猫科智能研究院",
+            species: "<strong>物种：</strong>家猫",
+            born: "<strong>出生：</strong>2025 年 9 月",
+            breed: "<strong>品种/毛色：</strong>长毛金渐层",
+            research_style: "<strong>研究风格：</strong>好奇、安静、擅长策略性提要求",
+            resources: "<strong>偏好资源：</strong>零食、软床、纸箱、阳光",
+            nicknames: "<strong>昵称：</strong>Waffle 教授、Waffle PI",
+            page_title: "猫咪学术主页",
+            pi_title: "猫科智能方向 Principal Investigator",
+            support_badge: "研究由无限零食和人类劳动力支持。",
+            intro: "Waffle 是一位独立猫科研究员，专注于人类监督、环境探索和高级午睡调度。当前研究关注如何通过连续喵喵、眼神交流和策略性可爱来提升家庭服务质量。它出生于 2025 年 9 月，是一只长毛金渐层，拥有严肃的学术表情和非常不严肃的研究议程。",
+            pipeline_observe: "观察",
+            pipeline_meow: "喵喵",
+            pipeline_nap: "午睡",
+            pipeline_treat: "零食",
+            research_interests: "研究兴趣",
+            interest_human: "人类行为观察",
+            interest_sleep: "睡眠优化",
+            interest_box: "纸箱空间探索",
+            interest_treat: "零食获取",
+            interest_navigation: "室内高速导航",
+            interest_bird: "窗边鸟类观察",
+            news_title: "动态",
+            news_1: "<strong>2026 年 6 月</strong>：上线 Waffle 猫咪学术主页。",
+            news_2: "<strong>2026 年 5 月</strong>：在高级午睡调度任务上刷新个人纪录。",
+            news_3: "<strong>2026 年 4 月</strong>：将研究范围扩展到家庭监督。",
+            news_4: "<strong>2026 年 3 月</strong>：获得 Best Cat Award。",
+            awards_title: "奖项",
+            award_1: "最佳家庭猫",
+            award_2: "沙发毛发分布杰出贡献奖",
+            award_3: "清晨唤醒人类卓越奖",
+            award_4: "终身可爱成就奖",
+            pub_title: "代表性论文",
+            pub_venue_1: "Journal of Applied Meow Science, 2026",
+            pub_paper_1: "反复发出进食请求后人类是否会提供零食的系统性研究",
+            pub_authors_1: "<strong>Waffle</strong>, Human Assistant",
+            pub_venue_2: "International Conference on Feline Computing, 2026",
+            pub_paper_2: "通过动态窗台选择优化日照暴露",
+            pub_authors_2: "<strong>Waffle</strong>, Human Assistant",
+            pub_venue_3: "Transactions on Domestic Intelligence, 2026",
+            pub_paper_3: "NapFormer：基于柔软度和人类可用性预测最佳家庭休息位置",
+            pub_authors_3: "<strong>Waffle</strong>",
+            projects_title: "项目",
+            project_1_title: "Project BoxNet",
+            project_1_desc: "研究不同纸箱尺寸与猫咪满意度之间的关系。",
+            project_2_title: "NapFormer",
+            project_2_desc: "根据阳光、柔软度和人类距离预测最佳睡觉位置。",
+            project_3_title: "MeowGPT",
+            project_3_desc: "通过叫声控制人类完成开门、添粮和陪玩任务。",
+            project_4_title: "CatVLA",
+            project_4_desc: "面向家庭环境自主零食检索的 Vision-Language-Action 系统。",
+            gallery_title: "相册"
+        }
+    };
+
+    page.querySelectorAll("[data-i18n]").forEach(function(node) {
+        translations.en[node.dataset.i18n] = node.innerHTML;
+    });
+
+    function setLang(lang) {
+        page.querySelectorAll("[data-i18n]").forEach(function(node) {
+            const key = node.dataset.i18n;
+            node.innerHTML = translations[lang][key] || translations.en[key] || "";
+        });
+        page.querySelectorAll("[data-waffle-lang]").forEach(function(button) {
+            button.classList.toggle("active", button.dataset.waffleLang === lang);
+        });
+        page.dataset.lang = lang;
+    }
+
+    page.querySelectorAll("[data-waffle-lang]").forEach(function(button) {
+        button.addEventListener("click", function() {
+            setLang(button.dataset.waffleLang);
+        });
+    });
+});
+</script>

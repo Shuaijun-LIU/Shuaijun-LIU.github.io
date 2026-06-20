@@ -97,7 +97,36 @@ div.lazy {
     --waffle-blue: #4f78a7;
     --waffle-gold: #c79445;
     --waffle-cream: #fff8ea;
+    position: relative;
     color: var(--waffle-ink);
+}
+
+.waffle-lang-switch {
+    position: sticky;
+    top: 78px;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+    pointer-events: none;
+}
+
+.waffle-lang-switch button {
+    pointer-events: auto;
+    border: 1px solid rgba(79, 120, 167, 0.22);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--waffle-blue);
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    box-shadow: 0 0.25rem 0.9rem rgba(47, 56, 64, 0.08);
+}
+
+.waffle-lang-switch button.active {
+    background: var(--waffle-blue);
+    color: #fff;
 }
 
 .waffle-page .card {
