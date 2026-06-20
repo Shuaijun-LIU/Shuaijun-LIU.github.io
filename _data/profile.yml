@@ -29,14 +29,17 @@ portrait_url: /assets/images/photos/portrait.jpg
 
 education:
 - name: The Hong Kong University of Science and Technology (Guangzhou)
+  logo: /assets/images/badges/hkust-logo-mini.png
   position: >- 
     Ph.D. Student <br/>
     Advisor: Prof. Ningxin Su · NEBULIS Lab
   date: Sep. 2025 - Jun. 2028
 - name: Boston University
+  logo: /assets/images/badges/bu-logo-mini.png
   position: M.S. in Computer Science
   date: Sep. 2023 - May 2025
 - name: Hong Kong Baptist University
+  logo: /assets/images/badges/hkbu-logo-mini.png
   position: >-
     B.S. in Statistics and Data Science <br/>
     Minor in Computer Science
