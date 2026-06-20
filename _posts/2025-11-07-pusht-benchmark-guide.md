@@ -9,12 +9,18 @@ tags:
 excerpt: "PushT is a single 2D pushing benchmark, but that simplicity makes it useful for debugging action chunks, policy outputs, and evaluation pipelines."
 ---
 
-PushT is a small 2D control benchmark where the agent must push a T-shaped object into a target T-shaped region. It is not a broad task suite. Its strength is the opposite: it is simple enough that policy, action scaling, and evaluation bugs become easier to see.
+PushT is a small 2D contact-rich control task that became widely used through the Diffusion Policy evaluation suite. The agent must push a T-shaped object into a target T-shaped region. Its value comes from being simple, visual, and sensitive to action-sequence quality.
 
 <figure class="blog-figure">
-  <img src="{{ '/assets/images/blog/benchmarks/navigation-control.svg' | relative_url }}" alt="Navigation and control benchmark loop">
-  <figcaption>PushT is useful because the closed-loop control problem is easy to visualize: observe, choose action, push, and measure overlap with the target.</figcaption>
+  <img src="{{ '/assets/images/blog/benchmarks/papers/pusht-paper-figure.jpg' | relative_url }}" alt="PushT and other simulated manipulation tasks from the Diffusion Policy paper">
+  <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2303.04137">Diffusion Policy</a> source package, where PushT appears as one of the simulated manipulation tasks.</figcaption>
 </figure>
+
+## What the Paper Context Adds
+
+PushT is not a large benchmark suite by itself. In the Diffusion Policy paper, it is part of a broader evaluation over multiple manipulation tasks. That context matters: PushT is best treated as a diagnostic task for closed-loop action generation, not as evidence for general-purpose robot intelligence.
+
+The task is still valuable because contact-rich pushing exposes errors in action normalization, action horizon, temporal smoothing, and rollout logging. A bad policy is easy to see in video.
 
 ## What PushT Tests
 
@@ -29,19 +35,7 @@ It is often useful for debugging:
 - simple success metrics;
 - video export and qualitative inspection.
 
-## Why It Remains Valuable
-
-Small benchmarks are not automatically weak benchmarks. PushT is valuable because it gives fast feedback. A full VLA evaluation can fail for many reasons at once: perception, language, model loading, action scaling, environment setup, or success detection. PushT strips most of that away and makes the control loop visible.
-
-## When To Use It
-
-Use PushT early when building a new policy pipeline, especially if the method outputs action chunks or uses a sequence model. It is a good first target before moving into multi-task manipulation or language-conditioned benchmarks.
-
-## What It Does Not Prove
-
-PushT does not prove household manipulation, language understanding, object generalization, or real robot robustness. It is a control and pipeline sanity benchmark. Treat it as an early diagnostic, not a final robotics claim.
-
-## A Minimal Usage Pattern
+## How to Use It
 
 The practical workflow is:
 
@@ -51,6 +45,14 @@ load policy -> run N PushT episodes -> save JSON/CSV metrics -> inspect rollout 
 
 When debugging, vary one setting at a time: action horizon, normalization, seed, or policy checkpoint. If multiple knobs change together, PushT loses its main advantage as a diagnostic tool.
 
-## Takeaway
+## When To Use It
 
-PushT is useful because it is small. It gives a fast, visual answer to a basic question: can this policy produce coherent closed-loop actions at all?
+Use PushT early when building a new policy pipeline, especially if the method outputs action chunks or uses a sequence model. It is a good first target before moving into multi-task manipulation, language-conditioned benchmarks, or real robot data.
+
+## Limits
+
+PushT does not prove household manipulation, language understanding, object generalization, or real robot robustness. It is a control and pipeline sanity benchmark. Treat it as an early diagnostic, not a final robotics claim.
+
+## Paper Source
+
+This note was revised from the paper and its LaTeX source package: <a href="https://arxiv.org/abs/2303.04137">Diffusion Policy: Visuomotor Policy Learning via Action Diffusion</a>.

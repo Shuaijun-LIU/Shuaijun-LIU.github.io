@@ -9,37 +9,43 @@ tags:
 excerpt: "RoboCasa extends MuJoCo/RoboSuite-style manipulation into large kitchen task spaces with appliances, objects, fixtures, and composite household workflows."
 ---
 
-RoboCasa is a household and kitchen manipulation benchmark built on the RoboSuite ecosystem. The reason it matters is scale and structure: instead of a handful of simple tabletop goals, it organizes many kitchen tasks around fixtures, appliances, receptacles, objects, and composite workflows.
+RoboCasa is a simulation framework and benchmark for household-scale kitchen manipulation. The paper extends the RoboSuite ecosystem from compact tabletop tasks toward realistic kitchens with many scenes, objects, robot embodiments, tasks, and generated demonstrations.
 
 <figure class="blog-figure">
-  <img src="{{ '/assets/images/blog/benchmarks/simulator-manipulation.svg' | relative_url }}" alt="Simulator manipulation benchmark map">
-  <figcaption>RoboCasa keeps the controlled simulator benefits of RoboSuite while expanding the task space toward realistic kitchen workflows.</figcaption>
+  <img src="{{ '/assets/images/blog/benchmarks/papers/robocasa-paper-figure.jpg' | relative_url }}" alt="RoboCasa overview figure from the paper">
+  <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2406.02523">RoboCasa</a> source package, summarizing scenes, objects, embodiments, tasks, and demonstration data.</figcaption>
 </figure>
 
-## What RoboCasa Adds
+## What the Paper Contributes
 
-RoboSuite gives the manipulation workbench. RoboCasa adds a richer household domain. Tasks can involve counters, cabinets, drawers, microwaves, kettles, sinks, stoves, food items, containers, and kitchen-specific success conditions.
+The paper highlights four pillars:
 
-This makes RoboCasa useful when the question is not merely whether the robot can grasp an object, but whether it can act inside a structured domestic scene.
+| Pillar | Practical meaning |
+| --- | --- |
+| 120 kitchen scenes | Layout and style variation beyond a single demo room |
+| 2,500+ 3D objects | Object diversity across many kitchen-relevant categories |
+| Cross-embodiment support | Mobile manipulators and humanoid robots can be studied in the same domain |
+| 100 tasks and 100K+ trajectories | A larger task/data regime than small tabletop suites |
+
+This matters because many robotics methods look strong in toy tabletop settings but become fragile when fixtures, appliances, receptacles, and scene layout matter.
 
 ## Atomic and Composite Tasks
-
-A helpful way to read RoboCasa is to separate atomic tasks from composite tasks.
 
 Atomic tasks focus on a smaller skill or fixture interaction, such as opening, closing, placing, cleaning, or manipulating a specific appliance-related element.
 
 Composite tasks combine these pieces into larger household workflows, such as arranging, preparing, serving, loading, cleaning, or setting up kitchen items.
 
-## When To Use It
+This split is useful when designing experiments. Atomic tasks help isolate a skill bottleneck. Composite tasks test whether a policy can remain coherent across longer kitchen workflows.
 
-Use RoboCasa when your method needs household manipulation diversity, scene variation, fixture-aware interaction, or more realistic task semantics than a pure tabletop benchmark.
+## How to Use It
 
-It is a good fit for:
+The conceptual workflow is:
 
-- language-conditioned household manipulation;
-- long-horizon task decomposition;
-- policy robustness across kitchen layouts;
-- testing whether perception and action stay aligned under object and fixture diversity.
+```text
+choose task -> choose scene/layout -> choose embodiment -> roll out policy -> score success and save media
+```
+
+For a first smoke test, pick a simple task, render a short rollout, and verify assets, cameras, object placement, and success conditions. For a benchmark table, state the task subset, scene split, object registry, robot embodiment, and demonstration source.
 
 ## What To Be Careful About
 
@@ -47,16 +53,10 @@ Large task spaces are powerful, but they are also easier to misuse. Before repor
 
 Another practical issue is asset completeness. Kitchen benchmarks depend on object and scene assets. If a project uses fallback assets or a reduced object registry, that should be documented because it can change task semantics.
 
-## A Minimal Usage Pattern
+## Limits
 
-The conceptual workflow is:
+RoboCasa improves household simulation coverage, but it is still simulated. Real kitchens add compliance, sensor noise, safety constraints, and unmodeled object behavior.
 
-```text
-choose task -> choose split/scene -> reset env -> roll out policy -> save success and media
-```
+## Paper Source
 
-For a first smoke test, pick one simple registered task, render a short rollout, and inspect the video. For full benchmark use, enumerate tasks from the registry or official task documentation rather than manually copying names.
-
-## Takeaway
-
-RoboCasa is useful when a project outgrows toy manipulation but still needs reproducible simulation. It is a strong bridge between controlled MuJoCo experiments and household-scale robot learning.
+This note was revised from the paper and its LaTeX source package: <a href="https://arxiv.org/abs/2406.02523">RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots</a>.

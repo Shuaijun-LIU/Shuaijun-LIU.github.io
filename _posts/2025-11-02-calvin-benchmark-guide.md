@@ -9,18 +9,18 @@ tags:
 excerpt: "CALVIN focuses on language-conditioned manipulation over multi-step sequences, making it useful for testing whether policies can keep acting after the first subtask."
 ---
 
-CALVIN is a long-horizon language-conditioned manipulation benchmark. Its core value is simple: it forces a policy to solve multiple subtasks in a row, rather than winning one isolated manipulation episode and stopping there.
+CALVIN is a benchmark for long-horizon, language-conditioned manipulation. Its main contribution is the evaluation setup: a policy should not only solve one short instruction, but continue through a chain of subtasks using language and multimodal observations.
 
 <figure class="blog-figure">
-  <img src="{{ '/assets/images/blog/benchmarks/language-manipulation.svg' | relative_url }}" alt="Language-conditioned manipulation benchmark workflow">
-  <figcaption>CALVIN emphasizes sequence execution: the policy must keep using observations and language goals across several subtask transitions.</figcaption>
+  <img src="{{ '/assets/images/blog/benchmarks/papers/calvin-paper-figure.jpg' | relative_url }}" alt="CALVIN long-horizon manipulation overview from the paper">
+  <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2112.03227">CALVIN</a> source package, illustrating language-conditioned manipulation across several environments and sensor streams.</figcaption>
 </figure>
 
-## The Main Idea
+## What the Paper Contributes
 
-Many manipulation benchmarks evaluate one instruction at a time. CALVIN is stricter because the agent is often measured by how many tasks it can complete in a chain. This makes it a useful testbed for compounding errors, task memory, and recovery after imperfect intermediate actions.
+The paper collects about twenty-four hours of teleoperated play data across four environments. It then builds language-conditioned tasks by combining recorded state information with hundreds of natural-language instructions. The benchmark contains 34 task types and evaluates policies on chains of five sequential instructions.
 
-Instead of asking only "did the robot open the drawer?", CALVIN asks whether the robot can continue after opening the drawer, move to a new subgoal, and keep satisfying later instructions.
+The hardest split is especially useful: train on three environments and test in an unseen environment. This makes CALVIN a stronger test of generalization than a single-scene imitation-learning setup.
 
 ## What It Tests
 
@@ -29,33 +29,31 @@ CALVIN is useful for:
 - long-horizon instruction following;
 - policy memory and history conditioning;
 - task-oracle evaluation over composed subtasks;
-- image-plus-state manipulation policies;
-- VLA-style policies that need action chunks or closed-loop correction.
+- static-camera, gripper-camera, and robot-state conditioning;
+- VLA-style policies that need action chunks, closed-loop correction, or progress monitoring.
 
-The benchmark is often discussed through dataset splits such as D-to-D or ABC-to-D, where the important question is whether the policy can transfer across environments or keep performance under multi-step evaluation.
+The important metric is not just whether the first instruction succeeds. CALVIN asks how far the policy gets through a sequence before compounding errors stop it.
 
-## When To Use It
+## How to Use It
 
-Use CALVIN when your method claims to improve long-horizon behavior, robustness across chained instructions, or execution stability. It is a better fit than a single-step pick-place task when the method includes memory, replanning, progress monitoring, or action correction.
+The practical workflow is:
 
-For early debugging, use a small validation subset first. A full sequence evaluation is more meaningful, but it is also slower and harder to diagnose without rollout videos.
+```text
+choose split -> load language instruction -> run policy rollout -> score with task oracle
+```
+
+For early debugging, load a small validation episode and render both the static and gripper views. Before training or evaluating a large model, verify observation keys, camera resolution, language strings, robot-state normalization, and action scaling.
 
 ## What To Watch Out For
 
-CALVIN can make policies look worse than they are if action scaling, camera preprocessing, or observation keys are mismatched. Before comparing algorithms, confirm that the policy reads the expected static camera, gripper camera, robot state, and language field.
+CALVIN is sensitive to preprocessing details. A model can fail because of camera convention mismatch or action normalization, even when the high-level method is reasonable.
 
-The second common issue is over-focusing on average sequence length. That number is useful, but a per-subtask table often reveals the actual bottleneck. A model may be good at moving sliders but weak at drawer or object placement actions.
+Also avoid reporting only average sequence length. Per-subtask success and rollout videos often reveal whether the bottleneck is drawer motion, slider control, object placement, or recovery after an imperfect intermediate state.
 
-## A Minimal Usage Pattern
+## Limits
 
-A typical CALVIN evaluation has four layers:
+CALVIN is still a simulated benchmark. It is excellent for long-horizon language-conditioned control, but it does not replace real-robot deployment or household-scale scene diversity.
 
-```text
-dataset split -> language instruction -> policy rollout -> task oracle score
-```
+## Paper Source
 
-For a new project, start by loading one validation episode, rendering the static and gripper views, and verifying that the task oracle agrees with simple successful or failed transitions. Only then run a larger benchmark table.
-
-## Takeaway
-
-CALVIN is a strong benchmark for asking whether a robot policy can remain useful after the first action. If your method is about long-horizon reliability, it is often more informative than a benchmark where every episode resets after one short goal.
+This note was revised from the paper and its LaTeX source package: <a href="https://arxiv.org/abs/2112.03227">CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks</a>.

@@ -9,38 +9,26 @@ tags:
 excerpt: "OGBench is a controlled benchmark for offline RL and offline goal-conditioned RL, useful before moving a method into real robot data or VLA evaluation."
 ---
 
-OGBench is designed for offline reinforcement learning and offline goal-conditioned reinforcement learning. It is useful when you want to test whether an algorithm can learn from fixed datasets and reach goals without immediately paying the cost of real robot data or complex VLA evaluation.
+OGBench is a benchmark for offline goal-conditioned reinforcement learning. The paper is useful because it separates several algorithmic challenges that are often mixed together: stitching behavior from offline data, long-horizon reasoning, stochastic control, and learning from high-dimensional observations.
 
 <figure class="blog-figure">
-  <img src="{{ '/assets/images/blog/benchmarks/offline-real-data.svg' | relative_url }}" alt="Offline and real-robot data benchmark workflow">
-  <figcaption>OGBench-style experiments center on datasets, goals, policies, and offline evaluation rather than live robot deployment.</figcaption>
+  <img src="{{ '/assets/images/blog/benchmarks/papers/ogbench-paper-figure.jpg' | relative_url }}" alt="OGBench environment overview from the paper">
+  <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2410.20092">OGBench</a> source package, showing state- and pixel-based locomotion, manipulation, and drawing tasks.</figcaption>
 </figure>
 
-## What OGBench Tests
+## What the Paper Contributes
 
-OGBench covers several task families:
+OGBench focuses on fixed-dataset learning, where the policy cannot collect new experience online. Its task families include:
 
 | Family | Typical use |
 | --- | --- |
-| Locomotion | navigation, stitching, long-horizon goal reaching |
-| Manipulation | object control, puzzle-like goals, sequential state changes |
-| Drawing | discrete action planning and structured state transitions |
+| Locomotion | Navigation, stitching, long-horizon goal reaching |
+| Manipulation | Object control, puzzle-like goals, sequential state changes |
+| Drawing | Structured state transitions and goal-conditioned behavior |
 
-This makes it a good early benchmark for algorithms that need controlled variation: failure recovery, latent steering, action selection, goal representation, and offline policy improvement.
+The paper emphasizes that offline goal-conditioned RL is not just "offline RL with a goal vector." A method may need to infer useful intermediate behavior from the dataset, stitch partial trajectories, and reason over long horizons without fresh exploration.
 
-## Why It Is Useful for Embodied AI
-
-Many embodied-AI ideas are expensive to validate directly in a full VLA stack. OGBench gives a lower-cost test. If a replanning or action-correction mechanism cannot help in a controlled offline manipulation setting, it is unlikely to become reliable after adding language, vision encoders, and real robot noise.
-
-## When To Use It
-
-Use OGBench when the method is about offline learning, goal-conditioned action selection, short-horizon feasibility, or algorithmic ablation. It is also useful when you want a fast development loop before moving to LIBERO, DROID, or a real robot dataset.
-
-## What It Does Not Prove
-
-OGBench should not be the only evidence for real-world VLA generalization. It does not by itself prove hardware deployment, language understanding, or multi-agent coordination. Treat it as a mechanism benchmark: it can show whether an idea works under controlled offline assumptions.
-
-## A Minimal Usage Pattern
+## How to Use It
 
 The official-style API usually creates both an environment and datasets:
 
@@ -53,13 +41,22 @@ env, train_dataset, val_dataset = ogbench.make_env_and_datasets(
 )
 
 obs, info = env.reset(options={"task_id": 1, "render_goal": True})
-action = env.action_space.sample()
-next_obs, reward, terminated, truncated, info = env.step(action)
+next_obs, reward, terminated, truncated, info = env.step(env.action_space.sample())
 env.close()
 ```
 
-For manipulation work, start with an environment-only smoke before downloading large datasets. Then download one task dataset, log observation and action shapes, and only then scale to larger families.
+For manipulation work, start with an environment-only smoke before downloading large datasets. Then inspect observation/action shapes, goal fields, dataset keys, and evaluation horizons.
 
-## Takeaway
+## When To Use It
 
-OGBench is a good benchmark for proving that the algorithmic core works. It is not the final destination for robot-learning claims, but it is often the right first filter.
+Use OGBench when the method is about offline learning, goal-conditioned action selection, latent planning, replay-buffer composition, action correction, or algorithmic ablation. It gives faster feedback than a full VLA stack and has cleaner failure modes than real robot data.
+
+It is also a good first filter for replanning ideas. If an idea cannot help in a controlled offline goal-reaching benchmark, it is unlikely to become reliable after adding language, vision encoders, and real robot noise.
+
+## Limits
+
+OGBench does not prove language understanding, hardware deployment, or real-world VLA generalization. Treat it as a mechanism benchmark for offline goal-conditioned learning.
+
+## Paper Source
+
+This note was revised from the paper and its LaTeX source package: <a href="https://arxiv.org/abs/2410.20092">OGBench: Benchmarking Offline Goal-Conditioned RL</a>.

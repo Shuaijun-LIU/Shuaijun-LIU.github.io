@@ -9,12 +9,23 @@ tags:
 excerpt: "RoboFactory is useful when a robotics project needs multi-robot coordination tasks rather than another single-arm manipulation benchmark."
 ---
 
-RoboFactory and its OpenMARL-style workflows are useful for a different question than most manipulation benchmarks. Instead of only asking whether one robot can grasp or place an object, RoboFactory asks how robots coordinate across tasks, roles, scenes, and policies.
+RoboFactory is a benchmark and automated data collection framework for embodied multi-agent manipulation. The paper is useful because it does not treat multi-robot learning as simply "single-robot learning times N." It introduces compositional constraints to make collaboration safer and more structured.
 
 <figure class="blog-figure">
-  <img src="{{ '/assets/images/blog/benchmarks/systems-coordination.svg' | relative_url }}" alt="Systems and coordination benchmark structure">
-  <figcaption>RoboFactory-style evaluation is about agents, scene configuration, policy execution, and coordination metrics.</figcaption>
+  <img src="{{ '/assets/images/blog/benchmarks/papers/robofactory-paper-figure.jpg' | relative_url }}" alt="RoboFactory benchmark demonstrations from the paper">
+  <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2503.16408">RoboFactory</a> source package, showing example embodied multi-agent manipulation tasks.</figcaption>
 </figure>
+
+## What the Paper Contributes
+
+The paper proposes logical, spatial, and temporal constraints for multi-agent embodied systems. Its framework has two central components:
+
+| Component | Role |
+| --- | --- |
+| RoboBrain | Generates subgoals and textual compositional constraints from task descriptions and observations |
+| RoboChecker | Converts textual constraints into interfaces that validate generated multi-agent trajectories |
+
+This is important because multi-agent manipulation failures are often about coordination, not only low-level control. A plan can be locally reasonable for each robot while still violating timing, collision, role, or ordering constraints.
 
 ## What It Tests
 
@@ -26,6 +37,16 @@ The important benchmark dimension is coordination:
 - Does the task require passing, timing, or role allocation?
 - Does the policy work in a table scene, a RoboCasa-like scene, or both?
 - Can the evaluation separate individual agent failure from group-level failure?
+
+## How to Use It
+
+The generic workflow is:
+
+```text
+choose task -> choose scene family -> generate or load multi-agent trajectories -> validate constraints -> train/evaluate policy
+```
+
+For first experiments, start with one task and one scene family. Add more agents or a second scene family only after logging, videos, and per-agent metrics are stable.
 
 ## When To Use It
 
@@ -39,16 +60,6 @@ Multi-agent results are easy to overstate. A task with multiple robots is not au
 
 Also keep scene family separate from task ID. The same task name can behave differently in a table scene and a kitchen-like scene.
 
-## A Minimal Usage Pattern
+## Paper Source
 
-The generic workflow is:
-
-```text
-choose task ID -> choose scene family -> choose policy -> run rollout -> save video and per-agent metrics
-```
-
-For first experiments, start with one task and one scene family. Add the second scene family only after the policy and logging are stable.
-
-## Takeaway
-
-RoboFactory is most valuable when the research question is coordination. It helps prevent a common mistake: using single-agent benchmarks to support multi-agent claims.
+This note was revised from the paper and its LaTeX source package: <a href="https://arxiv.org/abs/2503.16408">RoboFactory: Exploring Embodied Agent Collaboration with Compositional Constraints</a>. The paper also provides a project page at <a href="https://iranqin.github.io/robofactory/">https://iranqin.github.io/robofactory/</a>.

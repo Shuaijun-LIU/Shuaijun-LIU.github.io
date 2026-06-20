@@ -9,40 +9,26 @@ tags:
 excerpt: "ManiSkill2 is useful when manipulation tasks need richer simulation assets, articulated interactions, and scalable visual or state-based evaluation."
 ---
 
-ManiSkill2 is a manipulation benchmark and environment suite built on the SAPIEN simulation ecosystem. It is useful when a project needs a richer set of manipulation tasks than classic tabletop environments, especially tasks involving articulated objects, clutter, assembly, or more complex geometry.
+ManiSkill2 is a SAPIEN-based benchmark for generalizable manipulation skills. The paper is useful because it combines task diversity, object diversity, demonstrations, multiple observation modes, and high-throughput visual simulation in one benchmark suite.
 
 <figure class="blog-figure">
-  <img src="{{ '/assets/images/blog/benchmarks/simulator-manipulation.svg' | relative_url }}" alt="Simulator manipulation benchmark map">
-  <figcaption>ManiSkill2-style tasks combine robot control, object interaction, simulation assets, sensors, and task-specific metrics.</figcaption>
+  <img src="{{ '/assets/images/blog/benchmarks/papers/maniskill2-paper-figure.jpg' | relative_url }}" alt="ManiSkill2 task overview from the paper">
+  <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2302.04659">ManiSkill2</a> source package, showing task families across rigid, articulated, mobile-base, dual-arm, and soft-body manipulation.</figcaption>
 </figure>
+
+## What the Paper Contributes
+
+The paper reports 20 manipulation task families, 2,000+ object models, and 4M+ demonstration frames. It covers stationary and mobile-base settings, single-arm and dual-arm tasks, rigid-body and soft-body manipulation, and both 2D/3D visual input.
+
+Another important contribution is systems-oriented: ManiSkill2 includes asynchronous rendering and a render-server design to improve visual sample collection. The paper reports about 2000 FPS for a CNN-based visual policy collection setup with one GPU and 16 processes.
 
 ## What ManiSkill2 Covers
 
-Typical ManiSkill2 task categories include:
+Typical task categories include lifting, stacking, cluttered picking, peg insertion, cabinet drawers and doors, faucet turning, charger plugging, object movement, obstacle avoidance, pouring, filling, writing, and geometry-driven manipulation.
 
-- cube lifting, stacking, and picking;
-- cluttered object picking;
-- peg insertion and assembly;
-- cabinet drawers and doors;
-- faucet turning and charger plugging;
-- larger object movement and obstacle avoidance;
-- pouring, filling, writing, and geometry-driven tasks.
+This makes ManiSkill2 useful when the research question needs richer simulated manipulation than classic tabletop tasks but does not necessarily require a full household kitchen benchmark.
 
-This makes it useful when the research question needs more than a single pick-place task but does not necessarily require a full household kitchen benchmark.
-
-## When To Use It
-
-Use ManiSkill2 for scalable manipulation evaluation, SAPIEN-based task design, visual observation pipelines, and richer object interactions. It can be a good fit for policies that need depth, segmentation, point clouds, or visually grounded action learning.
-
-## What To Check First
-
-Before treating a task as benchmark-ready, run a small reset/step/render smoke. Simulation benchmarks often fail for practical reasons: rendering backend mismatch, missing assets, incompatible observation mode, or a changed task registry.
-
-Also make the observation mode explicit. State-based and image-based results answer different questions.
-
-## A Minimal Usage Pattern
-
-The conceptual workflow is:
+## How to Use It
 
 ```python
 import gymnasium as gym
@@ -54,8 +40,22 @@ frame = env.render()
 env.close()
 ```
 
-The exact task ID and observation mode depend on the installed ManiSkill version. For a paper or blog result, always record those details.
+The exact task ID and observation mode depend on the installed ManiSkill version. For a paper result, record those details alongside the controller, camera settings, seed, and evaluation horizon.
 
-## Takeaway
+## When To Use It
 
-ManiSkill2 is a strong choice when a project needs richer simulated manipulation without immediately moving to very large household or real-robot datasets.
+Use ManiSkill2 for scalable manipulation evaluation, SAPIEN-based task design, visual observation pipelines, and richer object interactions. It can be a good fit for policies that need depth, segmentation, point clouds, or visually grounded action learning.
+
+## What To Check First
+
+Before treating a task as benchmark-ready, run a small reset/step/render smoke. Simulation benchmarks often fail for practical reasons: rendering backend mismatch, missing assets, incompatible observation mode, or a changed task registry.
+
+Also make the observation mode explicit. State-based and image-based results answer different questions.
+
+## Limits
+
+ManiSkill2 is still a simulator benchmark. Strong results do not automatically establish language grounding, household robustness, or real-robot transfer.
+
+## Paper Source
+
+This note was revised from the paper and its LaTeX source package: <a href="https://arxiv.org/abs/2302.04659">ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills</a>.
