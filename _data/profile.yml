@@ -33,7 +33,7 @@ education:
   color: "#996600"
   position: >- 
     Ph.D. Student <br/>
-    <a href="https://nebulis-lab.com" target="_blank">Advisor: Prof. Ningxin Su · NEBULIS Lab</a>
+    <a href="https://nebulis-lab.com" target="_blank">Advisor: Prof. Ningxin Su</a>
   date: Sep. 2025 - Jun. 2028
 - name: Boston University
   logo: /assets/images/badges/bu-logo-mini.png
@@ -42,6 +42,7 @@ education:
   date: Sep. 2023 - May 2025
 - name: Hong Kong Baptist University
   logo: /assets/images/badges/hkbu-logo-mini.png
+  logo_width: 27px
   color: "#004B8D"
   position: >-
     B.S. in Statistics and Data Science <br/>
