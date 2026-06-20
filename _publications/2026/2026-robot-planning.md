@@ -8,6 +8,5 @@ abstract: >-
   Models long-horizon robot task planning as hierarchical concept prediction, symbolic dependency repair, and behavior-tree compilation for more executable and logically consistent plans.
 authors:
 - Shuaijun Liu
-- Ningxin Su
+- Ningxin Su#
 ---
-

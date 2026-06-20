@@ -7,7 +7,5 @@ pages:
   url: /publications
 - name: Blog
   url: /blog
-- name: Showcase
-  url: /showcase
 - name: Waffle 🧇
   url: /waffle/

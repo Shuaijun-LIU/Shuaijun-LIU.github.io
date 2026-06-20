@@ -8,6 +8,5 @@ abstract: >-
   Studies action reliability under appearance shifts and task-semantic changes, aiming to preserve stable behavior under semantic invariance while separating actions correctly when goals, constraints, or order change.
 authors:
 - Shuaijun Liu
-- Ningxin Su
+- Ningxin Su#
 ---
-

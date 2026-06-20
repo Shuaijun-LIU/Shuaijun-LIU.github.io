@@ -9,10 +9,9 @@ abstract: >-
 authors:
 - Shuaijun Liu
 - Jiaying Yin
-- Zixuan Zeng
-- Jingjin Wu
+- Zishu Zeng
+- Jingjin Wu#
 links:
   Paper: https://ieeexplore.ieee.org/document/10074734
   DOI: https://doi.org/10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00217
 ---
-

@@ -8,6 +8,5 @@ abstract: >-
   Improves object selection, spatial-relation understanding, and history-conditioned manipulation through structured representations of task semantics and interaction context.
 authors:
 - Shuaijun Liu
-- Ningxin Su
+- Ningxin Su#
 ---
-
