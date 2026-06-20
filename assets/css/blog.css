@@ -63,6 +63,32 @@
     margin: 1rem 0;
 }
 
+.blog-content .blog-figure {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid #e8edf3;
+    border-radius: 0.75rem;
+    background: #fbfcff;
+}
+
+.blog-content .blog-figure img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+}
+
+.blog-content .blog-figure figcaption {
+    margin-top: 0.75rem;
+    color: #667085;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    text-align: center;
+}
+
+.blog-content strong {
+    color: #1f2937;
+}
+
 /* Multi-column image layouts */
 .blog-content .row img {
     margin: 0.5rem 0;

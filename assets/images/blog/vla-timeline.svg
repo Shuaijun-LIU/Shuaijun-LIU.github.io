@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Timeline of representative VLA and robot foundation model systems</title>
+  <desc id="desc">A timeline from RT-1 to SmolVLA showing how robot policies evolved from scalable robot transformers to open and efficient VLA systems.</desc>
+  <defs>
+    <linearGradient id="timeline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3d72d8"/>
+      <stop offset="0.25" stop-color="#27a36a"/>
+      <stop offset="0.5" stop-color="#df8b20"/>
+      <stop offset="0.75" stop-color="#7b5dcc"/>
+      <stop offset="1" stop-color="#d15f49"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1d2733" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title { font: 700 32px Lato, Arial, sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 17px Lato, Arial, sans-serif; fill: #5c6674; }
+      .year { font: 700 16px Lato, Arial, sans-serif; fill: #1f2937; }
+      .name { font: 700 18px Lato, Arial, sans-serif; fill: #172033; }
+      .text { font: 400 14px Lato, Arial, sans-serif; fill: #56606f; }
+      .tag { font: 700 11px Lato, Arial, sans-serif; fill: #ffffff; letter-spacing: .06em; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" fill="#fbfcff"/>
+  <circle cx="104" cy="105" r="64" fill="#edf4ff"/>
+  <circle cx="1088" cy="425" r="70" fill="#fff0ea"/>
+  <text x="70" y="70" class="title">A Short VLA Timeline</text>
+  <text x="72" y="104" class="subtitle">Representative systems that changed how robots combine vision, language, and action.</text>
+
+  <rect x="100" y="248" width="1000" height="8" rx="4" fill="url(#timeline)"/>
+
+  <g filter="url(#shadow)">
+    <circle cx="140" cy="252" r="14" fill="#3d72d8"/>
+    <rect x="70" y="300" width="180" height="122" rx="16" fill="#ffffff" stroke="#d8e5ff"/>
+    <rect x="90" y="320" width="64" height="24" rx="12" fill="#3d72d8"/>
+    <text x="106" y="337" class="tag">2022</text>
+    <text x="90" y="370" class="name">RT-1</text>
+    <text x="90" y="395" class="text">Scaled robot data</text>
+    <text x="90" y="416" class="text">and transformer control.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="312" cy="252" r="14" fill="#27a36a"/>
+    <rect x="222" y="84" width="200" height="132" rx="16" fill="#ffffff" stroke="#d8f1dc"/>
+    <rect x="242" y="104" width="64" height="24" rx="12" fill="#27a36a"/>
+    <text x="258" y="121" class="tag">2023</text>
+    <text x="242" y="154" class="name">PaLM-E / RT-2</text>
+    <text x="242" y="179" class="text">Embodied reasoning and</text>
+    <text x="242" y="200" class="text">actions as language tokens.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="486" cy="252" r="14" fill="#df8b20"/>
+    <rect x="396" y="300" width="206" height="122" rx="16" fill="#ffffff" stroke="#ffe0ad"/>
+    <rect x="416" y="320" width="64" height="24" rx="12" fill="#df8b20"/>
+    <text x="432" y="337" class="tag">2023</text>
+    <text x="416" y="370" class="name">Open X-Embodiment</text>
+    <text x="416" y="395" class="text">Cross-robot data and</text>
+    <text x="416" y="416" class="text">RT-X transfer.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="660" cy="252" r="14" fill="#7b5dcc"/>
+    <rect x="570" y="84" width="210" height="132" rx="16" fill="#ffffff" stroke="#efdcff"/>
+    <rect x="590" y="104" width="64" height="24" rx="12" fill="#7b5dcc"/>
+    <text x="606" y="121" class="tag">2024</text>
+    <text x="590" y="154" class="name">Octo / OpenVLA</text>
+    <text x="590" y="179" class="text">Open generalist policies</text>
+    <text x="590" y="200" class="text">for manipulation.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="842" cy="252" r="14" fill="#d15f49"/>
+    <rect x="752" y="300" width="210" height="122" rx="16" fill="#ffffff" stroke="#ffd9d3"/>
+    <rect x="772" y="320" width="64" height="24" rx="12" fill="#d15f49"/>
+    <text x="788" y="337" class="tag">2024</text>
+    <text x="772" y="370" class="name">pi0</text>
+    <text x="772" y="395" class="text">Flow matching for</text>
+    <text x="772" y="416" class="text">dexterous robot actions.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="1036" cy="252" r="14" fill="#34495e"/>
+    <rect x="928" y="84" width="214" height="132" rx="16" fill="#ffffff" stroke="#dbe7ef"/>
+    <rect x="948" y="104" width="64" height="24" rx="12" fill="#34495e"/>
+    <text x="964" y="121" class="tag">2025</text>
+    <text x="948" y="154" class="name">Gemini, GR00T, SmolVLA</text>
+    <text x="948" y="179" class="text">Generalist, humanoid,</text>
+    <text x="948" y="200" class="text">and efficient deployment.</text>
+  </g>
+</svg>
