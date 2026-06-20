@@ -13,5 +13,6 @@ authors:
 - Yuhui Deng
 - Jingjin Wu#
 links:
-  DOI: https://doi.org/10.1016/j.comnet.2026.112064
+  Project Website: https://shuaijun-liu.github.io/HATTO-UFog
+  Paper: https://doi.org/10.1016/j.comnet.2026.112064
 ---

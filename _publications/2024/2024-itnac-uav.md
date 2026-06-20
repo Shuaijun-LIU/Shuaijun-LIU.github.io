@@ -12,5 +12,5 @@ authors:
 - Yuhui Deng
 - Jingjin Wu#
 links:
-  DOI: https://doi.org/10.1109/ITNAC62915.2024.10815424
+  Paper: https://doi.org/10.1109/ITNAC62915.2024.10815424
 ---
