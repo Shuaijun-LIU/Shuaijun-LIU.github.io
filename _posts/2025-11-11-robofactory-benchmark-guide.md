@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "RoboFactory: Multi-Robot Tasks for Coordination and Role Allocation"
-date: 2012-11-11
+date: 2025-11-11
 tags:
   - Benchmark
   - Multi-Agent

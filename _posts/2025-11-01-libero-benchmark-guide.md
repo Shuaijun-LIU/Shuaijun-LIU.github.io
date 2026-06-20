@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "LIBERO: A Practical Guide to Language-Conditioned Manipulation Benchmarks"
-date: 2012-11-01
+date: 2025-11-01
 tags:
   - Benchmark
   - Robotics

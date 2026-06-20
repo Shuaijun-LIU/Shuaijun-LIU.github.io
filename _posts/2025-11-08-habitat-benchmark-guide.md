@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "Habitat: Navigation Benchmarks for Embodied Feedback and Replanning"
-date: 2012-11-08
+date: 2025-11-08
 tags:
   - Benchmark
   - Embodied AI

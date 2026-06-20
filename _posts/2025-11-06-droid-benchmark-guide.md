@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "DROID: Real-Robot Data for Vision-Language-Action Research"
-date: 2012-11-06
+date: 2025-11-06
 tags:
   - Benchmark
   - Real Robot Data

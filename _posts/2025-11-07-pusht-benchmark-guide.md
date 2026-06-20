@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "PushT: Why a Tiny 2D Control Task Is Still Useful"
-date: 2012-11-07
+date: 2025-11-07
 tags:
   - Benchmark
   - Control

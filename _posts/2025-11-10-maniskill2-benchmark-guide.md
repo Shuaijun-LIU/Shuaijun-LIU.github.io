@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "ManiSkill2: SAPIEN-Based Manipulation for Richer Simulation Tasks"
-date: 2012-11-10
+date: 2025-11-10
 tags:
   - Benchmark
   - SAPIEN

@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "RoboSuite: The Manipulation Workbench Behind Many Robot Benchmarks"
-date: 2012-11-03
+date: 2025-11-03
 tags:
   - Benchmark
   - Simulation

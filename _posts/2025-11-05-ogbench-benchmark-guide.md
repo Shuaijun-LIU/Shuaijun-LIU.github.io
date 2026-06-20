@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "OGBench: Offline Goal-Conditioned RL Before Real-Robot Complexity"
-date: 2012-11-05
+date: 2025-11-05
 tags:
   - Benchmark
   - Offline RL

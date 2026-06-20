@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "RoboCasa: Kitchen-Scale Manipulation Beyond Toy Tabletop Tasks"
-date: 2012-11-04
+date: 2025-11-04
 tags:
   - Benchmark
   - Household Robotics

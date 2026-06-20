@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "AgiBot World Assets: World Models, Reasoning-to-Action, and Simulation Reuse"
-date: 2012-11-12
+date: 2025-11-12
 tags:
   - Benchmark
   - World Models

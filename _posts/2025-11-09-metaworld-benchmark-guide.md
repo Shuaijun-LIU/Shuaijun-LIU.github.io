@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "MetaWorld: A Compact Benchmark for Multi-Task Tabletop Manipulation"
-date: 2012-11-09
+date: 2025-11-09
 tags:
   - Benchmark
   - Manipulation

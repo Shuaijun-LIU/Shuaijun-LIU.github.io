@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "CALVIN: Long-Horizon Language-Conditioned Manipulation"
-date: 2012-11-02
+date: 2025-11-02
 tags:
   - Benchmark
   - Robotics
