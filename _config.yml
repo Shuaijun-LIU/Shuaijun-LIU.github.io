@@ -115,7 +115,6 @@ author:
 include:
   - .htaccess
   - _pages
-  - files
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -138,6 +137,11 @@ exclude:
   - log
   - node_modules
   - package.json
+  - README.md
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - markdown_generator
+  - talkmap
   - tmp
   - vendor
   - CV-ShuaijunLIU.pdf

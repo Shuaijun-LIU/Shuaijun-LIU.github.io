@@ -1,4 +1,4 @@
-# main links links
+# Main navigation.
 main:
   - title: "EDUCATION"
     url: /publications/
@@ -11,9 +11,3 @@ main:
 
   - title: "AWARDS & SKILLS"
     url: /award/
-    
-  #- title: "CV"
-  #  url: /cv/
-    
-  #- title: "Guide"
-  #  url: /teaching/
