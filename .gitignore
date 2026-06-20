@@ -1,6 +1,6 @@
-_site/
-CV-ShuaijunLIU.pdf
-_publications/CV-ShuaijunLIU.pdf
 *.docx
+*.pdf
 .DS_Store
-_posts/2016-08-14-blog-post-5.md
+_site/
+node_modules/
+
