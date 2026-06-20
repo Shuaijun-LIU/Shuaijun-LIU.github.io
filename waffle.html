@@ -5,7 +5,6 @@ navbar_title: Waffle 🧇
 permalink: /waffle/
 container_class: container-xl
 gallery_images:
-- /assets/images/waffle/waffle-01.jpg
 - /assets/images/waffle/waffle-02.jpg
 - /assets/images/waffle/waffle-03.jpg
 - /assets/images/waffle/waffle-04.jpg
@@ -25,9 +24,9 @@ gallery_images:
 <div class="waffle-page">
     <div class="row">
         <div class="col-lg-4 mb-3">
-            <div class="card border-0 shadow-sm bg-white h-100">
+            <div class="card border-0 shadow-sm bg-white h-100 waffle-profile-card">
                 <div class="card-body p-4 text-center">
-                    <img src="{{ '/assets/images/waffle/waffle-11.jpg' | relative_url }}" class="waffle-portrait mb-3" alt="Waffle 🧇">
+                    <img src="{{ '/assets/images/waffle/waffle-01.jpg' | relative_url }}" class="waffle-portrait mb-3" alt="Waffle 🧇">
                     <h1 class="h3 mb-1">Waffle 🧇</h1>
                     <div class="text-muted">Chief Feline Researcher</div>
                     <div class="small mt-1">
@@ -37,6 +36,8 @@ gallery_images:
                     <hr>
                     <div class="text-left small">
                         <div><strong>Species:</strong> Domestic cat</div>
+                        <div><strong>Born:</strong> Sep. 2025</div>
+                        <div><strong>Breed/color:</strong> Long-haired golden shaded</div>
                         <div><strong>Research style:</strong> Curious, quiet, strategically demanding</div>
                         <div><strong>Favorite resources:</strong> Treats, soft beds, boxes, sunlight</div>
                         <div><strong>Nicknames:</strong> Professor Waffle, PI Waffle</div>
@@ -59,8 +60,15 @@ gallery_images:
                         Waffle is an independent feline researcher specializing in human supervision,
                         environmental exploration, and advanced nap scheduling. Current work studies how
                         repeated vocal requests, eye contact, and strategic cuteness can improve household
-                        service quality.
+                        service quality. Born in September 2025, he is a long-haired golden shaded cat
+                        with a serious academic expression and a deeply unserious research agenda.
                     </p>
+                    <div class="waffle-lab-strip" aria-label="Waffle research pipeline animation">
+                        <span>Observe</span>
+                        <span>Meow</span>
+                        <span>Nap</span>
+                        <span>Treat</span>
+                    </div>
                     <h5>Research Interests</h5>
                     <div class="waffle-tags">
                         <span>Human Behavior Observation</span>
@@ -98,35 +106,26 @@ gallery_images:
     <div class="card border-0 shadow-sm bg-white my-3">
         <div class="card-body p-4">
             <h3 class="h5">Selected Publications</h3>
-            <div class="row">
+            <div class="row waffle-publication-list">
                 <div class="col-lg-4 mb-3 mb-lg-0">
                     <div class="waffle-paper h-100">
-                        <img data-src="{{ '/assets/images/waffle/waffle-01.jpg' | relative_url }}" class="lazy w-100 rounded-xl" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" alt="Waffle sitting">
-                        <h4 class="h6 mt-3">A Systematic Study of Whether Humans Will Provide Snacks After Repeated Vocal Requests</h4>
-                        <p class="small mb-2">Waffle, Human Assistant<br><em>Journal of Applied Meow Science, 2026</em></p>
-                        <div class="small">
-                            <a href="#waffle-gallery">Paper</a> · <a href="#waffle-gallery">Video</a> · <a href="#waffle-gallery">Dataset</a> · <a href="#waffle-gallery">Treats</a>
-                        </div>
+                        <div class="small text-muted mb-2">Journal of Applied Meow Science, 2026</div>
+                        <h4 class="h6">A Systematic Study of Whether Humans Will Provide Snacks After Repeated Vocal Requests</h4>
+                        <p class="small mb-0"><strong>Waffle</strong>, Human Assistant</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3 mb-lg-0">
                     <div class="waffle-paper h-100">
-                        <img data-src="{{ '/assets/images/waffle/waffle-06.jpg' | relative_url }}" class="lazy w-100 rounded-xl" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" alt="Waffle near a tree">
-                        <h4 class="h6 mt-3">Optimizing Sunlight Exposure Through Dynamic Window-Sill Selection</h4>
-                        <p class="small mb-2">Waffle, Human Assistant<br><em>International Conference on Feline Computing, 2026</em></p>
-                        <div class="small">
-                            <a href="#waffle-gallery">Paper</a> · <a href="#waffle-gallery">Video</a> · <a href="#waffle-gallery">Dataset</a> · <a href="#waffle-gallery">Treats</a>
-                        </div>
+                        <div class="small text-muted mb-2">International Conference on Feline Computing, 2026</div>
+                        <h4 class="h6">Optimizing Sunlight Exposure Through Dynamic Window-Sill Selection</h4>
+                        <p class="small mb-0"><strong>Waffle</strong>, Human Assistant</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="waffle-paper h-100">
-                        <img data-src="{{ '/assets/images/waffle/waffle-08.jpg' | relative_url }}" class="lazy w-100 rounded-xl" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" alt="Waffle resting">
-                        <h4 class="h6 mt-3">NapFormer: Predicting Optimal Household Resting Locations from Softness and Human Availability</h4>
-                        <p class="small mb-2">Waffle<br><em>Transactions on Domestic Intelligence, 2026</em></p>
-                        <div class="small">
-                            <a href="#waffle-gallery">Paper</a> · <a href="#waffle-gallery">Video</a> · <a href="#waffle-gallery">Dataset</a> · <a href="#waffle-gallery">Treats</a>
-                        </div>
+                        <div class="small text-muted mb-2">Transactions on Domestic Intelligence, 2026</div>
+                        <h4 class="h6">NapFormer: Predicting Optimal Household Resting Locations from Softness and Human Availability</h4>
+                        <p class="small mb-0"><strong>Waffle</strong></p>
                     </div>
                 </div>
             </div>

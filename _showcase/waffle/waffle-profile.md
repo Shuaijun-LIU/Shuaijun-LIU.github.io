@@ -6,7 +6,7 @@ group: 我的宠物
 ---
 
 <div>
-  <img data-src="{{ 'assets/images/waffle/waffle-11.jpg' | relative_url }}" class="lazy w-100 rounded-xl-top" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+  <img data-src="{{ 'assets/images/waffle/waffle-01.jpg' | relative_url }}" class="lazy w-100 rounded-xl-top" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
   <div class="card-body">
     <h5 class="card-title">Waffle 🧇</h5>
     <p class="card-text">

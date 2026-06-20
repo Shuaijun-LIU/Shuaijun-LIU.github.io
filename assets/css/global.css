@@ -92,12 +92,74 @@ div.lazy {
     font-family: Source Code Pro, monospace;
 }
 
+.waffle-page {
+    --waffle-ink: #2f3840;
+    --waffle-blue: #4f78a7;
+    --waffle-gold: #c79445;
+    --waffle-cream: #fff8ea;
+    color: var(--waffle-ink);
+}
+
+.waffle-page .card {
+    border: 1px solid rgba(79, 120, 167, 0.12) !important;
+}
+
+.waffle-profile-card {
+    background: linear-gradient(180deg, #ffffff 0%, var(--waffle-cream) 100%) !important;
+}
+
 .waffle-page .waffle-portrait {
     width: 220px;
     height: 220px;
     object-fit: cover;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 3px solid rgba(199, 148, 69, 0.45);
+    box-shadow: 0 0.75rem 2rem rgba(79, 120, 167, 0.16);
+    object-position: 50% 42%;
+}
+
+.waffle-lab-strip {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0 1.25rem;
+    padding: 0.75rem;
+    border: 1px solid rgba(79, 120, 167, 0.14);
+    border-radius: 0.8rem;
+    background: linear-gradient(90deg, rgba(79, 120, 167, 0.08), rgba(199, 148, 69, 0.10));
+    overflow: hidden;
+}
+
+.waffle-lab-strip::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -35%;
+    width: 30%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+    animation: waffle-scan 5.5s ease-in-out infinite;
+}
+
+.waffle-lab-strip span {
+    z-index: 1;
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--waffle-blue);
+}
+
+@keyframes waffle-scan {
+    0%, 35% { left: -35%; }
+    75%, 100% { left: 105%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .waffle-lab-strip::before {
+        animation: none;
+        display: none;
+    }
 }
 
 .waffle-tags {
@@ -108,7 +170,7 @@ div.lazy {
 
 .waffle-tags span {
     border: 1px solid #d7e3ea;
-    background: #f8fbfc;
+    background: linear-gradient(180deg, #ffffff, #f8fbfc);
     color: #31515f;
     border-radius: 999px;
     padding: 0.25rem 0.65rem;
@@ -120,12 +182,11 @@ div.lazy {
     border: 1px solid #e6e9ed;
     border-radius: 0.8rem;
     padding: 1rem;
-    background: #fff;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
 }
 
-.waffle-paper img {
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
+.waffle-publication-list .waffle-paper {
+    border-left: 4px solid var(--waffle-blue);
 }
 
 .waffle-gallery img {
