@@ -8,128 +8,179 @@ tags:
   - Robotics
 ---
 
-Embodied AI agents do not live in a clean text box. They move through homes, labs, kitchens, warehouses, streets, or simulators that only partially reveal the state of the world. A plan that sounded correct five seconds ago can become wrong after a failed grasp, an unexpected obstacle, a newly observed object, a changed human preference, or a safety constraint that was not obvious at the start.
+Replanning is one of the easiest ideas to explain and one of the hardest ideas to make work in embodied AI.
 
-That is why replanning is becoming a central idea in embodied AI. It is the mechanism that turns a static "think once, act many times" pipeline into a feedback-driven loop: plan, act, observe, decide whether the plan is still valid, and revise it when needed.
+At a high level, replanning means updating an agent's future actions after execution reveals new information. A robot may discover that the target object is not where the language instruction implied, a grasp may fail, a door may already be open, another agent may occupy the path, or the environment may contain objects that were not visible when the first plan was generated.
+
+The modern replanning story is closely tied to language-model-based planning. Large language models are good at proposing high-level action sequences, but embodied execution turns planning into an interactive process. The agent has to observe, act, detect failure, revise the plan, and sometimes decide that replanning is not worth the cost.
+
+This post follows that idea through a few representative papers: ReAct, SayCan, Inner Monologue, LLM-Planner, FLARE, and BRACE.
+
+## The Short Version
+
+Replanning is not just "ask the model again." A useful embodied replanning system needs three ingredients:
+
+| Ingredient | What it answers | Representative papers |
+| --- | --- | --- |
+| Grounding | Is the plan feasible in this environment? | SayCan, LLM-Planner, FLARE |
+| Feedback | What happened after the last action? | ReAct, Inner Monologue |
+| Budgeting | Is another planner call worth the latency and compute? | BRACE |
+
+The difference matters. A language model can produce a plausible plan for "bring me a coke," but a robot must know whether the coke exists, whether the grasp succeeded, whether the path is blocked, and whether waiting for another large-model call will delay execution too much.
+
+## From Reasoning-Acting Loops to Embodied Replanning
+
+ReAct is not only a robotics paper, but it gives a useful abstraction: reasoning and acting should be interleaved. The model reasons, takes an action, observes the result, and uses that observation to update the next step. In interactive environments, this is already a form of replanning. The plan is not a static list. It is revised as the agent learns more.
+
+The embodied version is stricter. A robot action changes the physical world, and observations can be incomplete or delayed. ReAct's reason-act-observe pattern therefore becomes a control loop:
+
+1. Propose a next subgoal or skill.
+2. Execute through the robot or simulator.
+3. Observe the new state and execution result.
+4. Decide whether the current plan remains valid.
+5. Continue, repair, or replan.
+
+This loop is the conceptual backbone behind many later embodied planning systems.
+
+## SayCan: Ground the Plan Before You Execute It
+
+SayCan addresses a basic failure mode of language-only planning: a plan can be semantically reasonable but physically unavailable. A robot may know that "pick up the sponge" is useful for cleaning, but if the sponge is not reachable, the action should not be selected.
+
+SayCan combines two scores:
+
+- a language-model score for how useful an action is for the task;
+- an affordance score for whether the robot can execute that action in the current world.
 
 <figure class="blog-figure">
-  <img src="{{ '/assets/images/blog/replanning-loop.svg' | relative_url }}" alt="Diagram comparing open-loop execution with feedback-driven replanning in embodied AI">
-  <figcaption>Replanning treats execution as a loop. The agent does not only ask "What should I do?" It also asks "Did that work?", "Has the world changed?", and "Is it worth spending more computation to revise the plan?"</figcaption>
+  <img src="{{ '/assets/images/blog/replanning-papers/saycan-score.png' | relative_url }}" alt="SayCan combines language-model task relevance with robotic affordance scores">
+  <figcaption>Image source: the SayCan project page. SayCan makes a key point for replanning: plan quality is not only semantic plausibility. It also depends on what the robot can currently do.</figcaption>
 </figure>
 
-## A Simple Definition
+This is not replanning by itself, but it changes what replanning should optimize. A replan should not merely produce a new text plan. It should produce a plan that is grounded in current affordances.
 
-In embodied AI, replanning is the process of updating an agent's future actions after new information arrives during execution. The new information can come from perception, success detectors, low-level controllers, a human, another robot, a simulator, or a learned world model.
+If an action fails, the replanner should ask: did the high-level goal change, did the world state change, or was the selected action infeasible from the start?
 
-The key point is that replanning is not just "planning again." It is planning again with context:
+## Inner Monologue: Feedback Becomes Part of the Prompt
 
-- What has already been done?
-- Which subgoals are complete?
-- Which action failed, and why?
-- What is now visible in the scene?
-- What constraints became active?
-- How much time, energy, or inference budget remains?
+Inner Monologue makes the feedback loop explicit. The paper studies how language models can use environment feedback written in natural language, such as scene descriptions, success detector outputs, and human corrections.
 
-For a household robot, the first plan for "bring me a clean mug" may be:
+This is important because many embodied failures are not visible in the initial instruction. The agent learns them through execution:
 
-1. Go to the cabinet.
-2. Pick up a mug.
-3. Check whether it is clean.
-4. Bring it to the user.
+- "I see coke, water, chocolate bar."
+- "Action was not successful."
+- "The drawer is already open."
+- "The requested object is not visible."
 
-If the cabinet is empty, a rigid agent fails. A replanning agent can revise the plan: search the drying rack, ask a human, inspect the sink, or switch to another cup if the task allows it.
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/replanning-papers/inner-monologue-feedback.jpg' | relative_url }}" alt="Inner Monologue closed-loop feedback for robot planning">
+  <figcaption>Image source: Inner Monologue paper, Figure 1. The planner is not a one-shot instruction parser. It consumes scene descriptions, success signals, and human feedback as the task unfolds.</figcaption>
+</figure>
 
-## Planning, Execution, and Replanning
+In this framing, replanning is language-conditioned feedback processing. The model updates the plan because the prompt now contains new evidence about the environment and the previous action.
 
-It helps to separate three layers:
+This also reveals a weakness. As tasks become longer, the feedback history grows. The prompt can become long, noisy, and expensive to process. That issue becomes central later.
 
-| Layer | Question | Example |
+## LLM-Planner: Replan From What Has Actually Been Observed
+
+LLM-Planner focuses on few-shot grounded planning for embodied agents, especially on ALFRED-style long-horizon household tasks. Its key move is simple but important: when the current plan becomes unattainable or the agent repeatedly fails a subgoal, prompt the LLM again using the partial plan already completed and the objects observed so far.
+
+That gives replanning a concrete structure:
+
+1. Keep track of completed subgoals.
+2. Detect that the current subgoal is failing or unreachable.
+3. Summarize the observed environment.
+4. Ask the LLM for a continuation plan grounded in those observations.
+
+This is a more precise version of "try again." The replanner is not starting from scratch. It is conditioned on execution history and partial progress.
+
+## FLARE: Multimodal Grounding and Adaptive Replanning
+
+FLARE makes the visual grounding part more explicit. The paper argues that LLM planners often rely too much on linguistic common sense and ignore the actual state of the environment at command reception. To fix this, FLARE combines language instructions with environmental perception and adds an environment-adaptive replanning component.
+
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/replanning-papers/flare-architecture.png' | relative_url }}" alt="FLARE architecture for multimodal grounded planning and adaptive replanning">
+  <figcaption>Image source: the FLARE project page. FLARE connects visual observation, language-conditioned planning, and environment-adaptive replanning, making the current scene a first-class input to plan revision.</figcaption>
+</figure>
+
+This is the natural next step after LLM-Planner. Instead of treating perception as a small object list, the planner uses multimodal cues to correct or revise the plan. For ambiguous or incorrect language instructions, visual evidence can change the generated subgoal sequence.
+
+The takeaway is that replanning becomes more useful when it is grounded in perception, not only in conversation history.
+
+## When Replanning Becomes the Bottleneck
+
+The papers above mostly make replanning more capable. But in long-horizon embodied systems, a new problem appears: replanning itself can become expensive.
+
+Each replanning call may include:
+
+- the original task instruction;
+- the partial plan;
+- action history;
+- failure traces;
+- scene summaries;
+- object lists;
+- human feedback;
+- multi-agent coordination state.
+
+As this context grows, a large-model replanning call can become slow and bursty. In a closed-loop system, slow replanning is not just an implementation detail. It delays execution, changes timing, and can create additional failures.
+
+BRACE frames this as a control problem: when should the agent replan, how should it replan, and under what token and latency budget?
+
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/replanning-papers/brace-overview.png' | relative_url }}" alt="BRACE overview for budgeted replanning in embodied agents">
+  <figcaption>Image source: the BRACE project page. BRACE treats replanning as a budgeted closed-loop decision, making token growth, latency, cooldowns, and replanning-call modules part of the system design.</figcaption>
+</figure>
+
+This shifts the question from "Can the agent recover if the plan fails?" to "Can the agent recover while respecting real-time constraints?"
+
+For practical embodied agents, that distinction is crucial. A robot that replans correctly after 30 seconds may still fail the task if the world changes during those 30 seconds. A multi-agent system that replans too often can also create coordination delays.
+
+## A Paper-Grounded Taxonomy
+
+The literature suggests a useful taxonomy:
+
+| Replanning type | Main signal | Example |
 | --- | --- | --- |
-| Planning | What sequence of subgoals should solve the task? | "Find mug, pick mug, deliver mug." |
-| Execution | How do I perform the next action in the current state? | Navigate to the cabinet; run a grasp controller. |
-| Replanning | Should the current plan be kept, repaired, or replaced? | The mug is missing, so search a nearby rack. |
+| Reason-act replanning | Observation after an action | ReAct |
+| Affordance-grounded replanning | Current action feasibility | SayCan |
+| Feedback-language replanning | Natural-language feedback from detectors or humans | Inner Monologue |
+| Object-grounded replanning | Observed objects and completed subgoals | LLM-Planner |
+| Multimodal adaptive replanning | Visual state plus language instruction | FLARE |
+| Budgeted replanning | Token, latency, and real-time constraints | BRACE |
 
-Classical robotics has studied feedback, receding-horizon control, and task-and-motion planning for decades. What is new in current embodied AI is the role of large vision-language and language models as semantic planners. These models are good at proposing human-like task decompositions, but they are not automatically grounded in a robot's current abilities, observations, or safety constraints.
+These are not mutually exclusive. A deployable system may need all of them: perception to ground the plan, feedback to detect failure, memory to avoid repeating mistakes, and budgeting to decide whether another planner call is worth it.
 
-That creates the central tension: foundation models can write useful plans, but embodied agents need those plans to survive contact with the world.
+## What Makes Replanning Hard
 
-## Why Static Plans Break
+Replanning sounds straightforward, but several design choices are easy to get wrong.
 
-A static plan is attractive because it is simple. Ask a model once, get a list of actions, execute them. This works for short tasks in stable environments. It breaks as the horizon grows.
+First, **triggering** is hard. Replanning too late leaves the agent stuck. Replanning too often causes instability and wasted computation.
 
-Long-horizon embodied tasks create several compounding problems:
+Second, **state summarization** is hard. The replanner needs enough context to make a better decision, but not so much that every call becomes slow and noisy.
 
-- Partial observability: the agent cannot know all object locations or states before it moves.
-- Non-reversible actions: after pouring, cutting, heating, opening, or moving objects, some mistakes cannot simply be undone.
-- Execution uncertainty: navigation, grasping, pushing, and placing can fail even when the high-level plan is correct.
-- Ambiguous language: human instructions often omit constraints that matter physically.
-- Safety constraints: some plans are semantically plausible but physically unsafe.
+Third, **granularity** is hard. Sometimes the system should only repair one subgoal. Sometimes it should regenerate the whole plan. Sometimes it should stop and ask for help.
 
-Benchmarks such as ALFRED were designed to make this difficulty explicit: agents must follow language instructions through long, compositional household tasks with object interactions and non-reversible state changes. More recent safety-oriented benchmarks, such as SafeAgentBench and VestaBench, push this further by testing whether agents can handle hazardous, adversarial, or multi-constraint tasks.
+Fourth, **grounding** is hard. A replan based only on linguistic common sense can repeat the same mistake. The replanner needs current observations, affordances, and execution feedback.
 
-## What Counts as Feedback?
-
-Replanning needs feedback. The feedback does not have to be perfect, but it must say something useful about the gap between the plan and the world.
-
-Common feedback channels include:
-
-- Perception: object detections, scene descriptions, segmentation, maps, visual question answering.
-- Controller status: whether a skill succeeded, failed, timed out, or became unsafe.
-- Affordance estimates: whether a proposed action is physically possible from the current state.
-- Progress monitors: which subgoals have been achieved.
-- Human input: corrections, preferences, disambiguation, or explicit intervention.
-- Memory: what the agent has already tried, where objects were seen, and which failures repeated.
-
-This is why work such as SayCan matters: it shows how a language model's semantic preference can be grounded by action affordances. Inner Monologue takes another step by feeding language-form feedback, such as scene descriptions and success signals, back into the planner. LLM-Planner and FLARE similarly highlight the need for plans that are updated using current environmental observations rather than only linguistic common sense.
-
-## Different Forms of Replanning
-
-Not all replanning systems are the same. A useful taxonomy is:
-
-1. Event-triggered replanning: replan only when something important happens, such as a failed skill or a new object observation.
-2. Periodic replanning: replan every fixed number of steps, similar to receding-horizon control.
-3. Hierarchical replanning: update high-level subgoals less often, while low-level controllers adapt continuously.
-4. Repair-based replanning: keep most of the old plan and patch the broken step.
-5. Full replanning: discard the old plan and generate a new one from the current state.
-6. Budgeted replanning: decide whether replanning is worth its computational, latency, or energy cost.
-
-The last one is especially important. Replanning can improve robustness, but it is not free. A large model call can be slow, expensive, and unstable. A robot with limited onboard compute, a UAV with limited battery, or a fleet of agents sharing network resources cannot simply replan after every observation.
-
-The practical question is not "Should we replan?" but "When is replanning worth it?"
+Fifth, **evaluation** is hard. Task success alone is not enough. We also need to measure failed attempts, repeated replans, tail latency, human interventions, unsafe actions, and real-time deadline misses.
 
 ## Why We Should Care
 
-Replanning is worth attention because it sits at the boundary between impressive demos and deployable embodied systems.
+Replanning is central because it is where embodied AI becomes interactive. A one-shot plan can look impressive in a demo, but physical environments are partially observable, dynamic, and failure-prone.
 
-First, it is a robustness problem. A robot that cannot recover from minor mismatches is not useful outside a scripted demo. Replanning lets an agent use failures as information rather than treating them as terminal states.
+The research direction matters for four reasons:
 
-Second, it is a grounding problem. Language models can produce plans that sound reasonable but ignore the specific robot, room, object state, or safety constraint. Replanning connects semantic reasoning to current observations and action feasibility.
+1. **Robustness.** Replanning lets agents recover from execution drift and failed skills.
+2. **Grounding.** Replanning connects language-model reasoning to current observations and action feasibility.
+3. **Safety.** Replanning provides a mechanism to stop, revise, or ask for help when a plan becomes risky.
+4. **Efficiency.** Budgeted replanning makes planning cost part of the closed-loop policy rather than an afterthought.
 
-Third, it is a safety problem. Embodied agents can affect the physical world. If an instruction, intermediate state, or generated action becomes hazardous, the system needs a mechanism to stop, revise, or ask for clarification.
-
-Fourth, it is an efficiency problem. Long-horizon behavior requires selective computation. The best agent is not the one that thinks the most; it is the one that spends planning effort when the expected value of revising the plan is high.
-
-Finally, it is a coordination problem. In multi-agent systems or distributed robot deployments, replanning is how agents adapt to each other's actions, communication delays, changing task assignments, and limited compute resources.
-
-## Open Research Questions
-
-Several questions are still open:
-
-- Triggering: what signal should cause a replan?
-- State summarization: what should be passed to the planner without overwhelming it?
-- Granularity: should the system revise a single action, a subgoal, or the whole task plan?
-- Cost modeling: how should latency, compute, energy, and risk be traded against expected improvement?
-- Evaluation: should we measure only task success, or also recovery quality, wasted actions, unsafe attempts, and planning cost?
-- Multi-agent replanning: how should agents coordinate local plan revisions without creating global conflicts?
-
-These questions make replanning a rich direction for embodied intelligence. It is not only a patch for failure. It is a way to make planning interactive, grounded, and resource-aware.
+The most useful embodied agents will not simply plan better. They will know when the current plan is still good, when it should be repaired, when a new plan is worth the cost, and when the safest action is to stop.
 
 ## Further Reading
 
-- [ReAct: Synergizing Reasoning and Acting in Language Models](https://openreview.net/forum?id=WE_vluYUL-X). A general reasoning-and-acting framework where reasoning traces help update plans and handle exceptions.
-- [SayCan: Grounding Language in Robotic Affordances](https://say-can.github.io/). A robot planning system that combines language-model scores with affordance estimates for feasible skill selection.
-- [Inner Monologue: Embodied Reasoning through Planning with Language Models](https://innermonologue.github.io/). A closed-loop approach that feeds environment feedback into language-model planning.
-- [LLM-Planner: Few-Shot Grounded Planning for Embodied Agents](https://dki-lab.github.io/LLM-Planner/). A few-shot planner that updates high-level plans using feedback from the environment.
-- [FLARE: Multi-Modal Grounded Planning and Efficient Replanning](https://ojs.aaai.org/index.php/AAAI/article/view/32455). A 2025 AAAI paper focused on environment-grounded planning and adaptive replanning.
-- [ALFRED](https://a11y2.apps.allenai.org/paper?id=95061c101ff643dbff73945a8fb2e6ee8e2d010a). A long-horizon household instruction-following benchmark with object interactions and non-reversible state changes.
-- [SafeAgentBench](https://safeagentbench.github.io/) and [VestaBench](https://aclanthology.org/2025.emnlp-industry.149/). Benchmarks that emphasize safety-aware and multi-constraint embodied planning.
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/)
+- [SayCan: Do As I Can, Not As I Say](https://say-can.github.io/)
+- [Inner Monologue: Embodied Reasoning through Planning with Language Models](https://innermonologue.github.io/)
+- [LLM-Planner: Few-Shot Grounded Planning for Embodied Agents](https://dki-lab.github.io/LLM-Planner/)
+- [FLARE: Multi-Modal Grounded Planning and Efficient Replanning](https://twoongg.github.io/projects/flare/)
+- [BRACE: When Replanning Becomes the Bottleneck](https://nebulis-lab.com/BRACE/)
