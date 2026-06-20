@@ -41,6 +41,7 @@ education:
 - name: Hong Kong Baptist University
   logo: /assets/images/badges/hkbu-logo-mini.png
   logo_width: 22px
+  logo_margin_left: 4px
   color: "#004B8D"
   position: >-
     B.S. in Statistics and Data Science <br/>
