@@ -11,10 +11,10 @@
                                 {% for item in site.data.profile.education %}
                                 <li class="media mb-1">
                                     {% if item.logo %}
-                                    <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">
+                                    <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 30px;" class="mr-2 mt-1">
                                     {% endif %}
                                     <div class="media-body">
-                                        <div>{{ item.name }}</div>
+                                        <div {% if item.color %}style="color: {{ item.color }}; font-weight: 500;"{% endif %}>{{ item.name }}</div>
                                         <div class="small">{{ item.dept }}</div>
                                         <div class="small d-flex">
                                             <div>{{ item.position }}</div>
@@ -54,7 +54,7 @@
                     {% endif %}
 
                     {% if site.data.profile.awards %}
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 mt-3">
                         <div class="mx-2 my-1">
                             <h6>Honors & Awards</h6>
                             <ul class="list small pl-3 mb-1">
