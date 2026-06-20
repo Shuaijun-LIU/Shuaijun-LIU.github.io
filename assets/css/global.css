@@ -91,3 +91,44 @@ div.lazy {
 .email-text {
     font-family: Source Code Pro, monospace;
 }
+
+.waffle-page .waffle-portrait {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.waffle-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.waffle-tags span {
+    border: 1px solid #d7e3ea;
+    background: #f8fbfc;
+    color: #31515f;
+    border-radius: 999px;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.875rem;
+}
+
+.waffle-paper,
+.waffle-project {
+    border: 1px solid #e6e9ed;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    background: #fff;
+}
+
+.waffle-paper img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.waffle-gallery img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
