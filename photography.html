@@ -6,23 +6,7 @@ permalink: /photography/
 container_class: container-xl
 ---
 
-{% assign photo_count = site.data.photography | size %}
-
 <div class="photography-page">
-    <section class="photo-hero card border-0 shadow-sm bg-white">
-        <div class="photo-hero-copy">
-            <p class="photo-kicker">Personal Photography</p>
-            <h1>Places I Have Seen</h1>
-            <p>
-                A small collection of photos I took while traveling, studying, and walking around different cities.
-                Locations are lightly cleaned from the original file names for readability.
-            </p>
-        </div>
-        <div class="photo-hero-meta">
-            <span>{{ photo_count }} photos</span>
-        </div>
-    </section>
-
     <div class="photo-grid photo-grid-single">
         {% for photo in site.data.photography %}
         <figure class="photo-card">
