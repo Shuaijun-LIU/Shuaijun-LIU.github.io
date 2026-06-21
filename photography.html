@@ -1,0 +1,56 @@
+---
+layout: default
+title: Photography
+navbar_title: Photography
+container_class: container-xl
+---
+
+{% assign photo_count = site.data.photography | size %}
+{% assign photo_groups = site.data.photography | group_by: "region" %}
+
+<div class="photography-page">
+    <section class="photo-hero card border-0 shadow-sm bg-white">
+        <div class="photo-hero-copy">
+            <p class="photo-kicker">Personal Photography</p>
+            <h1>Places I Have Seen</h1>
+            <p>
+                A small collection of photos I took while traveling, studying, and walking around different cities.
+                Locations are lightly cleaned from the original file names for readability.
+            </p>
+        </div>
+        <div class="photo-hero-meta">
+            <span>{{ photo_count }} photos</span>
+            <span>{{ photo_groups | size }} regions</span>
+        </div>
+    </section>
+
+    <div class="photo-region-nav">
+        {% for group in photo_groups %}
+        <a href="#{{ group.name | slugify }}">{{ group.name }}</a>
+        {% endfor %}
+    </div>
+
+    {% for group in photo_groups %}
+    <section class="photo-section" id="{{ group.name | slugify }}">
+        <div class="photo-section-heading">
+            <h2>{{ group.name }}</h2>
+            <span>{{ group.items | size }} photos</span>
+        </div>
+        <div class="photo-grid">
+            {% for photo in group.items %}
+            <figure class="photo-card">
+                <img
+                    class="lazy"
+                    src="{{ '/assets/images/empty_300x200.png' | relative_url }}"
+                    data-src="{{ photo.image | relative_url }}"
+                    alt="{{ photo.title }} in {{ photo.location }}">
+                <figcaption>
+                    <strong>{{ photo.title }}</strong>
+                    <span>{{ photo.location }}</span>
+                </figcaption>
+            </figure>
+            {% endfor %}
+        </div>
+    </section>
+    {% endfor %}
+</div>
