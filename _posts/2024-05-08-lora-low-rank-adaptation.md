@@ -8,153 +8,189 @@ tags:
   - PEFT
 ---
 
-Fine-tuning a large language model sounds straightforward: take a pretrained model, train it on a smaller task-specific dataset, and obtain a model that behaves better for the target use case. The difficulty is that "the model" may contain billions of parameters. Updating all of them is expensive, storing a separate full copy for every downstream task is wasteful, and serving many task-specific variants quickly becomes operationally messy.
+Fine-tuning a large model is conceptually simple: start from a pretrained checkpoint, run gradient descent on downstream data, and save the adapted model. The difficulty is that modern checkpoints are too large for this workflow to be cheap. Updating every parameter requires large optimizer states, large gradients, and large checkpoints. If every task needs a full model copy, storage and serving quickly become the bottleneck.
 
-Low-Rank Adaptation, usually called **LoRA**, is a simple idea that became one of the standard tools for parameter-efficient fine-tuning. Instead of changing the entire pretrained weight matrix, LoRA freezes the original model and learns a small low-rank update. The result is a compact adapter that can be trained, stored, shared, merged, and swapped much more cheaply than a full model checkpoint.
+**LoRA**, short for **Low-Rank Adaptation**, changes the fine-tuning problem from "learn a new version of the whole model" to "learn a small residual update for selected weight matrices." The pretrained model stays frozen. The trainable part is a pair of low-rank matrices that can be stored, shared, merged, or swapped much more cheaply than a full checkpoint.
 
-<figure class="blog-figure">
-  <img src="{{ '/assets/images/blog/lora-low-rank-update.svg' | relative_url }}" alt="LoRA represents a weight update with two small low-rank matrices">
-  <figcaption>LoRA keeps the pretrained weight matrix frozen and learns a low-rank residual update. In practice, the trainable matrices are much smaller than the original layer.</figcaption>
-</figure>
+This post is based mainly on the original [LoRA paper](https://arxiv.org/abs/2106.09685) and the later [QLoRA paper](https://arxiv.org/abs/2305.14314). The figures below are converted from the papers' arXiv LaTeX source.
 
-## The Problem with Full Fine-Tuning
+## The Problem LoRA Solves
 
-Suppose a model contains a weight matrix $W$ inside an attention or feed-forward layer. In full fine-tuning, training directly changes $W$. This gives the optimizer maximum freedom, but it also means every task needs its own copy of all updated weights.
-
-That creates three practical problems.
-
-First, training memory is high. Fine-tuning does not only store model weights. It also needs gradients, optimizer states, activations, and often mixed-precision copies. Adam-style optimizers can multiply the memory footprint substantially.
-
-Second, checkpoint storage is high. A full fine-tuned model is often almost the same size as the base model. If a team has one model for summarization, another for customer support, and another for domain-specific extraction, the storage cost grows linearly with the number of tasks.
-
-Third, deployment becomes awkward. Serving ten fine-tuned variants may require ten large checkpoints, even if most parameters remain close to the same pretrained starting point.
-
-LoRA addresses these problems by asking a sharper question: do we really need to update the full parameter space to adapt the model?
-
-## The Low-Rank Assumption
-
-LoRA starts from the observation that the useful task-specific update may have much lower intrinsic rank than the original matrix. If the original layer has a large weight matrix $W$, the adapted layer can be written as:
+Consider a transformer model with a linear projection:
 
 $$
-W' = W + \Delta W
+h = Wx
 $$
 
-Instead of learning the full $\Delta W$, LoRA parameterizes it as the product of two smaller matrices:
+In full fine-tuning, the optimizer updates \(W\) directly. This gives maximum freedom, but it is expensive in three ways.
+
+First, the optimizer must store training states for many parameters. Adam-style optimizers commonly need multiple auxiliary tensors per trainable parameter, so the memory footprint is much larger than the checkpoint size alone.
+
+Second, each adapted model becomes large. If the base model is 7B, 13B, or 70B parameters, then a full fine-tuned checkpoint is essentially another model of similar size. A deployment with many domains or customers becomes a checkpoint management problem.
+
+Third, serving variants is awkward. If each task requires a separate full checkpoint, batching across tasks, switching behavior, and rolling out updates become operationally heavy.
+
+LoRA starts from a practical hypothesis: the useful downstream change may not need the full rank of the original matrix.
+
+## The Low-Rank Update
+
+Let \(W_0\) be a frozen pretrained weight matrix. Full fine-tuning learns a dense update \(\Delta W\):
+
+$$
+W' = W_0 + \Delta W
+$$
+
+LoRA does not learn a full \(\Delta W\). It parameterizes the update as the product of two smaller matrices:
 
 $$
 \Delta W = BA
 $$
 
-Here, $A$ projects the input down to a low-dimensional rank-$r$ space, and $B$ projects it back up. If $r$ is small, then $A$ and $B$ contain far fewer trainable parameters than a full update matrix.
-
-For a layer with input dimension $d$ and output dimension $k$, a full update contains $d \times k$ trainable parameters. A LoRA update contains approximately $r(d + k)$ parameters. When $r$ is 4, 8, 16, or 32, the reduction can be dramatic.
-
-The pretrained matrix $W$ stays frozen. Only the LoRA matrices are trained.
-
-## What Changes During Training?
-
-During training, the forward pass uses both the frozen base layer and the LoRA branch:
-
-$$
-h = Wx + BAx
-$$
-
-The frozen base layer still provides the general language, vision, or multimodal capability learned during pretraining. The LoRA branch learns a small task-specific correction.
-
-This design has a useful side effect: the adapter begins as a near-zero perturbation of the base model. In many implementations, one of the low-rank matrices is initialized to zero, so the model initially behaves like the original pretrained model. Fine-tuning then gradually learns a controlled residual.
-
-LoRA is usually applied to selected linear projections inside transformer blocks. Common targets include attention query and value projections, and sometimes key, output, gate, up, and down projections depending on the architecture and task. The right target modules are not universal. Instruction tuning, classification, visual adaptation, and diffusion models may benefit from different choices.
-
-## Why It Is Useful
-
-The most visible benefit is efficiency. LoRA reduces the number of trainable parameters, which reduces optimizer state and checkpoint size. This makes it easier to fine-tune larger models on limited hardware.
-
-The second benefit is modularity. A base model can remain fixed while multiple LoRA adapters are stored separately. One deployment can load a general base model and attach different adapters for different domains or users.
-
-The third benefit is mergeability. After training, the low-rank update can be merged into the original weight matrix:
-
-$$
-W_{\text{merged}} = W + BA
-$$
-
-This means LoRA does not necessarily add inference latency. A merged model behaves like an ordinary model with updated weights. When adapters need to be swapped dynamically, they can also remain separate.
+If \(W_0 \in \mathbb{R}^{d \times k}\), then a full update has \(d \times k\) trainable parameters. A LoRA update with rank \(r\) has roughly \(r(d+k)\) trainable parameters. When \(r\) is small, this is much cheaper.
 
 <figure class="blog-figure">
-  <img src="{{ '/assets/images/blog/lora-adapter-serving.svg' | relative_url }}" alt="One frozen base model can serve multiple task adapters">
-  <figcaption>A common deployment pattern is one shared base model plus small task adapters. This avoids storing a full model copy for every downstream task.</figcaption>
+  <img src="{{ '/assets/images/blog/lora-papers/lora-reparameterization.png' | relative_url }}" alt="LoRA reparameterizes a weight update with two low-rank matrices">
+  <figcaption>LoRA freezes the pretrained weight and trains only two low-rank matrices, commonly written as \(A\) and \(B\). Figure source: <a href="https://arxiv.org/abs/2106.09685">LoRA</a>.</figcaption>
 </figure>
 
-## LoRA Is Not Just Compression
+The adapted forward pass becomes:
 
-It is tempting to think of LoRA as a compression trick, but that misses the point. LoRA does not first train a full model and then compress it. It constrains the training update itself to a low-rank subspace.
+$$
+h = W_0x + BAx
+$$
 
-That constraint can be helpful. Full fine-tuning has enormous freedom, which can overfit small datasets or move the model too far from its pretrained behavior. LoRA limits how much the model can change, while still giving it a flexible path to adapt.
+The base path \(W_0x\) preserves the pretrained model's general capability. The LoRA branch \(BAx\) learns the task-specific correction.
 
-The constraint can also be limiting. If the task requires a large structural change, a very low rank may underfit. Increasing the rank, tuning more modules, using better data, or combining LoRA with other adaptation strategies may be necessary.
+The original paper initializes one of the low-rank factors so that the LoRA update is zero at the start of training. That means the model initially behaves like the base checkpoint. Fine-tuning then learns a controlled residual rather than immediately perturbing the model.
 
-## QLoRA: Quantization Plus LoRA
+## Why Low Rank Can Be Enough
 
-QLoRA extends the idea by reducing memory for the frozen base model as well. It keeps the pretrained model in a quantized format, commonly 4-bit, and backpropagates through it into LoRA adapters. The trainable part remains small, while the frozen base model consumes much less memory.
+The low-rank assumption is not saying that the original model is low rank. It is saying that the **task-specific update** may lie in a much smaller subspace than the full parameter matrix.
 
-The important distinction is this:
+That is a plausible assumption for many adaptation tasks. A pretrained model already contains general language, code, vision, or multimodal capability. Downstream fine-tuning often does not need to relearn syntax, common knowledge, or general representations. It needs to nudge the model toward a domain, task format, response style, or instruction distribution.
 
-- **LoRA** reduces the number of trainable parameters.
-- **QLoRA** combines LoRA with quantized storage of the frozen base model to reduce memory further.
+LoRA constrains that nudge. This has two consequences.
 
-This is why QLoRA made it practical to fine-tune much larger models on smaller hardware. The adapter is still the part being learned; quantization mainly changes how the frozen base model is stored and used during training.
+It reduces memory and storage because far fewer parameters are trainable.
 
-## Practical Knobs
+It can also regularize adaptation because the model cannot freely overwrite every weight. When data is limited, this constraint can be useful. When the task genuinely requires a large structural change, the same constraint can become a bottleneck.
 
-Several LoRA hyperparameters are worth understanding before using it blindly.
+## Where LoRA Is Inserted
 
-**Rank $r$** controls the capacity of the adapter. A small rank is cheaper but less expressive. A larger rank can fit more task-specific change but increases memory and storage.
+LoRA is usually applied to selected linear projections inside transformer blocks. Common targets include:
 
-**Alpha** scales the LoRA update. Many implementations use a scaling factor like $\alpha / r$ so that changing the rank does not automatically change the update magnitude too aggressively.
+- attention query and value projections;
+- attention key and output projections;
+- MLP up, down, and gate projections;
+- sometimes all linear layers in a transformer block.
 
-**Target modules** determine where LoRA is inserted. Training only attention projections may be enough for some tasks. Other tasks need feed-forward layers or more modules.
+There is no universal best choice. Attention-only LoRA can be cheap and effective. Instruction tuning and chat adaptation often benefit from adding LoRA to more modules. Vision-language models, diffusion models, and robot policies may need different target modules because their bottlenecks differ.
 
-**Dropout** can regularize the LoRA branch, especially when the adaptation dataset is small.
+The important point is that LoRA is a **surgical update mechanism**. It does not require changing the whole network, but it does require deciding where the adaptation capacity should enter.
 
-**Merging** matters for deployment. If only one adapter is needed, merging can simplify serving. If many adapters must be switched at runtime, keeping them separate may be better.
+## Rank, Alpha, and Scaling
+
+Three knobs matter in most LoRA implementations.
+
+**Rank \(r\)** controls capacity. Small ranks such as 4, 8, or 16 are cheap. Larger ranks such as 64 or 128 can fit richer changes but increase memory and checkpoint size.
+
+**Alpha** scales the LoRA branch. Many implementations use a factor like \(\alpha / r\), so the magnitude of the update does not accidentally change too much when the rank changes.
+
+**Dropout** regularizes the LoRA path. This can help when the adaptation dataset is small or noisy.
+
+These knobs should be tuned against the actual goal. A small classification adapter, a style-tuning adapter, a domain-specific instruction adapter, and a code-generation adapter may need different settings.
+
+## Merging and Serving
+
+LoRA is not only a training trick. It also changes deployment.
+
+After training, the low-rank update can be merged into the frozen weight:
+
+$$
+W_{\text{merged}} = W_0 + BA
+$$
+
+If a deployment uses one adapter at a time, merging makes inference look like an ordinary fine-tuned model. There is no separate adapter branch at runtime.
+
+If a deployment needs many task-specific behaviors, keeping adapters separate can be more useful. One base model can load different LoRA adapters for different domains, customers, languages, or tools. This is why LoRA became a practical format for sharing small fine-tunes.
+
+The trade-off is batching and adapter management. If different requests in the same batch use different adapters, the serving stack must route or batch them carefully. LoRA reduces the size of the adapted model, but it does not remove all systems complexity.
+
+## QLoRA: When The Frozen Model Is Still Too Large
+
+LoRA reduces the number of trainable parameters, but the frozen base model still has to fit in memory during training. For very large language models, that is still expensive.
+
+[QLoRA](https://arxiv.org/abs/2305.14314) combines LoRA with low-bit storage of the frozen base model. The base model is kept in 4-bit quantized form, while gradients flow into LoRA adapters. The trainable part remains small, and the frozen part becomes much cheaper to store.
+
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/lora-papers/qlora-overview.png' | relative_url }}" alt="QLoRA compares memory requirements of fine-tuning methods">
+  <figcaption>QLoRA keeps the pretrained transformer quantized while training LoRA adapters, reducing memory enough to make much larger models practical to fine-tune. Figure source: <a href="https://arxiv.org/abs/2305.14314">QLoRA</a>.</figcaption>
+</figure>
+
+It is useful to separate the ideas:
+
+- LoRA reduces the number of **trainable** parameters.
+- Quantization reduces the memory needed to store the **frozen** base model.
+- Paged optimizers and gradient checkpointing help manage memory spikes during training.
+
+This distinction prevents a common misunderstanding. QLoRA is not "just LoRA with smaller adapters." It is a memory system for training large models where the frozen model, activations, gradients, and optimizer states all matter.
+
+## LoRA Is Not A Knowledge Base
+
+LoRA can teach behavior, formatting, style, domain conventions, and task-specific mappings. It can also encode some facts from the training data. But it is a poor replacement for retrieval when the main problem is fresh, private, or frequently changing knowledge.
+
+If the goal is "answer using today's internal documents," LoRA is usually the wrong primary tool. Use retrieval or tool access. If the goal is "follow this organization's answer style and cite sources consistently," LoRA may be useful in combination with retrieval.
+
+This distinction matters because fine-tuning and retrieval solve different problems:
+
+| Problem | Better default |
+| --- | --- |
+| Output format, style, instruction behavior | LoRA or other fine-tuning |
+| Private or changing factual knowledge | Retrieval or tool use |
+| Domain-specific reasoning habits | Fine-tuning plus evaluation |
+| Evidence-grounded question answering | Retrieval plus generation |
+| Many small task variants | Shared base model plus adapters |
 
 ## Common Failure Modes
 
-LoRA is efficient, but it is not magic.
+LoRA is efficient, but it is not automatic.
 
-If the dataset is poor, LoRA will efficiently learn poor behavior. Low-rank adaptation does not fix label noise, weak prompts, inconsistent formatting, or missing task coverage.
+**Wrong data.** If the adaptation data is noisy or inconsistent, LoRA will learn the noise efficiently.
 
-If the rank is too small, the model may not adapt enough. This often appears as outputs that stay close to the base model and fail to learn domain-specific patterns.
+**Rank too small.** The model may stay too close to the base behavior and fail to learn the task.
 
-If the target modules are wrong, training may look cheap but ineffective. Some architectures need attention-only LoRA; others benefit from adapting MLP projections too.
+**Rank too large.** The adapter becomes more expensive and can overfit, especially with weak data.
 
-If users expect LoRA to "add knowledge" permanently, they may be disappointed. Fine-tuning can shape behavior and encode some facts, but it is not a substitute for retrieval, tool use, or maintaining an external knowledge base when facts change.
+**Wrong target modules.** Training only a few attention projections may be insufficient for some instruction or multimodal tasks.
 
-If too many adapters are stacked or merged without care, interactions can become unpredictable. Adapters are not guaranteed to compose cleanly.
+**Bad merge discipline.** Repeatedly merging, stacking, or composing adapters without evaluation can produce unpredictable behavior.
 
-## When to Use LoRA
+**Confusing adaptation with knowledge update.** LoRA is not a clean database update mechanism. It is better viewed as a behavioral adaptation mechanism.
 
-LoRA is a strong default when the goal is to adapt a large pretrained model to a task, style, domain, or instruction format without paying the cost of full fine-tuning.
+## Practical Checklist
 
-It is especially useful when:
+Before using LoRA, decide the following.
 
-- the base model is large;
-- training hardware is limited;
-- many task-specific variants are needed;
-- the adaptation dataset is moderate in size;
-- the deployment system can benefit from small swappable adapters.
+**What behavior should change?** Be specific. Style, format, reasoning pattern, tool protocol, or domain vocabulary are different targets.
 
-Full fine-tuning can still be appropriate when maximum task performance matters, data is large and high-quality, and compute is available. Retrieval can be more appropriate when the main problem is fresh or private knowledge. Prompting can be enough when the task is simple and the base model already knows the behavior.
+**Which modules should receive adapters?** Start from known recipes for the model family, then evaluate attention-only versus broader target modules if performance matters.
+
+**What rank is enough?** Use the smallest rank that reaches the target quality. Increasing rank is capacity, not a guarantee.
+
+**Will adapters be merged or swapped?** Merging is simple for single-adapter deployment. Swapping is useful when many domains share one base model.
+
+**How will the model be evaluated?** Do not rely on training loss alone. Check task success, format compliance, refusal behavior, hallucination tendency, and regression on general capabilities.
 
 ## Takeaway
 
-LoRA works because adaptation often does not require changing every parameter. By freezing the pretrained model and learning a low-rank residual update, it turns fine-tuning from a heavyweight model-copying problem into a lightweight adapter-learning problem.
+LoRA works because adaptation often does not require moving a model through the full parameter space. By freezing the base model and learning a low-rank residual update, it turns fine-tuning into adapter learning.
 
-The key intuition is simple: keep the general capability in the base model, and learn only the small task-specific correction. That is why LoRA became a central technique for practical LLM customization.
+The deeper lesson is not just "use fewer parameters." It is that large models can be treated as shared infrastructure, while task-specific behavior lives in small, auditable, replaceable modules. That is why LoRA became one of the default tools for practical model customization.
 
 ## Further Reading
 
 - [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
 - [LoRA on OpenReview, ICLR 2022](https://openreview.net/forum?id=nZeVKeeFYf9)
 - [Microsoft LoRA implementation](https://github.com/microsoft/LoRA)
-- [Hugging Face PEFT LoRA guide](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora)
 - [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
+- [Hugging Face PEFT LoRA guide](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora)
