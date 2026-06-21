@@ -16,6 +16,11 @@ Habitat is a simulation platform for embodied AI. The original paper is importan
   <figcaption>Paper figure from the <a href="https://arxiv.org/abs/1904.01201">Habitat</a> source package, showing the dataset-simulator-task stack for embodied agents.</figcaption>
 </figure>
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/habitat-task-examples.jpg' | relative_url }}" alt="Habitat navigation task maps and trajectory examples">
+  <figcaption>Navigation task examples from the paper source. For replanning work, trajectory shape and cost are often as important as binary success.</figcaption>
+</figure>
+
 ## What the Paper Contributes
 
 The paper presents Habitat as a platform rather than a single task. Its stack includes:
@@ -43,6 +48,20 @@ choose task config -> reset episode -> run policy/planner loop -> log trajectory
 ```
 
 For replanning experiments, make the replan budget explicit. Record how often the agent replans, what context it uses, and whether replanning improves success or only adds computation.
+
+## Practical Usage Notes
+
+For replanning work, Habitat is often most useful as a navigation substrate, especially around PointNav-style evaluation. That is a narrower and cleaner use than claiming broad Habitat coverage across every task family.
+
+For replanning papers, I would report:
+
+- task family, dataset split, episode count, and executor setting;
+- success, SPL, path length, collision or cost signals, and timeout rate;
+- number of replans, replan trigger, context window, and planning budget;
+- latency or token budget when a large model is part of the loop;
+- representative top-down maps or trajectory visualizations.
+
+The important failure mode is budget waste. A replan module can improve final success while making the agent too slow or too expensive. Habitat is useful because it lets the result be read as a closed-loop trajectory, not just a final answer.
 
 ## When To Use It
 

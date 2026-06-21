@@ -16,6 +16,11 @@ LIBERO is a benchmark for lifelong robot learning from language-conditioned mani
   <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2306.03310">LIBERO</a> source package, showing the benchmark suites and the lifelong-learning questions the paper was designed to study.</figcaption>
 </figure>
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/libero-task-examples.jpg' | relative_url }}" alt="LIBERO task examples across Spatial, Object, Goal, and Long suites">
+  <figcaption>Task examples covering the practical reporting split used for VLA evaluation: Spatial, Object, Goal, and Long.</figcaption>
+</figure>
+
 ## What the Paper Contributes
 
 The core design is a set of procedurally generated task suites for language-conditioned manipulation. The paper highlights four major suites:
@@ -26,6 +31,8 @@ The core design is a set of procedurally generated task suites for language-cond
 | LIBERO-Object | Generalization over object identity and visual variation |
 | LIBERO-Goal | Generalization over goal predicates |
 | LIBERO-100 | A larger task set for broader lifelong-learning evaluation |
+
+For current VLA evaluation, I would normally report the four task groups as Spatial, Object, Goal, and Long. The Long group is often represented by LIBERO-10, while LIBERO-90/100 are more useful when the question involves broader multitask pretraining or lifelong learning. This distinction matters because a method can look strong on object changes but still fail on goal-predicate transfer or long-horizon execution.
 
 This structure is why LIBERO is a good benchmark for vision-language-action models. A policy must connect language, perception, action, and a task-level success predicate, while the evaluation can isolate which kind of transfer is breaking.
 
@@ -42,6 +49,20 @@ print(task.language)
 ```
 
 For a real experiment, also record the suite name, observation mode, camera preprocessing, action scaling, initial-state protocol, and success predicate. Those details matter because the benchmark is often used to compare small changes in policy architecture or test-time strategy.
+
+## Practical Usage Notes
+
+The most important habit is to treat the suite name as part of the result, not as background metadata. A table that says "LIBERO success rate" without saying Spatial, Object, Goal, Long, LIBERO-10, or LIBERO-90 is usually not interpretable.
+
+In practice, the most useful checklist is:
+
+- record suite, task ID, language instruction, seed, camera names, and image resolution;
+- verify the initial-state protocol before comparing two policies;
+- export rollout videos with the same camera convention used by the evaluator;
+- report success rate together with timeouts, average horizon, and action throughput;
+- separate language-grounding failures from contact-control failures when inspecting rollouts.
+
+For VLA work, I would start with a small suite-level smoke test before running a full benchmark. If a policy cannot reliably reset, render, and execute a few LIBERO-10 rollouts, a larger Spatial/Object/Goal/Long table will mainly hide pipeline errors behind aggregate numbers.
 
 ## What to Look For
 

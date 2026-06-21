@@ -16,6 +16,11 @@ RoboSuite is a MuJoCo-based simulation framework for robot manipulation research
   <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2009.12293">RoboSuite</a> source package, showing example manipulation environments built with the framework.</figcaption>
 </figure>
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/robosuite-task-examples.jpg' | relative_url }}" alt="RoboSuite task examples from reset renders">
+  <figcaption>Task examples from reset renders. They show why controller, camera, and success logic should be recorded together with the task name.</figcaption>
+</figure>
+
 ## Why RoboSuite Matters
 
 RoboSuite is useful because it makes manipulation experiments inspectable. You can control the robot embodiment, controller, observation dictionary, camera setup, reward shaping, rendering mode, and task success logic.
@@ -51,6 +56,20 @@ env.close()
 ```
 
 For serious experiments, log the robot, controller, observation keys, camera names, image size, horizon, success metric, and random seed. Without those details, RoboSuite results are hard to reproduce.
+
+## Practical Usage Notes
+
+RoboSuite is a workbench, so the experiment definition is the benchmark. The same task name can behave differently under another controller, robot arm, observation dictionary, camera, horizon, or reward setting.
+
+The guide checklist I would keep next to every RoboSuite run:
+
+- record robot embodiment, controller config, observation keys, image size, camera names, horizon, and seed;
+- test reset, step, render, and success detection before launching training;
+- keep policy-resolution images separate from high-resolution debug videos;
+- verify whether the failure is controller-level before attributing it to policy learning;
+- use simple tasks such as Lift or Stack as pipeline checks before moving to larger suites.
+
+For headless machines, rendering backend issues can dominate the first debugging session. Treat a clean offscreen render and a saved rollout video as part of the benchmark setup, not an optional convenience.
 
 ## When To Use It
 

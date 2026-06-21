@@ -16,6 +16,11 @@ OGBench is a benchmark for offline goal-conditioned reinforcement learning. The 
   <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2410.20092">OGBench</a> source package, showing state- and pixel-based locomotion, manipulation, and drawing tasks.</figcaption>
 </figure>
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/ogbench-task-examples.jpg' | relative_url }}" alt="OGBench task examples including PointMaze, Cube, and Powderworld">
+  <figcaption>Task examples from environment smoke renders. The useful first split is usually not "robot or not robot," but state versus pixel observations and small versus large datasets.</figcaption>
+</figure>
+
 ## What the Paper Contributes
 
 OGBench focuses on fixed-dataset learning, where the policy cannot collect new experience online. Its task families include:
@@ -46,6 +51,20 @@ env.close()
 ```
 
 For manipulation work, start with an environment-only smoke before downloading large datasets. Then inspect observation/action shapes, goal fields, dataset keys, and evaluation horizons.
+
+## Practical Usage Notes
+
+OGBench is attractive because it is easy to start small, but it can become expensive quickly if pixel or large-scale datasets are downloaded without a plan. A practical workflow is to start with the official environment-and-dataset API, then use an environment-only smoke before touching full datasets.
+
+My practical checklist:
+
+- create the environment through the official OGBench API instead of bypassing registration;
+- start with a small state dataset and compact loading before moving to pixel data;
+- record the exact environment name, dataset variant, observation keys, goal fields, and horizon;
+- keep dataset size and storage location visible in the experiment log;
+- separate algorithmic offline-RL claims from real-robot or VLA generalization claims.
+
+For replanning or goal-conditioned policies, OGBench is most useful when the result includes trajectory-level analysis. A final return number is less informative than showing whether the policy can stitch partial behavior, recover from a bad intermediate state, or reach a goal that is underrepresented in the dataset.
 
 ## When To Use It
 

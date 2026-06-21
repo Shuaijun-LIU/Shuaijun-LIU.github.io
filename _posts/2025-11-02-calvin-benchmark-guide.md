@@ -16,6 +16,11 @@ CALVIN is a benchmark for long-horizon, language-conditioned manipulation. Its m
   <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2112.03227">CALVIN</a> source package, illustrating language-conditioned manipulation across several environments and sensor streams.</figcaption>
 </figure>
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/calvin-task-examples.jpg' | relative_url }}" alt="CALVIN task examples with static and gripper camera observations">
+  <figcaption>Task examples for checking the static-camera and gripper-camera conventions before trusting sequence-level scores.</figcaption>
+</figure>
+
 ## What the Paper Contributes
 
 The paper collects about twenty-four hours of teleoperated play data across four environments. It then builds language-conditioned tasks by combining recorded state information with hundreds of natural-language instructions. The benchmark contains 34 task types and evaluates policies on chains of five sequential instructions.
@@ -43,6 +48,20 @@ choose split -> load language instruction -> run policy rollout -> score with ta
 ```
 
 For early debugging, load a small validation episode and render both the static and gripper views. Before training or evaluating a large model, verify observation keys, camera resolution, language strings, robot-state normalization, and action scaling.
+
+## Practical Usage Notes
+
+The guide-level lesson is that CALVIN should be debugged visually before it is debugged statistically. A sequence score can collapse because of a camera mismatch, a wrong robot-state normalization, an action-scale error, or an oracle mismatch. Those problems look similar in a table but very different in videos.
+
+Useful checks before a serious run:
+
+- inspect both the static and gripper camera streams;
+- verify the task oracle on a few known successful and failed episodes;
+- report the split, especially whether evaluation is seen-environment or unseen-environment;
+- include per-subtask success instead of only average completed instructions;
+- save failure clips for the first failed subtask in each sequence.
+
+For action-chunking policies, also state whether the model emits one 7D action at a time or a longer action chunk. Changing that interface can change recovery behavior even when the model architecture is unchanged.
 
 ## What To Watch Out For
 

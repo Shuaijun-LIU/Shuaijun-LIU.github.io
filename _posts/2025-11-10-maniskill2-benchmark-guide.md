@@ -16,6 +16,11 @@ ManiSkill2 is a SAPIEN-based benchmark for generalizable manipulation skills. Th
   <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2302.04659">ManiSkill2</a> source package, showing task families across rigid, articulated, mobile-base, dual-arm, and soft-body manipulation.</figcaption>
 </figure>
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/maniskill2-task-examples.jpg' | relative_url }}" alt="ManiSkill2 task examples showing simulated and real PickCube settings">
+  <figcaption>Task examples from the paper source, including simulation-to-real visual comparisons. Observation mode and task version should always be written next to the score.</figcaption>
+</figure>
+
 ## What the Paper Contributes
 
 The paper reports 20 manipulation task families, 2,000+ object models, and 4M+ demonstration frames. It covers stationary and mobile-base settings, single-arm and dual-arm tasks, rigid-body and soft-body manipulation, and both 2D/3D visual input.
@@ -41,6 +46,20 @@ env.close()
 ```
 
 The exact task ID and observation mode depend on the installed ManiSkill version. For a paper result, record those details alongside the controller, camera settings, seed, and evaluation horizon.
+
+## Practical Usage Notes
+
+The most common mistake is to treat ManiSkill2 as a task name rather than a versioned simulator benchmark. Task IDs, observation modes, controllers, and registry behavior can change across releases, and ManiSkill2 versus later ManiSkill versions should not be mixed silently.
+
+A minimum reproducibility block should include:
+
+- task ID, benchmark version, controller, observation mode, camera setup, and seed;
+- whether the result uses state, RGB, RGB-D, point cloud, or segmentation observations;
+- reset/step/render smoke status before full evaluation;
+- horizon, success metric, and whether demonstrations are used;
+- any asset or rendering backend assumptions needed to reproduce videos.
+
+For method design, ManiSkill2 is strong when the question needs richer object interaction or visual simulation than RoboSuite. It is less direct when the claim is language-conditioned planning or household workflow completion; in those cases, pair it with LIBERO or RoboCasa.
 
 ## When To Use It
 

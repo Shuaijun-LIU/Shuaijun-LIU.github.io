@@ -16,6 +16,11 @@ DROID is a large in-the-wild robot manipulation dataset. The paper is useful bec
   <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2403.12945">DROID</a> source package, showing the in-the-wild data collection setting and dataset diversity.</figcaption>
 </figure>
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/droid-task-examples.jpg' | relative_url }}" alt="DROID real-robot task and evaluation setup examples">
+  <figcaption>Task and evaluation setup examples from the paper source. DROID is most useful when the real-robot data protocol is treated as part of the benchmark.</figcaption>
+</figure>
+
 ## What the Paper Contributes
 
 The paper introduces a dataset of 76k successful robot demonstration trajectories, about 350 hours of interaction data, 564 scenes, 86 tasks, and 52 buildings collected over 12 months. Each episode includes synchronized RGB streams, calibration information, depth information, language instructions, state, action, and metadata.
@@ -43,6 +48,20 @@ load episode -> inspect cameras/state/actions -> train or evaluate policy -> com
 ```
 
 Before training on a large subset, inspect a few episodes visually. Confirm camera conventions, action dimensions, language fields, timestamp alignment, and normalization. These details often matter more than model architecture during the first week of work.
+
+## Practical Usage Notes
+
+The guide-level recommendation is to treat DROID as real-world robot data first and a closed-loop benchmark only when the matching hardware and deployment protocol are actually available. A sample, a model checkpoint, or a partial data mirror is enough for offline analysis, but not enough to claim closed-loop real-robot performance.
+
+Useful first checks:
+
+- inspect a few episodes before batching over the dataset;
+- verify camera streams, action dimensions, language fields, timestamps, and calibration metadata;
+- start with offline action prediction or imitation-learning diagnostics before claiming deployment;
+- document whether the full dataset, a curated subset, or a small sample is used;
+- avoid mixing simulated benchmark claims with real-world data claims in one aggregate number.
+
+For VLA research, DROID is strongest as a bridge between controlled benchmarks and real robot trajectories. It can reveal whether a policy interface survives real camera streams and real action distributions, but it does not remove the need for controlled ablations elsewhere.
 
 ## What It Does Not Automatically Provide
 

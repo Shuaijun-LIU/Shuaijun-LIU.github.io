@@ -16,6 +16,11 @@ AgiBot World Colosseo is a large-scale embodied manipulation platform. The paper
   <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2503.06669">AgiBot World</a> source package, showing the large-scale platform covering data, models, benchmarks, and ecosystem resources.</figcaption>
 </figure>
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/agibot-task-examples.jpg' | relative_url }}" alt="AgiBot World data collection and task pipeline examples">
+  <figcaption>Pipeline examples from the paper source. AgiBot World is easiest to use when data, world-model, VLA, and simulator-asset tracks are kept separate.</figcaption>
+</figure>
+
 ## What the Paper Contributes
 
 The paper introduces AgiBot World Colosseo as an open-sourced manipulation platform with a deployed suite of 100 dual-arm humanoid robots. It also presents a generalist policy, ViLLA, which uses a latent action planner to bridge vision-language inputs and dexterous robotic action.
@@ -40,6 +45,20 @@ choose asset track -> inspect expected input/output -> run baseline smoke -> ada
 ```
 
 For model work, first reproduce the expected data format and baseline I/O. For benchmark work, state which track, metric, and subset are used. For simulator or ecosystem reuse, keep the claim scoped to the asset actually used.
+
+## Practical Usage Notes
+
+The ecosystem should be split into tracks: world-model data, VLA/action data, simulator assets, and baseline repositories. Mixing those tracks makes a result hard to understand. A model trained on one track is not automatically evaluated on another.
+
+For each experiment, write down:
+
+- which asset track is used: world model, VLA/action, simulator asset, benchmark, or baseline code;
+- expected input and output format before modifying the model;
+- subset size, modality, and whether depth or only RGB is available;
+- baseline reproduction status before adding a new method;
+- the exact benchmark metric or downstream claim supported by that track.
+
+This is especially important for large ecosystem releases. They are valuable because many resources are aligned, but that does not mean every resource carries the same kind of evidence. A simulator asset pack supports environment construction; a world-model dataset supports prediction or planning studies; a VLA dataset supports action learning.
 
 ## When To Use It
 

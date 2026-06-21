@@ -16,6 +16,11 @@ MetaWorld is a MuJoCo benchmark for multi-task and meta-reinforcement learning i
   <figcaption>Paper figure from the <a href="https://arxiv.org/abs/1910.10897">MetaWorld</a> source package, showing the 50-task manipulation suite and the train/test split idea for meta-learning.</figcaption>
 </figure>
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/metaworld-task-examples.jpg' | relative_url }}" alt="MetaWorld task examples across multiple tabletop manipulation families">
+  <figcaption>Task examples from the paper source. MetaWorld is useful because many tasks share one interface while still requiring different manipulation skills.</figcaption>
+</figure>
+
 ## What the Paper Contributes
 
 MetaWorld was designed to move meta-RL and multi-task RL beyond narrow task families. Instead of only varying a goal location inside one environment, it includes qualitatively different skills such as reaching, pushing, pick-place, opening doors, operating drawers, pressing buttons, inserting pegs, and opening windows.
@@ -47,6 +52,20 @@ env.close()
 ```
 
 For fair comparison, report the benchmark split, task list, seed, horizon, success definition, and whether evaluation uses state observations or rendered images.
+
+## Practical Usage Notes
+
+"MetaWorld" is not a single setting. MT and ML splits answer different questions, and a custom four-task subset should not be compared as if it were MT50 or ML45.
+
+For a clean report, include:
+
+- exact task family names and version suffixes;
+- MT or ML split, plus whether the run is a custom subset;
+- observation type, action normalization, horizon, seed count, and success definition;
+- per-task success in addition to the averaged score;
+- whether the experiment is about multitask learning, meta-learning, or task/client heterogeneity.
+
+MetaWorld is also useful for federated or distributed-learning prototypes because task heterogeneity is controllable. But the claim should stay scoped: strong MetaWorld performance does not establish language grounding, photorealistic perception, or real-robot deployment.
 
 ## When To Use It
 

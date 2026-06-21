@@ -16,6 +16,11 @@ RoboCasa is a simulation framework and benchmark for household-scale kitchen man
   <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2406.02523">RoboCasa</a> source package, summarizing scenes, objects, embodiments, tasks, and demonstration data.</figcaption>
 </figure>
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/robocasa-task-examples.jpg' | relative_url }}" alt="RoboCasa kitchen task examples from reset renders">
+  <figcaption>Task examples from guide renders. RoboCasa should be read as a kitchen-scale task space, not just a handful of isolated tabletop interactions.</figcaption>
+</figure>
+
 ## What the Paper Contributes
 
 The paper highlights four pillars:
@@ -46,6 +51,20 @@ choose task -> choose scene/layout -> choose embodiment -> roll out policy -> sc
 ```
 
 For a first smoke test, pick a simple task, render a short rollout, and verify assets, cameras, object placement, and success conditions. For a benchmark table, state the task subset, scene split, object registry, robot embodiment, and demonstration source.
+
+## Practical Usage Notes
+
+The main practical point from the guide is that RoboCasa's task space is larger and messier than a paper table suggests. Atomic tasks and composite tasks should be handled separately, because a policy that opens a cabinet reliably may still fail when the same skill appears inside a longer kitchen workflow.
+
+Before reporting results, make the following explicit:
+
+- whether the run uses atomic tasks, composite tasks, or both;
+- the scene family, scene split, object registry, embodiment, camera setup, and seed;
+- whether all required assets are complete or whether a reduced asset setup was used;
+- whether demonstrations, scripted policies, or learned policies are being evaluated;
+- whether success is checked at the subskill level or only at the final workflow state.
+
+For method development, I would start with a small atomic subset, export videos, and then move into composite workflows. Jumping directly into a broad kitchen benchmark can make every failure ambiguous: perception, fixture geometry, object assets, planning horizon, and controller settings all move at once.
 
 ## What To Be Careful About
 

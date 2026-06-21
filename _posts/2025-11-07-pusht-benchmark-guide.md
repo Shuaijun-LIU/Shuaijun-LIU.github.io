@@ -11,6 +11,11 @@ excerpt: "PushT is a single 2D pushing benchmark, but that simplicity makes it u
 
 PushT is a small 2D contact-rich control task that became widely used through the Diffusion Policy evaluation suite. The agent must push a T-shaped object into a target T-shaped region. It is not a broad manipulation benchmark, and it should not be presented as one. Its value is narrower and more useful: it is a fast diagnostic for whether a policy can produce coherent closed-loop action sequences.
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/pusht-task-examples.jpg' | relative_url }}" alt="PushT task mockup showing a T-shaped object and target region">
+  <figcaption>PushT task mockup from the Diffusion Policy source package. The visual simplicity is the point: it isolates temporal action quality under contact.</figcaption>
+</figure>
+
 ## What the Paper Context Adds
 
 PushT is not a large benchmark suite by itself. In the Diffusion Policy paper, it is part of a broader evaluation over multiple manipulation tasks. That context matters: PushT is best treated as a diagnostic task for closed-loop action generation, not as evidence for general-purpose robot intelligence.
@@ -45,6 +50,20 @@ I would use PushT near the beginning of a policy pipeline, especially for method
 I would not spend too much time optimizing a leaderboard-style number on it. Once the policy is stable, the next question should be whether the same design survives more realistic observation, task, and embodiment variation. PushT is a gate, not a destination.
 
 When debugging, change only one variable at a time. Action horizon, normalization, seed, checkpoint, and observation preprocessing can all change the rollout. If several knobs move together, PushT stops being a clean diagnostic and becomes just another confusing experiment.
+
+## Practical Usage Notes
+
+The cleanest mental model is "one task, many policy interfaces." PushT is often used through evaluation wrappers that vary observation history, action horizon, chunk size, normalization, checkpoint, and seed. Those details define the experiment as much as the task itself.
+
+For a fair PushT run, I would record:
+
+- the environment wrapper and task variant;
+- observation history length and action prediction horizon;
+- whether actions are normalized, clipped, or denormalized by the evaluator;
+- seed count, score aggregation, and success threshold;
+- JSON or CSV summaries together with rollout videos.
+
+The videos are not cosmetic. PushT can show the difference between a policy that solves the task through smooth correction and one that occasionally gets a lucky collision. If a method claims better temporal modeling, the rollout should visibly support that claim.
 
 ## What It Cannot Tell You
 

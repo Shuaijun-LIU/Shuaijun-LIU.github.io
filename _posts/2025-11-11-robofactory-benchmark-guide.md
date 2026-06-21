@@ -16,6 +16,11 @@ RoboFactory is a benchmark and automated data collection framework for embodied 
   <figcaption>Paper figure from the <a href="https://arxiv.org/abs/2503.16408">RoboFactory</a> source package, showing how RoboBrain generates subgoals and constraints while RoboChecker validates multi-agent trajectories.</figcaption>
 </figure>
 
+<figure class="blog-figure">
+  <img src="{{ '/assets/images/blog/benchmarks/tasks/robofactory-task-examples.jpg' | relative_url }}" alt="RoboFactory multi-robot task examples">
+  <figcaption>Task examples from the paper source. The benchmark is most informative when the task requires explicit role allocation, handoff, timing, or collision-aware coordination.</figcaption>
+</figure>
+
 ## What the Paper Contributes
 
 The paper proposes logical, spatial, and temporal constraints for multi-agent embodied systems. Its framework has two central components:
@@ -47,6 +52,20 @@ choose task -> choose scene family -> generate or load multi-agent trajectories 
 ```
 
 For first experiments, start with one task and one scene family. Add more agents or a second scene family only after logging, videos, and per-agent metrics are stable.
+
+## Practical Usage Notes
+
+Task identity should be separated from scene family. A table-scene task and a RoboCasa-like kitchen task can share a name while stressing different perception, clearance, and coordination behavior.
+
+Useful reporting details:
+
+- task ID, scene family, number of agents, and robot embodiments;
+- whether success requires cooperation, handoff, ordering, collision avoidance, or role assignment;
+- per-agent metrics alongside group-level success;
+- videos or trajectory summaries for failed coordination cases;
+- policy carrier, data source, and constraint checker configuration.
+
+For a first benchmark pass, I would use one task from each coordination pattern rather than many visually similar tasks. The point is to test whether the method can allocate roles and maintain temporal structure, not merely whether multiple robots are present in the scene.
 
 ## When To Use It
 
