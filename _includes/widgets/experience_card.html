@@ -13,7 +13,7 @@
                                     {% if item.logo %}
                                     <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: {{ item.logo_width | default: '30px' }}; margin-left: {{ item.logo_margin_left | default: '0' }};" class="mr-2 mt-1">
                                     {% endif %}
-                                    <div class="media-body">
+                                    <div class="media-body" {% if item.text_margin_left %}style="margin-left: {{ item.text_margin_left }};"{% endif %}>
                                         <div {% if item.color %}style="color: {{ item.color }}; font-weight: 500;"{% endif %}>{{ item.name }}</div>
                                         <div class="small">{{ item.dept }}</div>
                                         <div class="small d-flex">
