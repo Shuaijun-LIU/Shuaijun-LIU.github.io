@@ -109,11 +109,15 @@ div.lazy {
     margin-left: 0.45rem;
 }
 
+.profile-portrait-figure {
+    margin-top: 0.65rem;
+}
+
 .portrait-animation-slot {
     align-items: center;
     justify-content: center;
     height: 40px;
-    margin-top: -0.25rem;
+    margin-top: 0.3rem;
 }
 
 .portrait-animation-video {

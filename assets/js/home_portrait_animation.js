@@ -10,7 +10,10 @@
     const videos = Array.from(slot.querySelectorAll(".portrait-animation-video"));
     if (!videos.length) return;
 
-    const randomDelay = () => 10000 + Math.random() * 20000;
+    const randomDuration = () => 10000 + Math.random() * 20000;
+    let activeIndex = Math.floor(Math.random() * videos.length);
+    let switchTimer = null;
+
     const hideVideo = (video) => {
         video.pause();
         try {
@@ -21,7 +24,7 @@
         video.classList.remove("is-active");
     };
 
-    const startVideo = (video, fallback) => {
+    const startVideo = (video) => {
         try {
             video.currentTime = 0;
         } catch (error) {
@@ -29,14 +32,13 @@
         }
 
         video.play().catch(() => {
-            window.clearTimeout(fallback);
             hideVideo(video);
-            scheduleNext();
+            switchToNext();
         });
     };
 
-    const playOne = () => {
-        const video = videos[Math.floor(Math.random() * videos.length)];
+    const showActive = () => {
+        const video = videos[activeIndex];
 
         videos.forEach((item) => {
             if (item !== video) hideVideo(item);
@@ -49,27 +51,25 @@
 
         video.classList.add("is-active");
 
-        const fallback = window.setTimeout(() => {
-            hideVideo(video);
-            scheduleNext();
-        }, 5000);
-
-        video.onended = () => {
-            window.clearTimeout(fallback);
-            hideVideo(video);
-            scheduleNext();
-        };
-
         if (video.readyState >= 1) {
-            startVideo(video, fallback);
+            startVideo(video);
         } else {
-            video.onloadedmetadata = () => startVideo(video, fallback);
+            video.onloadedmetadata = () => startVideo(video);
         }
+
+        window.clearTimeout(switchTimer);
+        switchTimer = window.setTimeout(switchToNext, randomDuration());
     };
 
-    const scheduleNext = () => {
-        window.setTimeout(playOne, randomDelay());
+    const switchToNext = () => {
+        const previousIndex = activeIndex;
+        if (videos.length > 1) {
+            while (activeIndex === previousIndex) {
+                activeIndex = Math.floor(Math.random() * videos.length);
+            }
+        }
+        showActive();
     };
 
-    scheduleNext();
+    showActive();
 })();
