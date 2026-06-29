@@ -1,3 +1,7 @@
+- title: Nexbot
+  description: Interactive robot character concept with Spline controls.
+  url: /animation/nexbot/
+  thumbnail: /assets/images/demos/nexbot.jpg
 - title: 100 Followers
   description: Interactive Spline scene with gaze-tracking characters.
   url: /animation/100-followers/
