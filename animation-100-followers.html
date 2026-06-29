@@ -4,23 +4,7 @@ title: 100 Followers
 navbar_title: 3D Demo
 permalink: /animation/100-followers/
 container_class: container-fluid px-0
+spline_scene: /assets/spline/100-followers/scene.splinecode
 ---
 
-<main class="animation-page" aria-label="Interactive 100 followers animation">
-    <div
-        id="followers-scene"
-        class="followers-scene"
-        data-scene-url="{{ '/assets/spline/100-followers/scene.splinecode' | relative_url }}">
-        <canvas id="followers-canvas" aria-label="Interactive 3D animation"></canvas>
-        <div class="followers-loader" aria-hidden="true"></div>
-    </div>
-</main>
-
-<script type="importmap">
-{
-    "imports": {
-        "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@1.12.97/build/runtime.js"
-    }
-}
-</script>
-<script type="module" src="{{ '/assets/js/spline_demo.js' | relative_url }}"></script>
+{% include spline_demo.html label="Interactive 100 followers animation" %}

@@ -1,0 +1,18 @@
+<main class="animation-page" aria-label="{{ include.label | default: page.title }}">
+    <div
+        id="followers-scene"
+        class="followers-scene"
+        data-scene-url="{{ page.spline_scene | relative_url }}">
+        <canvas id="followers-canvas" aria-label="Interactive 3D animation"></canvas>
+        <div class="followers-loader" aria-hidden="true"></div>
+    </div>
+</main>
+
+<script type="importmap">
+{
+    "imports": {
+        "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@1.12.97/build/runtime.js"
+    }
+}
+</script>
+<script type="module" src="{{ '/assets/js/spline_demo.js' | relative_url }}"></script>

@@ -1,8 +1,68 @@
 - title: Nexbot
-  description: Interactive robot character concept with Spline controls.
+  description: Interactive robot character concept.
   url: /animation/nexbot/
   thumbnail: /assets/images/demos/nexbot.jpg
+- title: Robot Model
+  description: Rotatable 3D robot model.
+  url: /animation/robot/
+  thumbnail: /assets/images/demos/robot.jpg
+- title: Cyber Mannequin
+  description: Interactive cyber mannequin model.
+  url: /animation/cyber-mannequin/
+  thumbnail: /assets/images/demos/cyber-mannequin.jpg
+- title: Robot Follow Cursor
+  description: Cursor-reactive landing page robot scene.
+  url: /animation/robot-follow-cursor/
+  thumbnail: /assets/images/demos/robot-follow-cursor.jpg
+- title: R4X Bot
+  description: Stylized interactive bot scene.
+  url: /animation/r4x-bot/
+  thumbnail: /assets/images/demos/r4x-bot.jpg
+- title: Robot Arm
+  description: Interactive robotic arm scene.
+  url: /animation/robot-arm/
+  thumbnail: /assets/images/demos/robot-arm.jpg
+- title: AI Data Model
+  description: Data model interaction scene.
+  url: /animation/ai-data-model/
+  thumbnail: /assets/images/demos/ai-data-model.jpg
+- title: AI
+  description: Abstract AI-themed 3D scene.
+  url: /animation/ai/
+  thumbnail: /assets/images/demos/ai.jpg
+- title: 3D City Navigation
+  description: Interactive city navigation scene.
+  url: /animation/3d-city-navigation/
+  thumbnail: /assets/images/demos/3d-city-navigation.jpg
+- title: 3D Spotify Vision Pro
+  description: Spatial music interface inspired by Apple Vision Pro.
+  url: /animation/3d-spotify-vision-pro/
+  thumbnail: /assets/images/demos/3d-spotify-vision-pro.jpg
+- title: The Orb Hand
+  description: Interactive orb-and-hand composition.
+  url: /animation/the-orb-hand/
+  thumbnail: /assets/images/demos/the-orb-hand.jpg
+- title: World Planet
+  description: Rotating world planet scene.
+  url: /animation/world-planet/
+  thumbnail: /assets/images/demos/world-planet.jpg
+- title: Ocean
+  description: Immersive ocean scene.
+  url: /animation/ocean/
+  thumbnail: /assets/images/demos/ocean.jpg
+- title: Ocean Odyssey
+  description: Game-like ocean adventure scene.
+  url: /animation/ocean-odyssey/
+  thumbnail: /assets/images/demos/ocean-odyssey.jpg
+- title: Particles
+  description: Interactive particle animation scene.
+  url: /animation/particles/
+  thumbnail: /assets/images/demos/particles.jpg
+- title: Minecraft World
+  description: Minecraft-inspired block world scene.
+  url: /animation/minecraft-world/
+  thumbnail: /assets/images/demos/minecraft-world.jpg
 - title: 100 Followers
-  description: Interactive Spline scene with gaze-tracking characters.
+  description: Gaze-tracking character scene.
   url: /animation/100-followers/
   thumbnail: /assets/images/demos/100-followers.jpg
