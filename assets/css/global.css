@@ -328,6 +328,75 @@ div.lazy {
     line-height: 1.35;
 }
 
+.demo-index-page {
+    padding: 1.5rem 0 3rem;
+}
+
+.demo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.demo-card {
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(38, 50, 56, 0.1);
+    border-radius: 0.8rem;
+    background: #fff;
+    color: #263238;
+    text-decoration: none;
+    box-shadow: 0 0.35rem 1.1rem rgba(38, 50, 56, 0.07);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.demo-card:hover {
+    border-color: rgba(45, 111, 143, 0.28);
+    color: #263238;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 0.65rem 1.5rem rgba(38, 50, 56, 0.12);
+}
+
+.demo-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #080b12;
+}
+
+.demo-card-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem 1rem;
+}
+
+.demo-card-body h2 {
+    margin: 0 0 0.2rem;
+    font-size: 1.05rem;
+}
+
+.demo-card-body p {
+    margin: 0;
+    color: #68757f;
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+
+.demo-card-body span {
+    flex: 0 0 auto;
+    border: 1px solid rgba(45, 111, 143, 0.16);
+    border-radius: 999px;
+    padding: 0.2rem 0.55rem;
+    color: #2d6f8f;
+    font-size: 0.76rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
 .animation-page {
     min-height: calc(100vh - 5rem);
     margin-top: -0.5rem;
