@@ -1,0 +1,9 @@
+{% assign video_src = include.src | default: '' %}
+{% assign video_label = include.label | default: 'Decorative animation' %}
+{% assign video_class = include.class | default: '' %}
+
+<div class="desktop-video-badge d-none d-lg-flex {{ video_class }}" aria-label="{{ video_label }}">
+    <video autoplay loop muted playsinline preload="none" width="34" height="34">
+        <source src="{{ video_src | relative_url }}" type="video/mp4" media="(min-width: 992px)">
+    </video>
+</div>

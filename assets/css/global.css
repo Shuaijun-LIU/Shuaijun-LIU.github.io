@@ -92,6 +92,30 @@ div.lazy {
     font-family: Source Code Pro, monospace;
 }
 
+.desktop-video-badge {
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.desktop-video-badge video {
+    display: block;
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.desktop-video-home {
+    justify-content: flex-end;
+    margin: -0.35rem 0 0.25rem;
+    padding-right: 0.25rem;
+}
+
+.desktop-video-sidebar {
+    justify-content: flex-start;
+    margin: 0 0 0.65rem 0.55rem;
+}
+
 .waffle-page {
     --waffle-ink: #2f3840;
     --waffle-blue: #4f78a7;
