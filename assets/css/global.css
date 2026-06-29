@@ -228,13 +228,6 @@ div.lazy {
     transform: scale(1);
 }
 
-.waffle-page .waffle-portrait.is-leaving {
-    opacity: 0;
-    visibility: visible;
-    z-index: 1;
-    transform: scale(0.98);
-}
-
 .waffle-page .waffle-portrait-icon {
     object-position: center;
 }

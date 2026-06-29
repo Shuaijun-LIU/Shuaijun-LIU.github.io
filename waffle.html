@@ -278,21 +278,13 @@ document.addEventListener("DOMContentLoaded", function() {
         const portraits = Array.from(portraitFrame.querySelectorAll(".waffle-portrait"));
         let activeIndex = 0;
         const randomDelay = () => 10000 + Math.random() * 10000;
-        const transitionGap = 520;
 
         function switchPortrait() {
-            const current = portraits[activeIndex];
             activeIndex = activeIndex === 0 ? 1 : 0;
-            const next = portraits[activeIndex];
-
-            current.classList.remove("is-active");
-            current.classList.add("is-leaving");
-
-            window.setTimeout(function() {
-                current.classList.remove("is-leaving");
-                next.classList.add("is-active");
-                window.setTimeout(switchPortrait, randomDelay());
-            }, transitionGap);
+            portraits.forEach(function(portrait, index) {
+                portrait.classList.toggle("is-active", index === activeIndex);
+            });
+            window.setTimeout(switchPortrait, randomDelay());
         }
 
         window.setTimeout(switchPortrait, randomDelay());
