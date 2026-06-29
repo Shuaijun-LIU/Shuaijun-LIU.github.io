@@ -2,6 +2,14 @@
   description: Interactive robot character concept.
   url: /animation/nexbot/
   thumbnail: /assets/images/demos/nexbot.jpg
+- title: 100 Followers
+  description: Gaze-tracking character scene.
+  url: /animation/100-followers/
+  thumbnail: /assets/images/demos/100-followers.jpg
+- title: The Orb Hand
+  description: Interactive orb-and-hand composition.
+  url: /animation/the-orb-hand/
+  thumbnail: /assets/images/demos/the-orb-hand.jpg
 - title: Robot Follow Cursor
   description: Cursor-reactive landing page robot scene.
   url: /animation/robot-follow-cursor/
@@ -30,10 +38,6 @@
   description: Spatial music interface inspired by Apple Vision Pro.
   url: /animation/3d-spotify-vision-pro/
   thumbnail: /assets/images/demos/3d-spotify-vision-pro.jpg
-- title: The Orb Hand
-  description: Interactive orb-and-hand composition.
-  url: /animation/the-orb-hand/
-  thumbnail: /assets/images/demos/the-orb-hand.jpg
 - title: World Planet
   description: Rotating world planet scene.
   url: /animation/world-planet/
@@ -54,7 +58,3 @@
   description: Minecraft-inspired block world scene.
   url: /animation/minecraft-world/
   thumbnail: /assets/images/demos/minecraft-world.jpg
-- title: 100 Followers
-  description: Gaze-tracking character scene.
-  url: /animation/100-followers/
-  thumbnail: /assets/images/demos/100-followers.jpg
