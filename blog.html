@@ -23,7 +23,6 @@ body_attr: >-
 
     <div class="col-2 d-none d-lg-block">
         <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% include desktop_video_badge.html src="/assets/videos/logo-jump.mp4" label="Jump animation" class="desktop-video-sidebar" %}
             {% for year in blogs_by_year %}
             <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
             {% endfor %}
