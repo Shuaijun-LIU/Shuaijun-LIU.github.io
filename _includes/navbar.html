@@ -5,7 +5,14 @@
             {% if page.navbar_title == "Home" %}
                 {% include desktop_video_badge.html src="/assets/videos/logo-hi.mp4" label="Waving hi animation" class="desktop-video-navbar" %}
             {% else %}
-                {% include navbar_video_cycle.html label="Looking around and jump animations" class="desktop-video-navbar-secondary" %}
+                {% assign nav_position = 2 %}
+                {% for item in site.data.navigation.pages %}
+                    {% if item.name == page.navbar_title %}
+                        {% assign nav_position = forloop.index %}
+                    {% endif %}
+                {% endfor %}
+                {% assign nav_offset_class = "desktop-video-navbar-page-" | append: nav_position %}
+                {% include navbar_video_cycle.html label="Looking around and jump animations" class=nav_offset_class %}
             {% endif %}
         </a>
         <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

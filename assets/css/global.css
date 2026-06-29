@@ -109,8 +109,24 @@ div.lazy {
     margin-left: 0.45rem;
 }
 
-.desktop-video-navbar-secondary {
+.desktop-video-navbar-page-2 {
     margin-left: 1.25rem;
+}
+
+.desktop-video-navbar-page-3 {
+    margin-left: 1.75rem;
+}
+
+.desktop-video-navbar-page-4 {
+    margin-left: 2.25rem;
+}
+
+.desktop-video-navbar-page-5 {
+    margin-left: 2.75rem;
+}
+
+.desktop-video-navbar-page-6 {
+    margin-left: 3.25rem;
 }
 
 .navbar-video-cycle {
