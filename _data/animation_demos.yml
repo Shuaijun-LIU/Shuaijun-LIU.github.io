@@ -2,14 +2,6 @@
   description: Interactive robot character concept.
   url: /animation/nexbot/
   thumbnail: /assets/images/demos/nexbot.jpg
-- title: Robot Model
-  description: Rotatable 3D robot model.
-  url: /animation/robot/
-  thumbnail: /assets/images/demos/robot.jpg
-- title: Cyber Mannequin
-  description: Interactive cyber mannequin model.
-  url: /animation/cyber-mannequin/
-  thumbnail: /assets/images/demos/cyber-mannequin.jpg
 - title: Robot Follow Cursor
   description: Cursor-reactive landing page robot scene.
   url: /animation/robot-follow-cursor/
@@ -26,8 +18,8 @@
   description: Data model interaction scene.
   url: /animation/ai-data-model/
   thumbnail: /assets/images/demos/ai-data-model.jpg
-- title: AI
-  description: Abstract AI-themed 3D scene.
+- title: Stars ✨
+  description: Interactive 3D stars scene.
   url: /animation/ai/
   thumbnail: /assets/images/demos/ai.jpg
 - title: 3D City Navigation
