@@ -1,0 +1,22 @@
+<main class="animation-page" aria-label="{{ include.label | default: page.title }}">
+    <div
+        id="spline-loader-scene"
+        class="followers-scene"
+        data-scene-url="{{ page.spline_scene | relative_url }}"
+        data-camera-position="{{ page.loader_camera_position }}"
+        data-camera-rotation="{{ page.loader_camera_rotation }}"
+        data-camera-fov="{{ page.loader_camera_fov | default: 45 }}">
+        <div class="followers-loader" aria-hidden="true"></div>
+    </div>
+</main>
+
+<script type="importmap">
+{
+    "imports": {
+        "@splinetool/loader": "https://unpkg.com/@splinetool/loader@1.12.97/build/SplineLoader.js",
+        "three": "https://unpkg.com/three@0.149.0/build/three.module.js",
+        "three/": "https://unpkg.com/three@0.149.0/"
+    }
+}
+</script>
+<script type="module" src="{{ '/assets/js/spline_loader_demo.js' | relative_url }}"></script>

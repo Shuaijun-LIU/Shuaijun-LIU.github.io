@@ -433,25 +433,6 @@ div.lazy {
     display: none;
 }
 
-.model-demo-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-}
-
-.model-demo-viewer {
-    display: block;
-    width: min(100%, 1180px);
-    height: calc(100vh - 8rem);
-    min-height: 620px;
-    border-radius: 0.9rem;
-    background:
-        radial-gradient(circle at 35% 22%, rgba(255, 255, 255, 0.16), transparent 28%),
-        linear-gradient(145deg, #e6edf2 0%, #cfdbe3 48%, #101722 49%, #070a10 100%);
-    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.28);
-}
-
 @keyframes followers-loader-spin {
     to {
         transform: rotate(360deg);
@@ -468,15 +449,6 @@ div.lazy {
         height: calc(100vh - 4.5rem);
     }
 
-    .model-demo-page {
-        padding: 0.75rem;
-    }
-
-    .model-demo-viewer {
-        height: calc(100vh - 6rem);
-        min-height: calc(100vh - 6rem);
-        border-radius: 0.7rem;
-    }
 }
 
 @media (max-width: 991.98px) {
