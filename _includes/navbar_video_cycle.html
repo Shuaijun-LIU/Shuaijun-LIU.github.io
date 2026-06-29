@@ -1,17 +1,17 @@
-<div class="portrait-animation-slot d-none d-lg-flex" aria-hidden="true">
+<div class="navbar-video-cycle d-none d-lg-flex {{ include.class }}" aria-label="{{ include.label | default: 'Navigation animation' }}">
     <video
-        class="portrait-animation-video"
+        class="navbar-video-cycle-item"
         muted
         loop
         playsinline
         preload="none"
         data-src="{{ '/assets/videos/logo-look.mp4' | relative_url }}"></video>
     <video
-        class="portrait-animation-video"
+        class="navbar-video-cycle-item"
         muted
         loop
         playsinline
         preload="none"
         data-src="{{ '/assets/videos/logo-jump.mp4' | relative_url }}"></video>
 </div>
-<script defer src="{{ '/assets/js/home_portrait_animation.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/navbar_video_cycle.js' | relative_url }}"></script>

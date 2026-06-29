@@ -109,26 +109,29 @@ div.lazy {
     margin-left: 0.45rem;
 }
 
-.profile-portrait-figure {
-    margin-top: 0.65rem;
+.desktop-video-navbar-secondary {
+    margin-left: 1.25rem;
 }
 
-.portrait-animation-slot {
+.navbar-video-cycle {
     align-items: center;
     justify-content: center;
-    height: 40px;
-    margin-top: 0.3rem;
+    pointer-events: none;
 }
 
-.portrait-animation-video {
+.navbar-video-cycle-item {
     display: none;
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     object-fit: contain;
 }
 
-.portrait-animation-video.is-active {
+.navbar-video-cycle-item.is-active {
     display: block;
+}
+
+.profile-portrait-figure {
+    margin-top: 0.65rem;
 }
 
 .waffle-page {

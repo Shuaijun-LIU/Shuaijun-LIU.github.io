@@ -2,7 +2,11 @@
     <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %}">
         <a class="navbar-brand d-flex align-items-center">
             <strong>{{site.data.profile.navbar_name}}</strong>
-            {% include desktop_video_badge.html src="/assets/videos/logo-hi.mp4" label="Waving hi animation" class="desktop-video-navbar" %}
+            {% if page.navbar_title == "Home" %}
+                {% include desktop_video_badge.html src="/assets/videos/logo-hi.mp4" label="Waving hi animation" class="desktop-video-navbar" %}
+            {% else %}
+                {% include navbar_video_cycle.html label="Looking around and jump animations" class="desktop-video-navbar-secondary" %}
+            {% endif %}
         </a>
         <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-map"></i> Menu
