@@ -10,7 +10,7 @@ container_class: container-fluid px-0
     <div
         id="followers-scene"
         class="followers-scene"
-        data-model-url="{{ '/assets/models/100-followers/100_followers.glb' | relative_url }}">
+        data-scene-url="{{ '/assets/spline/100-followers/scene.splinecode' | relative_url }}">
         <canvas id="followers-canvas" aria-label="Interactive 3D animation"></canvas>
         <div class="followers-loader" aria-hidden="true"></div>
     </div>
@@ -19,8 +19,7 @@ container_class: container-fluid px-0
 <script type="importmap">
 {
     "imports": {
-        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@1.12.97/build/runtime.js"
     }
 }
 </script>
