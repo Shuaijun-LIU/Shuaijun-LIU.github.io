@@ -172,14 +172,51 @@ div.lazy {
     background: linear-gradient(180deg, #ffffff 0%, var(--waffle-cream) 100%) !important;
 }
 
-.waffle-page .waffle-portrait {
+.waffle-portrait-frame {
+    position: relative;
     width: 220px;
     height: 220px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.waffle-page .waffle-portrait {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid rgba(199, 148, 69, 0.45);
     box-shadow: 0 0.75rem 2rem rgba(79, 120, 167, 0.16);
+    opacity: 0;
     object-position: 50% 42%;
+    transform: scale(0.96);
+    transition: opacity 0.9s ease, transform 0.9s ease, box-shadow 0.9s ease;
+    pointer-events: none;
+}
+
+.waffle-page .waffle-portrait.is-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.waffle-page .waffle-portrait-icon {
+    object-position: center;
+}
+
+.waffle-page .waffle-portrait-icon.is-active {
+    box-shadow: 0 0.9rem 2.35rem rgba(199, 148, 69, 0.20);
+    animation: waffle-portrait-spin 18s linear infinite;
+}
+
+@keyframes waffle-portrait-spin {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+    to {
+        transform: scale(1) rotate(360deg);
+    }
 }
 
 .waffle-lab-strip {
@@ -223,6 +260,14 @@ div.lazy {
     .waffle-lab-strip::before {
         animation: none;
         display: none;
+    }
+
+    .waffle-page .waffle-portrait {
+        transition: none;
+    }
+
+    .waffle-page .waffle-portrait-icon.is-active {
+        animation: none;
     }
 }
 

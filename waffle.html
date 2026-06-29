@@ -33,7 +33,10 @@ gallery_images:
         <div class="col-lg-4 mb-3">
             <div class="card border-0 shadow-sm bg-white h-100 waffle-profile-card">
                 <div class="card-body p-4 text-center">
-                    <img src="{{ '/assets/images/waffle/waffle-01.jpg' | relative_url }}" class="waffle-portrait mb-3" alt="Waffle 🧇">
+                    <div class="waffle-portrait-frame mb-3" aria-label="Waffle 🧇 portrait">
+                        <img src="{{ '/assets/images/waffle/waffle-01.jpg' | relative_url }}" class="waffle-portrait waffle-portrait-photo is-active" alt="Waffle 🧇">
+                        <img src="{{ '/assets/images/waffle/waffle-icon.png' | relative_url }}" class="waffle-portrait waffle-portrait-icon" alt="Waffle 🧇 icon">
+                    </div>
                     <h1 class="h3 mb-1">Waffle 🧇</h1>
                     <div class="text-muted" data-i18n="role">Chief Feline Researcher</div>
                     <div class="small mt-1" data-i18n="affiliation">
@@ -269,5 +272,22 @@ document.addEventListener("DOMContentLoaded", function() {
             setLang(button.dataset.waffleLang);
         });
     });
+
+    const portraitFrame = page.querySelector(".waffle-portrait-frame");
+    if (portraitFrame && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const portraits = Array.from(portraitFrame.querySelectorAll(".waffle-portrait"));
+        let activeIndex = 0;
+        const randomDelay = () => 10000 + Math.random() * 10000;
+
+        function switchPortrait() {
+            activeIndex = activeIndex === 0 ? 1 : 0;
+            portraits.forEach(function(portrait, index) {
+                portrait.classList.toggle("is-active", index === activeIndex);
+            });
+            window.setTimeout(switchPortrait, randomDelay());
+        }
+
+        window.setTimeout(switchPortrait, randomDelay());
+    }
 });
 </script>
