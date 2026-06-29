@@ -194,15 +194,26 @@ div.lazy {
     border: 3px solid rgba(199, 148, 69, 0.45);
     box-shadow: 0 0.75rem 2rem rgba(79, 120, 167, 0.16);
     opacity: 0;
+    visibility: hidden;
+    z-index: 0;
     object-position: 50% 42%;
     transform: scale(0.96);
-    transition: opacity 0.9s ease, transform 0.9s ease, box-shadow 0.9s ease;
+    transition: opacity 0.52s ease, transform 0.52s ease, box-shadow 0.52s ease;
     pointer-events: none;
 }
 
 .waffle-page .waffle-portrait.is-active {
     opacity: 1;
+    visibility: visible;
+    z-index: 2;
     transform: scale(1);
+}
+
+.waffle-page .waffle-portrait.is-leaving {
+    opacity: 0;
+    visibility: visible;
+    z-index: 1;
+    transform: scale(0.98);
 }
 
 .waffle-page .waffle-portrait-icon {
