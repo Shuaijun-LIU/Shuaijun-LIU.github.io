@@ -1,0 +1,27 @@
+---
+layout: default
+title: Animation
+navbar_title: Animation
+permalink: /animation/
+container_class: container-fluid px-0
+---
+
+<main class="animation-page" aria-label="Interactive 100 followers animation">
+    <div
+        id="followers-scene"
+        class="followers-scene"
+        data-model-url="{{ '/assets/models/100-followers/100_followers.glb' | relative_url }}">
+        <canvas id="followers-canvas" aria-label="Interactive 3D animation"></canvas>
+        <div class="followers-loader" aria-hidden="true"></div>
+    </div>
+</main>
+
+<script type="importmap">
+{
+    "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+}
+</script>
+<script type="module" src="{{ '/assets/js/followers_animation.js' | relative_url }}"></script>

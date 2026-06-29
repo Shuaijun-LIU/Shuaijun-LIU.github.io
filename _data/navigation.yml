@@ -9,5 +9,7 @@ pages:
   url: /blog
 - name: Photography
   url: /photography/
+- name: Animation
+  url: /animation/
 - name: Waffle 🧇
   url: /waffle/

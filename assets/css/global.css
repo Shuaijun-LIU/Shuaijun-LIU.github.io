@@ -328,6 +328,70 @@ div.lazy {
     line-height: 1.35;
 }
 
+.animation-page {
+    min-height: calc(100vh - 5rem);
+    margin-top: -0.5rem;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 18% 18%, rgba(45, 116, 166, 0.2), transparent 28%),
+        radial-gradient(circle at 84% 72%, rgba(225, 118, 76, 0.16), transparent 30%),
+        linear-gradient(135deg, #080b12 0%, #111827 52%, #090b10 100%);
+}
+
+.followers-scene {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 5rem);
+    min-height: 620px;
+    cursor: grab;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.followers-scene:active {
+    cursor: grabbing;
+}
+
+.followers-scene canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.followers-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 34px;
+    height: 34px;
+    margin: -17px 0 0 -17px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-top-color: rgba(255, 255, 255, 0.86);
+    border-radius: 50%;
+    animation: followers-loader-spin 0.9s linear infinite;
+}
+
+.followers-scene.is-loaded .followers-loader {
+    display: none;
+}
+
+@keyframes followers-loader-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .animation-page,
+    .followers-scene {
+        min-height: calc(100vh - 4.5rem);
+    }
+
+    .followers-scene {
+        height: calc(100vh - 4.5rem);
+    }
+}
+
 @media (max-width: 991.98px) {
     .photo-grid {
         column-count: 2;
