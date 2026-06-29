@@ -386,17 +386,6 @@ div.lazy {
     line-height: 1.35;
 }
 
-.demo-card-body span {
-    flex: 0 0 auto;
-    border: 1px solid rgba(45, 111, 143, 0.16);
-    border-radius: 999px;
-    padding: 0.2rem 0.55rem;
-    color: #2d6f8f;
-    font-size: 0.76rem;
-    font-weight: 700;
-    white-space: nowrap;
-}
-
 .animation-page {
     min-height: calc(100vh - 5rem);
     margin-top: -0.5rem;
