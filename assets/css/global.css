@@ -68,12 +68,14 @@ h1, h2, h3, h4, h5, h6,
     display: block;
     height: 205px;
     object-fit: contain;
+    object-position: center top;
 }
 
 .publication-mobile-cover img {
     display: block;
     height: 180px;
     object-fit: contain;
+    object-position: center top;
 }
 
 .abstract-links {
