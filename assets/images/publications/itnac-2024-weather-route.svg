@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Illustration of a UAV route planned around weather and terrain hazards">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#eaf5ff"/><stop offset="1" stop-color="#fafcff"/></linearGradient>
+    <linearGradient id="ground" x2="0" y2="1"><stop stop-color="#dcece5"/><stop offset="1" stop-color="#b9d3c4"/></linearGradient>
+    <linearGradient id="storm" x2="0" y2="1"><stop stop-color="#fbcbbd" stop-opacity=".8"/><stop offset="1" stop-color="#eb8d86" stop-opacity=".16"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#31556f" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="1200" height="720" rx="36" fill="url(#sky)"/>
+  <path d="M0 448 Q170 318 340 410 T685 375 T1200 392 V720 H0Z" fill="#e6f0eb"/>
+  <path d="M0 526 Q180 417 326 456 T644 438 T1003 414 T1200 465 V720 H0Z" fill="url(#ground)"/>
+  <path d="M0 608 Q181 544 325 581 T634 552 T928 514 T1200 560 V720 H0Z" fill="#a9c9b5" opacity=".75"/>
+  <g fill="none" stroke="#76ab95" stroke-width="4" opacity=".38">
+    <path d="M-20 627 Q150 565 313 605 T630 579 T949 537 T1220 583"/>
+    <path d="M-20 660 Q151 600 318 638 T645 612 T954 576 T1220 622"/>
+    <path d="M-20 697 Q161 636 328 672 T651 648 T953 609 T1220 656"/>
+  </g>
+  <g transform="translate(182 153)" fill="#fff" stroke="#c9dcec" stroke-width="4" filter="url(#shadow)">
+    <rect x="0" y="0" width="245" height="118" rx="26"/>
+    <path d="M45 77c-17 0-24-10-24-21 0-11 8-20 19-20 4-18 17-27 33-27 17 0 29 11 33 24 15 0 25 10 25 22 0 13-10 22-25 22Z" fill="#d0e2ec" stroke="none"/>
+    <g stroke="#3e9cc2" stroke-width="6" stroke-linecap="round"><path d="M60 88l-10 19"/><path d="M86 88l-10 19"/><path d="M112 88l-10 19"/></g>
+    <g stroke="#4d99ad" stroke-width="6" stroke-linecap="round" fill="none"><path d="M160 37h51"/><path d="M177 61h37"/><path d="M165 84h51"/></g>
+  </g>
+  <path d="M487 344c40-44 119-59 168-25 45 31 66 96 63 148-3 45-38 94-88 105-67 14-144-35-168-93-20-49-10-99 25-135Z" fill="url(#storm)"/>
+  <path d="M487 344c40-44 119-59 168-25 45 31 66 96 63 148-3 45-38 94-88 105-67 14-144-35-168-93-20-49-10-99 25-135Z" fill="none" stroke="#d77f79" stroke-width="5" stroke-dasharray="14 12" opacity=".85"/>
+  <path d="M121 574 C270 560 333 437 421 410 S562 291 710 303 S834 337 1020 225" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+  <path d="M121 574 C270 560 333 437 421 410 S562 291 710 303 S834 337 1020 225" fill="none" stroke="#1683a3" stroke-width="13" stroke-linecap="round"/>
+  <circle cx="121" cy="574" r="24" fill="#fff" stroke="#1683a3" stroke-width="11"/>
+  <circle cx="1020" cy="225" r="24" fill="#fff" stroke="#1683a3" stroke-width="11"/>
+  <g transform="translate(815 172) rotate(-16)" stroke="#174b69" stroke-width="13" stroke-linecap="round" fill="none" filter="url(#shadow)">
+    <path d="M-78 0H78M0-46V46M-42-39L42 39M-42 39L42-39"/>
+    <circle r="26" fill="#f8fcff" stroke-width="8"/>
+    <circle cx="-79" r="17" fill="#f8fcff" stroke-width="7"/><circle cx="79" r="17" fill="#f8fcff" stroke-width="7"/>
+    <circle cy="-47" r="17" fill="#f8fcff" stroke-width="7"/><circle cy="47" r="17" fill="#f8fcff" stroke-width="7"/>
+  </g>
+</svg>

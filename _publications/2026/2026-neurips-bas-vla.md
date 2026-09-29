@@ -3,9 +3,8 @@ title: "Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Model
 date: 2026-09-20 00:01:00 +0800
 selected: true
 cover: /assets/images/publications/bas-vla-overview.webp
-pub: "Conference on Neural Information Processing Systems (NeurIPS)"
-pub_date: "2026"
-pub_last: ' <span class="badge badge-pill badge-publication badge-primary">Accepted</span>'
+pub: "Conference on Neural Information Processing Systems"
+pub_last: ' <span class="badge badge-pill badge-publication badge-primary"><i>NeurIPS</i> 2026</span>'
 abstract: >-
   Introduces BAS-VLA, an action-calibration framework that preserves behavior under appearance changes while adapting when task semantics change.
 authors:

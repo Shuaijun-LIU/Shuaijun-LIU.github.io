@@ -64,6 +64,24 @@ h1, h2, h3, h4, h5, h6,
     max-height: 120px;
 }
 
+.publication-cover {
+    display: block;
+    height: 205px;
+    object-fit: contain;
+}
+
+.publication-mobile-cover img {
+    display: block;
+    height: 180px;
+    object-fit: contain;
+}
+
+.abstract-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.9rem;
+}
+
 .abstract-body {
     min-height: 100px;
 }
