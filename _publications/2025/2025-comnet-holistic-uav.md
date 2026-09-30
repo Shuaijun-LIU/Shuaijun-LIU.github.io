@@ -1,6 +1,6 @@
 ---
 title: "Energy-Aware Holistic Optimization in UAV-Assisted Fog Computing: Attitude, Trajectory, Task Assignment"
-date: 2025-01-01 00:01:00 +0800
+date: 2025-01-01 12:00:00 +0800
 selected: false
 cover: /assets/images/publications/holistic-uav-network.webp
 cover_width: 718
