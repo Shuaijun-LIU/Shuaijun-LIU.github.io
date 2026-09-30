@@ -11,7 +11,7 @@
         <h5 class="font-weight-normal">{{ item.title }}</h5>
         <p class="small">{% include widgets/author_list.html authors=item.authors %}</p>
         <p class="small">{{ item.pub_pre }}<i>{{ item.pub }}</i>{{ item.pub_post }}{% if item.pub_date %} {{ item.pub_date }}{% endif %}{% if item.pub_last %} {{ item.pub_last }}{% endif %} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
-        <p class="small text-muted">{{ item.abstract }}</p>
+        <p class="small text-muted publication-abstract">{{ item.abstract }}</p>
         <p class="small lh-125 text-muted abstract-links">
             {% for link in item.links %}
             {% if link[1].url %}
