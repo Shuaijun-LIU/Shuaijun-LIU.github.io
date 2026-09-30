@@ -77,6 +77,21 @@ h1, h2, h3, h4, h5, h6,
     min-width: 0;
 }
 
+.publication-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.publication-details > h5,
+.publication-details > p {
+    margin: 0;
+}
+
+.publication-details .author-highlight {
+    color: #1261a0;
+}
+
 .publication-cover {
     display: block;
     width: 100%;

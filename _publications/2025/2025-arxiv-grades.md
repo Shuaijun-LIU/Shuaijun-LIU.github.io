@@ -8,7 +8,7 @@ cover_height: 549
 pub: "arXiv preprint"
 pub_date: "2025"
 abstract: >-
-  Introduces gradient-based early stopping for transformer fine-tuning, freezing individual attention and feed-forward matrices as they converge while other components continue learning.
+  Speeds up fine-tuning by freezing converged transformer matrices.
 authors:
 - Qifu Wen
 - Xi Zeng

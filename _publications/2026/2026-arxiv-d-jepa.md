@@ -8,7 +8,7 @@ cover_height: 959
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-
-  Aligns latent predictions with action outcomes so a world model can better choose among candidate futures.
+  Aligns latent world-model predictions with executed action outcomes. D-JEPA learns decision-relevant relations among candidate futures and realizes them in representations compatible with native latent-distance planning. Evaluations across control, manipulation, physical robots, and autonomous driving show improved action selection.
 authors:
 - Shuaijun Liu
 - Chengyu Wu

@@ -8,11 +8,11 @@
         {% endif %}
     </div>
     <div class="publication-details">
-        <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
-        <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-        <p class="mt-0 mb-0 small">{{ item.pub_pre }}<i>{{ item.pub }}</i>{{ item.pub_post }}{% if item.pub_date %} {{ item.pub_date }}{% endif %}{% if item.pub_last %} {{ item.pub_last }}{% endif %} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
-        <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
-        <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+        <h5 class="font-weight-normal">{{ item.title }}</h5>
+        <p class="small">{% include widgets/author_list.html authors=item.authors %}</p>
+        <p class="small">{{ item.pub_pre }}<i>{{ item.pub }}</i>{{ item.pub_post }}{% if item.pub_date %} {{ item.pub_date }}{% endif %}{% if item.pub_last %} {{ item.pub_last }}{% endif %} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
+        <p class="small text-muted">{{ item.abstract }}</p>
+        <p class="small lh-125 text-muted abstract-links">
             {% for link in item.links %}
             {% if link[1].url %}
             <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>

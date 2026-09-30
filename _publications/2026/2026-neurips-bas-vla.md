@@ -8,7 +8,7 @@ cover_height: 1350
 pub: "Conference on Neural Information Processing Systems"
 pub_last: ' <span class="badge badge-pill badge-publication badge-primary"><i>NeurIPS</i> 2026</span>'
 abstract: >-
-  Introduces BAS-VLA, an action-calibration framework that preserves behavior under appearance changes while adapting when task semantics change.
+  Calibrates a frozen vision-language-action policy to distinguish changes in scene appearance from changes in task meaning. A semantic calibration core adjusts behavior when the target object or task constraints change, while an evidence-gated auxiliary preserves behavior under irrelevant visual variation. This addresses both unnecessary action drift and continued execution of an outdated task. On the LIBERO-Object Milk-Swap benchmark, BAS-VLA maintains 98.0% clean and 97.5% semantics-preserving success while suppressing the original task after target swaps. Under validated style shifts, it raises success from 42% to 70% without reducing clean performance.
 authors:
 - Shuaijun Liu
 - Feiyang You

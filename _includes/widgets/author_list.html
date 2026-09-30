@@ -37,6 +37,10 @@
         {%- assign display_name = name | append: mark -%}
     {%- endif -%}
     
+    {%- if info['highlight'] == true -%}
+        {%- assign display_name = display_name | prepend: '<span class="author-highlight">' | append: '</span>' -%}
+    {%- endif -%}
+
     {%- if info['url'] -%}
         <a class="text-body" target="_blank" href="{{ info['url'] }}">{{ display_name }}</a>{%- if forloop.index < authors.size -%}, {% endif -%}
     {%- else -%}

@@ -8,7 +8,7 @@ cover_height: 531
 pub: "IEEE 24th International Conference on High Performance Computing and Communications (HPCC)"
 pub_date: "2022"
 abstract: >-
-  Studies UAV trajectory planning, resource allocation, and task assignment for UAV-assisted fog computing, improving energy-delay efficiency over baseline algorithms.
+  Coordinates UAV trajectory planning and task assignment to improve energy efficiency in fog computing. The UAV serves as both a communication relay and a mobile computing node, with tasks distributed among available devices. Ant colony and particle swarm optimization support route and assignment decisions, while continuous convex approximation addresses the optimization problem. The planner explicitly accounts for buildings and other obstacles instead of assuming straight-line flight. Simulation experiments demonstrate improved energy efficiency over benchmark algorithms.
 authors:
 - Shuaijun Liu
 - Jiaying Yin
