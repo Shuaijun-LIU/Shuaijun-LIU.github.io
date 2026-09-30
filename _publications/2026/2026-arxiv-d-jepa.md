@@ -3,6 +3,8 @@ title: "D-JEPA: A Decision-Aligned Latent World Model"
 date: 2026-09-21 00:01:00 +0800
 selected: true
 cover: /assets/images/publications/d-jepa-overview.webp
+cover_width: 1400
+cover_height: 959
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-

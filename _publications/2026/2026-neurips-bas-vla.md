@@ -3,6 +3,8 @@ title: "Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Model
 date: 2026-09-20 00:01:00 +0800
 selected: true
 cover: /assets/images/publications/bas-vla-overview.webp
+cover_width: 1181
+cover_height: 1350
 pub: "Conference on Neural Information Processing Systems"
 pub_last: ' <span class="badge badge-pill badge-publication badge-primary"><i>NeurIPS</i> 2026</span>'
 abstract: >-

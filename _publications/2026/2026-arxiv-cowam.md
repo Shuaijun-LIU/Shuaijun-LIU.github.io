@@ -3,6 +3,8 @@ title: "CoWAM: Coordination Contracts for Selective Policy Intervention with WAM
 date: 2026-08-03 00:01:00 +0800
 selected: true
 cover: /assets/images/publications/cowam-overview.webp
+cover_width: 1400
+cover_height: 822
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-

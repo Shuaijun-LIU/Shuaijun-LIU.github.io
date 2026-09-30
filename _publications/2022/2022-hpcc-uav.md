@@ -3,6 +3,8 @@ title: "Optimal Trajectory Planning and Task Assignment for UAV-assisted Fog Com
 date: 2022-12-01 00:01:00 +0800
 selected: false
 cover: /assets/images/publications/hpcc-2022-trajectory.webp
+cover_width: 542
+cover_height: 531
 pub: "IEEE 24th International Conference on High Performance Computing and Communications (HPCC)"
 pub_date: "2022"
 abstract: >-
