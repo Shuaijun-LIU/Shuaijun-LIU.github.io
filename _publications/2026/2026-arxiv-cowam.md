@@ -8,7 +8,7 @@ cover_height: 822
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-
-  Uses coordination contracts to decide when predicted futures justify a selective intervention in bimanual robot policies.
+  Uses coordination contracts to decide when predicted futures justify a selective intervention in bimanual robot policies. Checks synchronization, role compatibility, and collision risk, retaining the nominal action unless an alternative meets all active constraints and offers a clear, low-risk improvement.
 authors:
 - Shuaijun Liu
 - Qifu Wen
