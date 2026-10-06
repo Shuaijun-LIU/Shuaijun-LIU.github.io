@@ -1,6 +1,6 @@
 ---
 title: "Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models"
-date: 2026-09-20 00:01:00 +0800
+date: 2026-10-06 12:01:00 +0800
 selected: true
 cover: /assets/images/publications/bas-vla-overview.webp
 cover_width: 1181
