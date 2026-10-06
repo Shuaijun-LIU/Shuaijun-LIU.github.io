@@ -16,4 +16,5 @@ authors:
 - Ningxin Su#
 links:
   Project Website: https://nebulis-lab.com/BRACE
+  Paper: https://arxiv.org/abs/2608.01428
 ---
