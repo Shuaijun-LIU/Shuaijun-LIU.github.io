@@ -1,12 +1,10 @@
 {% assign item = include.item %}
-<article class="publication-item {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
+<article class="publication-item {% unless item.cover %}publication-item--text-only {% endunless %}{% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
+    {% if item.cover %}
     <div class="publication-visual">
-        {% if item.cover %}
         <img src="{{ item.cover | relative_url }}" alt="{{ item.title | escape }}" class="publication-cover rounded-sm" loading="lazy" decoding="async"{% if item.cover_width and item.cover_height %} width="{{ item.cover_width }}" height="{{ item.cover_height }}"{% endif %}>
-        {% else %}
-        <svg class="bubble-visual-hash publication-cover rounded-sm" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
-        {% endif %}
     </div>
+    {% endif %}
     <div class="publication-details">
         <h5 class="font-weight-normal">{{ item.title }}</h5>
         <p class="small">{% include widgets/author_list.html authors=item.authors %}</p>

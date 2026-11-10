@@ -76,6 +76,10 @@ h1, h2, h3, h4, h5, h6,
     min-width: 0;
 }
 
+.publication-item--text-only .publication-details {
+    grid-column: 1 / -1;
+}
+
 .publication-details {
     display: flex;
     flex-direction: column;
