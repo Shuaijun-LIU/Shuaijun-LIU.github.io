@@ -14,5 +14,6 @@ authors:
 - Shuaijun Liu
 - Feiyang You
 - Ningxin Su
-paper_coming_soon: true
+links:
+  Paper: https://ningxinsu.github.io/assets/xingwei-iros26.pdf
 ---

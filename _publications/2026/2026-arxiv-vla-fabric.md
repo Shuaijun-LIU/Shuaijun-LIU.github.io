@@ -8,7 +8,7 @@ cover_height: 1302
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-
-  Connects complete, arm-local VLA policies through learned interaction while preserving local perception and action ownership. VLA-Fabric transfers coordination mechanisms across VLA architectures and scales to three- and four-arm teams. Across four physical tasks, it improves success over independent local policies by 16–40 percentage points.
+  Connects arm-local VLA policies through learned interaction while preserving perception and action ownership. VLA-Fabric transfers coordination across VLA architectures and scales to three- and four-arm teams. Across four tasks, it improves success over independent policies by 16–40 percentage points.
 authors:
 - Chenglong Zhang
 - Shuaijun Liu
