@@ -2,6 +2,9 @@
 title: "A Survey of Security in Real-World Agents: From Digital Agents to Embodied AI"
 date: 2026-10-14 12:00:00 +0800
 selected: false
+cover: /assets/images/publications/agent-security-survey-overview.webp
+cover_width: 1329
+cover_height: 711
 pub: "Preprints.org preprint"
 pub_date: "2026"
 abstract: >-
