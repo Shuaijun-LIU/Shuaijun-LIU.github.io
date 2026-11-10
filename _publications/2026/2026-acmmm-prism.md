@@ -1,6 +1,6 @@
 ---
 title: "PRISM: Proactive Recovery via Interpretable State Modeling for Embodied Human-Robot Interaction"
-date: 2026-11-09 12:00:00 +0800
+date: 2026-01-02 12:00:00 +0800
 selected: false
 pub: "ACM International Conference on Multimedia"
 pub_last: ' <span class="badge badge-pill badge-publication badge-primary"><i>ACM MM</i> 2026 · Oral</span>'
