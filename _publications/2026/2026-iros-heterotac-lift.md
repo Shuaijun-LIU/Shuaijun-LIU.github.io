@@ -15,5 +15,5 @@ authors:
 - Feiyang You
 - Ningxin Su
 links:
-  Paper: https://ningxinsu.github.io/assets/xingwei-iros26.pdf
+  Paper: https://rasevents.org/uploads/documents/pdfviewer/94/76/234338-4524.pdf
 ---
