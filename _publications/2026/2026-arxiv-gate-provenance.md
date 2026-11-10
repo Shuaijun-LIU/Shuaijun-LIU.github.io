@@ -2,9 +2,9 @@
 title: "The Gate, Not the Cache: Gate Provenance Bounds the Closed-Loop Reliability of Training-Free VLA Token Skipping"
 date: 2026-08-01 09:59:12 +0800
 selected: false
-cover: /assets/images/publications/gate-provenance-teaser.png
-cover_width: 1740
-cover_height: 795
+cover: /assets/images/publications/gate-provenance-figure4.png
+cover_width: 1572
+cover_height: 582
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-
