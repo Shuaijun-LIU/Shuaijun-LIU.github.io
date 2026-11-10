@@ -8,7 +8,7 @@ cover_height: 711
 pub: "Preprints.org preprint"
 pub_date: "2026"
 abstract: >-
-  Surveys how attacks on digital agents propagate into embodied systems through semantic hijacking, sensory manipulation, and middleware injection. The review connects attack access and trust boundaries to observed execution outcomes, compares defenses across system interfaces, and identifies requirements for dependable action enforcement and recovery under compromised state.
+  Surveys security threats across digital agents and embodied AI, linking attacks to execution outcomes and comparing defenses for dependable action enforcement and recovery.
 authors:
 - Yuhui Sun
 - Zhen Sun
