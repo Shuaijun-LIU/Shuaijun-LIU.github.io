@@ -2,9 +2,10 @@
 title: "MimicX: Policy-in-the-Loop Supervision Refinement for Video-Driven Humanoid Motion Tracking"
 date: 2026-10-07 04:05:40 +0800
 selected: true
-cover: /assets/images/publications/mimicx-parkour-teaser-16x15.webp
-cover_width: 1280
-cover_height: 1200
+cover: /assets/images/publications/mimicx-demo-poster.webp
+cover_video: /assets/images/publications/mimicx-demo-cover.mp4
+cover_width: 560
+cover_height: 394
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-

@@ -2,7 +2,14 @@
 <article class="publication-item {% unless item.cover %}publication-item--text-only {% endunless %}{% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
     {% if item.cover %}
     <div class="publication-visual">
+        {% if item.cover_video %}
+        <video class="publication-cover rounded-sm" aria-label="{{ item.title | escape }} demo" poster="{{ item.cover | relative_url }}" autoplay muted loop playsinline controls preload="none"{% if item.cover_width and item.cover_height %} width="{{ item.cover_width }}" height="{{ item.cover_height }}"{% endif %}>
+            <source src="{{ item.cover_video | relative_url }}" type="video/mp4">
+            <img src="{{ item.cover | relative_url }}" alt="{{ item.title | escape }}">
+        </video>
+        {% else %}
         <img src="{{ item.cover | relative_url }}" alt="{{ item.title | escape }}" class="publication-cover rounded-sm" loading="lazy" decoding="async"{% if item.cover_width and item.cover_height %} width="{{ item.cover_width }}" height="{{ item.cover_height }}"{% endif %}>
+        {% endif %}
     </div>
     {% endif %}
     <div class="publication-details">
