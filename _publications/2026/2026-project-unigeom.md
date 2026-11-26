@@ -8,7 +8,7 @@ cover_height: 250
 pub: "Research project"
 pub_date: "2026"
 abstract: >-
-  Learns compact adapters that connect independently trained world models. Calibrated on paired observations, they map one encoder's features into states another model's frozen dynamics can use for prediction.
+  Learns compact adapters that connect independently trained world models. Calibrated on paired observations, they map one encoder's features into states another model's frozen dynamics can predict from.
 authors:
 - Shuaijun Liu
 - Feiyang You
