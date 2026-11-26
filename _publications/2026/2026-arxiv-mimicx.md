@@ -9,7 +9,7 @@ cover_height: 394
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-
-  Uses policy execution feedback to refine supervision for video-driven humanoid motion tracking. MimicX identifies difficult transitions and affected body regions, adapts tracking rewards and reset sampling, and verifies which checkpoints should continue training. With matched budgets across twelve motion tasks, it raises held-out completion from 83.3% to 91.7%. On five video-driven collision-scene tasks, completion rises from 60% to 80%.
+  MimicX refines video-driven humanoid tracking and verifies policy checkpoints using rollout feedback. Completion rises from 83.3% to 91.7% on held-out motions and from 60% to 80% in collision scenes.
 authors:
 - Shuaijun Liu
 - Chenglong Zhang
