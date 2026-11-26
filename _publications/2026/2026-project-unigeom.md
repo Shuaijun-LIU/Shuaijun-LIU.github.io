@@ -8,15 +8,15 @@ cover_height: 250
 pub: "Research project"
 pub_date: "2026"
 abstract: >-
-  Learns compact adapters that let independently trained world models share representations. Calibrated on paired observations, the adapters map one encoder's features into the state space of another model's frozen dynamics, enabling prediction across model components.
+  Learns compact adapters that connect independently trained world models. Calibrated on paired observations, they map one encoder's features into states another model's frozen dynamics can use for prediction.
 authors:
 - Shuaijun Liu
 - Feiyang You
 - Qifu Wen
 - Shuyang Hao
-- Xingwei Chen
-- Chenglong Zhang
-- Chengyu Wu
+- X. Chen
+- C. Zhang
+- C. Wu
 - Ningxin Su#
 links:
   Project Website: https://nebulis-lab.com/UniGeom/
