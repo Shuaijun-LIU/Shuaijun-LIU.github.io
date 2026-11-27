@@ -8,7 +8,7 @@ cover_height: 250
 pub: "Research project"
 pub_date: "2026"
 abstract: >-
-  Learns compact adapters connecting independently trained world models. Calibrated on paired observations, they map one encoder's features into states another model's frozen dynamics can predict from.
+  Shared geometry lets UniGeom reuse complete frozen world models for prediction and control with independently trained visual encoders, retaining 97.4% of native navigation successes.
 authors:
 - Shuaijun Liu
 - Feiyang You
