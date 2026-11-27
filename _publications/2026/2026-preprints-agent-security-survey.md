@@ -8,7 +8,7 @@ cover_height: 711
 pub: "Preprints.org preprint"
 pub_date: "2026"
 abstract: >-
-  Surveys security threats across digital agents and embodied AI, linking attacks to execution outcomes and comparing defenses for dependable action enforcement and recovery.
+  Traces digital compromise to robot execution and compares what experiments establish about safety, separating evidence from generated plans, simulation, and physical actions.
 authors:
 - Yuhui Sun
 - Zhen Sun

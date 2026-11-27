@@ -8,7 +8,7 @@ cover_height: 814
 pub: "Computer Networks, 277, 112064"
 pub_date: "2026"
 abstract: >-
-  Jointly optimizes attitude control, 3D trajectory planning, resource allocation, and task assignment in UAV-assisted fog computing. The framework couples a fuzzy-enhanced adaptive PID controller with an improved ant colony trajectory planner and particle swarm task assignment. It accounts for varying terrain and dynamically generated tasks, while allowing decisions in one module to inform the others. This connects the UAV's physical flight behavior with communication and computation decisions across the network. Simulation studies evaluate the resulting trade-offs between latency and energy consumption and show improvements over benchmark methods. Joint decisions capture how flight, communication, and computation costs affect the overall system.
+  Optimizes flight and computing decisions together for a UAV that acts as both a relay and a fog node. The framework couples adaptive attitude control with safe 3D routing, resource allocation, and task placement, so flight behavior informs the delay and energy costs of offloading. FEAR-PID stabilizes the quadrotor across flight phases, while ACS-DS decouples trajectory decisions and uses a safety value to guide search over varying terrain. A modified particle swarm optimizer assigns incoming tasks. In simulation, ACS-DS with adaptive attitude control reduces the combined latency and energy cost by 48.1% relative to conventional ACS.
 authors:
 - Shuaijun Liu
 - Jinqiu Du

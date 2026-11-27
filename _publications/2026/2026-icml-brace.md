@@ -8,7 +8,7 @@ cover_height: 998
 pub: "International Conference on Machine Learning"
 pub_last: ' <span class="badge badge-pill badge-publication badge-primary"><i>ICML</i> 2026</span>'
 abstract: >-
-  Studies replanning overhead in long-horizon embodied agents and introduces a budgeted replanning framework with adaptive replanning decisions, token budgets, latency SLOs, and context compression.
+  BRACE decides when to replan and budgets each call against latency deadlines. E-RECAP prunes context by utility, cutting replanning tokens by 62–92% across three simulators.
 authors:
 - Shuaijun Liu
 - Feiyang You

@@ -8,7 +8,7 @@ cover_height: 837
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-
-  Proves that unbounded differences between internal update maps can coexist with vanishing predictive KL in Gaussian hidden Markov models, separating internal dynamics from predictive performance.
+  Constructs a radial filter for Gaussian HMMs with unbounded worst-case divergence from exact Bayesian updates as switching becomes rare, even as predictive KL vanishes.
 authors:
 - Qifu Wen*
 - Shuaijun Liu*

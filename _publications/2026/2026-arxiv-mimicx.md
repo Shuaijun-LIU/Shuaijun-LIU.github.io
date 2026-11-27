@@ -9,7 +9,7 @@ cover_height: 394
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-
-  MimicX refines video-driven humanoid tracking and verifies policy checkpoints using rollout feedback. Completion rises from 83.3% to 91.7% on held-out motions and from 60% to 80% in collision scenes.
+  MimicX turns rollout failures into targeted reward and reset updates, then verifies which checkpoint should continue training. Full-motion completion rises from 60% to 80% across five video-driven collision scenes.
 authors:
 - Shuaijun Liu
 - Chenglong Zhang

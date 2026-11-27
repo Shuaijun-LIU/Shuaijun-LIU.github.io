@@ -8,7 +8,7 @@ cover_height: 770
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-
-  Unifies bathymetry, data-driven currents and tides, and optional pollution fields in a marine robotics simulator. OneOcean benchmarks navigation, inspection, coordination, and cleanup with up to ten vehicles, using standardized metrics and reproducible run manifests.
+  OneOcean grounds ten marine robotics tasks in a shared dataset of bathymetry, currents, tides, and optional pollution. A common task protocol makes navigation, inspection, coordination, and cleanup comparable across simulation backends and teams of up to ten vehicles.
 authors:
 - Shuaijun Liu
 - Qifu Wen

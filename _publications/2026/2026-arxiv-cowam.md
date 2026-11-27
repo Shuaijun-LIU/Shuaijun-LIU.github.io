@@ -8,7 +8,7 @@ cover_height: 822
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-
-  Uses coordination contracts to decide when predicted futures justify a selective intervention in bimanual robot policies. Checks synchronization, role compatibility, and collision risk, retaining the nominal action unless an alternative meets all active constraints and offers a clear, low-risk improvement.
+  CoWAM checks predicted futures against coordination contracts to decide when to override a bimanual policy. Across eight simulated tasks, it raises closed-loop success by 9.6 percentage points over the strongest selective baseline while keeping harmful interventions below 1%.
 authors:
 - Shuaijun Liu
 - Qifu Wen

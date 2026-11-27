@@ -8,7 +8,7 @@ cover_height: 296
 pub: "Research project"
 pub_date: "2026"
 abstract: >-
-  CarryQ feeds each action's quantization residual into the next token choice, helping errors cancel over time and reducing drift during robot execution. It works with the existing codebook, decoder, and token budget.
+  CarryQ uses residual feedback to cancel quantization errors across robot actions with the same codebook and token budget. On physical charger insertion, completed connections rise from 6% to 36% at four bits.
 authors:
 - Shuaijun Liu
 - Feiyang You

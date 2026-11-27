@@ -9,7 +9,7 @@ cover_height: 336
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-
-  Learns coordination among arm-local VLA policies while preserving local perception and action ownership. It transfers across architectures and scales to four arms, improving success by 16–40 percentage points over independent policies.
+  VLA-Fabric teaches complete arm-local policies to exchange shared context, peer-specific features, and action-stage signals. These coordination functions transfer across VLA backbones and improve success by 16–40 percentage points over independent policies on four physical tasks.
 authors:
 - Chenglong Zhang
 - Shuaijun Liu

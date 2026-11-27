@@ -8,7 +8,7 @@ cover_height: 1340
 pub: "International Telecommunication Networks and Applications Conference (ITNAC)"
 pub_date: "2024"
 abstract: >-
-  Combines LSTM-based weather prediction with terrain-aware crash-risk assessment to guide UAV trajectory planning. The ACS-DS-R planner adjusts three-dimensional flight paths to avoid hazardous regions using meteorological forecasts and topographical data. Simulations across cities, forests, lakes, coasts, and mountains show lower crash risk and improved task completion with modest additional energy consumption.
+  ACS-DS-R turns LSTM weather forecasts and terrain data into a crash-risk map that guides 3D UAV routing. It accounts for collision exposure and flight dynamics when selecting paths. In simulation, it cuts the average crash rate by over 33% and raises task success roughly 2.58-fold versus DAACO, with 13% more energy use.
 authors:
 - Shuaijun Liu
 - Jiaying Yin

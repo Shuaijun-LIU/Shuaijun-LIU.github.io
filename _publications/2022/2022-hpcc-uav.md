@@ -8,7 +8,7 @@ cover_height: 531
 pub: "IEEE 24th International Conference on High Performance Computing and Communications (HPCC)"
 pub_date: "2022"
 abstract: >-
-  Coordinates UAV trajectory planning and task assignment to improve energy efficiency in fog computing. The UAV serves as both a communication relay and a mobile computing node, with tasks distributed among available devices. Ant colony and particle swarm optimization support route and assignment decisions, while continuous convex approximation addresses the optimization problem. The planner explicitly accounts for buildings and other obstacles instead of assuming straight-line flight. Simulation experiments demonstrate improved energy efficiency over benchmark algorithms.
+  Jointly plans obstacle-avoiding UAV routes and assigns computing tasks to improve the energy efficiency of fog computing. The optimization accounts for the UAV's two roles as an onboard processor and a relay to remote edge devices, so the route reflects where tasks run and how data reaches them. The approach combines ant colony search, particle swarm optimization, and continuous convex approximation. Simulations show higher energy efficiency than benchmark methods.
 authors:
 - Shuaijun Liu
 - Jiaying Yin

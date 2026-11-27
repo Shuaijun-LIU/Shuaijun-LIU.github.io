@@ -5,7 +5,7 @@ selected: false
 pub: "ACM International Conference on Multimedia"
 pub_last: ' <span class="badge badge-pill badge-publication badge-primary"><i>ACM MM</i> 2026 · Oral</span>'
 abstract: >-
-  Models multimodal interaction states to anticipate failures and guide proactive recovery in human-robot interaction. PRISM combines near-future hazard prediction, explicit failure prototypes, and recovery-action ranking to decide when to intervene, balancing risk reduction against action cost. Retrieval-grounded evidence explains the resulting decisions and supports debugging.
+  PRISM uses interpretable failure prototypes to connect early hazard prediction to the choice of when and how a robot should intervene. It weighs predicted risk reduction against action cost and retrieves evidence for its decision. A preliminary blinded study favored these explanations for clarity, trust, and debugging.
 authors:
 - Xingwei Chen
 - Ziyu Li

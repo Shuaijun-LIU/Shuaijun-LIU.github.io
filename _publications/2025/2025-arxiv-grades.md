@@ -8,7 +8,7 @@ cover_height: 549
 pub: "arXiv preprint"
 pub_date: "2025"
 abstract: >-
-  Speeds up fine-tuning by freezing converged transformer matrices.
+  Gradient-based matrix freezing accelerates transformer fine-tuning by 1.57–7.22×.
 authors:
 - Qifu Wen
 - Xi Zeng

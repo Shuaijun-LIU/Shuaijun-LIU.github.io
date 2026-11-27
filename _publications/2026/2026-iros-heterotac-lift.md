@@ -8,7 +8,7 @@ cover_height: 700
 pub: "IEEE/RSJ International Conference on Intelligent Robots and Systems"
 pub_last: ' <span class="badge badge-pill badge-publication badge-primary"><i>IROS</i> 2026</span>'
 abstract: >-
-  Uses heterogeneous tactile sensors on both gripper jaws to decide when a grasp is ready to lift. Tactile servoing refines contact, risk-budgeted compliance regulates grip force, and a brief micro-lift verifies stability before full lifting. This improves grasping of visually challenging, fragile, and deformable objects while reducing unsafe lift admissions.
+  HeteroTac-Lift makes grasping a decision about whether contact can support a lift. It aligns readings from different tactile arrays on the two jaws, corrects contact geometry, and regulates grip within a risk-based force window. A 2–4 mm verification lift screens unstable grasps, cutting the false accept rate from 19.3% to 5.8% in matched-budget ablations.
 authors:
 - Xingwei Chen
 - Shuaijun Liu

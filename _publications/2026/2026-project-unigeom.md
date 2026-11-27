@@ -8,7 +8,7 @@ cover_height: 250
 pub: "Research project"
 pub_date: "2026"
 abstract: >-
-  Shared geometry lets UniGeom reuse complete frozen world models for prediction and control with independently trained visual encoders, retaining 97.4% of native navigation successes.
+  UniGeom uses shared geometry to connect independent perception to frozen world-model prediction and control, retaining 97.4% of native navigation successes in paired trials.
 authors:
 - Shuaijun Liu
 - Feiyang You

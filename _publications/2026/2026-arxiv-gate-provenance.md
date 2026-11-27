@@ -8,7 +8,7 @@ cover_height: 582
 pub: "arXiv preprint"
 pub_date: "2026"
 abstract: >-
-  Shows that gate provenance governs reliable VLA token skipping. Actuation-slack refresh restores closed-loop task success while reducing serving latency by 18–22% versus dense inference.
+  Shows that self-harvested gates undermine VLA token skipping. A dense refresh during actuation restores task success and cuts serving latency 18–22% versus dense inference.
 authors:
 - Qi Luo
 - Shuaijun Liu
